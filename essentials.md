@@ -10,7 +10,7 @@ All of our work lives in the [material-motion](https://github.com/material-motio
 
 For each of the ideas explored in the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/):
 
-- Elevate existing solutions so that we can avoid re-inventing wheels.
+- Elevate existing solutions so that we can avoid re-inventing wheels. Add solutions to the Starmap's [Community](https://material-motion.gitbooks.io/material-motion-starmap/content/community/) chapter.
 - In the absence of existing solutions, build great ones.
 
 For ourselves as a team:
