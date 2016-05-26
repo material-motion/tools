@@ -5,6 +5,6 @@
 * [Roadmaps](roadmaps/README.md)
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
-   * Swift
+   * [Swift](roadmaps/swift.md)
    * Web
 
