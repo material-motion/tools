@@ -4,7 +4,7 @@ The Material Motion team members may be found at https://github.com/orgs/materia
 
 New to the team? Check out the chapter on [Essentials](essentials.md).
 
-Most of our work is guided by the [Starmap](https://featherless.gitbooks.io/material-motion-starmap/content/).
+Most of our work is guided by the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/).
 
 ## License
 
