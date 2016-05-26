@@ -17,7 +17,3 @@ For ourselves as a team:
 
 - Operate in the open.
 
-## Helpful reading
-
-
-
