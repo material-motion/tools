@@ -17,3 +17,6 @@ For ourselves as a team:
 
 - Operate in the open.
 
+## Getting started
+
+New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
