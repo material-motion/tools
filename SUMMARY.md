@@ -3,8 +3,8 @@
 * [Introduction](README.md)
 * [Essentials](essentials.md)
 * [Roadmaps](roadmaps/README.md)
+   * Android
    * Swift
    * Objective-C
-   * Android
    * Web
 
