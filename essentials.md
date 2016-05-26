@@ -35,7 +35,9 @@ For ourselves as a team:
 
 GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.
 
+We will periodically publish "releases" of our books. This means that the `master` branch is able to be in a perpetual state of drafting.
 
+If you intend to make minor edits, feel free to do so on the master branch.
 
 ## Getting started
 
