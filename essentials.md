@@ -18,6 +18,12 @@ For ourselves as a team:
 
 - Operate in the open.
 
+## Tools we use
+
+- [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
+- GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
+
+
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
