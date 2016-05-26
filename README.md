@@ -2,7 +2,7 @@
 
 The Material Motion team members may be found at https://github.com/orgs/material-motion/teams/core-team.
 
-
+New to the team? Check out the chapter on [Essentials](essentials.md).
 
 ## License
 
