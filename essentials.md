@@ -8,8 +8,8 @@ All of our work lives in the [material-motion](https://github.com/material-motio
 
 ## Team goals
 
-- Operate in the open.
 - Provide the best possible solutions for the ideas explored in the [Starmap](https://featherless.gitbooks.io/material-motion-starmap/content/).
+- Operate in the open.
 
 ## Helpful reading
 
