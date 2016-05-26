@@ -22,7 +22,12 @@ For ourselves as a team:
 
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
+- git for all version tracking.
 
+### Objective-C/Swift
+
+- Xcode 7.3.
+- Swift 2.2.
 
 ## Getting started
 
