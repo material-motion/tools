@@ -52,6 +52,10 @@ Create a branch for major edits. You can create a branch by following these step
 - Select "New branch"
 - Name the branch.
 
+Once you've created a branch you can freely make changes on it. Your branch is now on its own.
+
+#### Pulling in the latest changes
+
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
