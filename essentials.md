@@ -43,6 +43,10 @@ We will periodically publish "releases" of our books. This means that the `maste
 
 If you intend to make minor edits, feel free to do so on the master branch. Use good judgement.
 
+### Making major edits
+
+Create a branch for major edits. This will allow you to stage your thoughts in a safe place without being impacted by work going on in the master branch.
+
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
