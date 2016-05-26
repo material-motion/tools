@@ -67,6 +67,10 @@ To do so, select the "branch" dropdown menu and select "Merge branches". Merge *
 
 To do so, select the "branch" dropdown menu and select "Merge branches". Merge **from** your branch **to** master. The master branch will now include all of your changes.
 
+### Handling conflicts
+
+If GitBook detects a conflict when attempting to merge two branches it will open [the conflict resolution](https://www.gitbook.com/blog/features/merge-conflicts) page.
+
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
