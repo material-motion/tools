@@ -34,6 +34,10 @@ For ourselves as a team:
 - Xcode 7.3.
 - Swift 2.2.
 
+## Getting started
+
+New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
+
 ## GitBook etiquette
 
 GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.
@@ -70,7 +74,3 @@ To do so, select the "branch" dropdown menu and select "Merge branches". Merge *
 ### Handling conflicts
 
 If GitBook detects a conflict when attempting to merge two branches it will open [the conflict resolution](https://www.gitbook.com/blog/features/merge-conflicts) page.
-
-## Getting started
-
-New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
