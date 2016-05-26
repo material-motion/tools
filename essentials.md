@@ -56,6 +56,10 @@ Once you've created a branch you can freely make changes on it. Your branch is n
 
 #### Pulling in the latest changes
 
+Changes may land in master while you're working on your branch. To update your branch with these latest changes you can merge `master` into your branch.
+
+To do so, select the "branch" dropdown menu and pick
+
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
