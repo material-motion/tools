@@ -43,7 +43,7 @@ We will periodically publish "releases" of our books. We are ok with the `master
 
 ### Making minor edits
 
-If you intend to make minor edits, feel free to do so on the master branch. Use good judgement.
+If you intend to make minor edits, feel free to do so on the master branch. Use good judgment.
 
 ### Making major edits
 
