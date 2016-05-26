@@ -26,6 +26,8 @@ For ourselves as a team:
 
 ### Android
 
+- Android Studio 2.1
+
 ### Objective-C/Swift
 
 - Xcode 7.3.
