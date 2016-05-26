@@ -8,7 +8,8 @@ All of our work lives in the [material-motion](https://github.com/material-motio
 
 ## Team goals
 
-- Provide the best possible solutions for the ideas explored in the [Starmap](https://featherless.gitbooks.io/material-motion-starmap/content/).
+- Elevate existing solutions so that we can avoid re-inventing wheels.
+- In the absense of existing solutions, build great solutions for the ideas explored in the [Starmap](https://featherless.gitbooks.io/material-motion-starmap/content/).
 - Operate in the open.
 
 ## Helpful reading
