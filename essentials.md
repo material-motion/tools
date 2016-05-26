@@ -24,6 +24,7 @@ For ourselves as a team:
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
 - git for all version tracking.
+- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
 
 ### Android
 
