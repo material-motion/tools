@@ -50,7 +50,7 @@ If you intend to make minor edits, feel free to do so on the master branch. Use 
 Create a branch for major edits. You can create a branch by following these steps:
 
 - Edit the book of interest.
-- Click the "branch" dropdown in the top right of the GitBook web UI.
+- Click the "branch" drop-down in the top right of the GitBook web user interface.
 - Select "New branch"
 - Name the branch.
 
