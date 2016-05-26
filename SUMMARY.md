@@ -6,5 +6,5 @@
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
    * [Swift](roadmaps/swift.md)
-   * [Web](roadmaps/web.md)
+   * [JavaScript](roadmaps/web.md)
 
