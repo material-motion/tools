@@ -39,7 +39,7 @@ GitBook does not have pull requests. By default, changes are made to the `master
 
 ### Releasing
 
-We will periodically publish "releases" of our books. This means that the `master` branch is able to be in a perpetual state of drafting.
+We will periodically publish "releases" of our books. We are ok with the `master` branch being in a perpetual state of drafting.
 
 ### Making minor edits
 
