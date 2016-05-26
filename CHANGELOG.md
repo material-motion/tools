@@ -12,4 +12,4 @@ This is the most recent changelog.
 
 # 2016
 
-Just getting started.
+We're just getting started.
