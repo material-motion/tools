@@ -1,6 +1,8 @@
-# My Awesome Book
+# Material Motion team documents
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+The Material Motion team members may be found at https://github.com/orgs/material-motion/teams/core-team.
+
+
 
 ## License
 
