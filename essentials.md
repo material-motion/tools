@@ -60,7 +60,7 @@ Once you've created a branch you can freely make changes on it. Your branch is n
 
 Changes may land in master while you're working on your branch. To update your branch with these latest changes you can merge `master` into your branch.
 
-To do so, select the "branch" dropdown menu and pick
+To do so, select the "branch" dropdown menu and select "Merge branches". Merge **from** master **to** your branch.
 
 ## Getting started
 
