@@ -33,7 +33,7 @@ For ourselves as a team:
 
 ## GitBook etiquette
 
-GitBook does not have pull requests. By default, all changes are made to the `master` branch for the book.
+GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.
 
 
 
