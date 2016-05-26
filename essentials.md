@@ -12,7 +12,7 @@ For each of the ideas explored in the [Starmap](https://material-motion.gitbooks
 
 - Elevate existing solutions so that we can avoid re-inventing wheels.
 - In the absence of existing solutions, build great ones.
-- Add solutions to the Starmap's [Community](https://material-motion.gitbooks.io/material-motion-starmap/content/community/) chapter.
+- List solutions in the Starmap's [Community](https://material-motion.gitbooks.io/material-motion-starmap/content/community/) chapter.
 
 For ourselves as a team:
 
