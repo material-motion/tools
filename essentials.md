@@ -45,7 +45,12 @@ If you intend to make minor edits, feel free to do so on the master branch. Use 
 
 ### Making major edits
 
-Create a branch for major edits. This will allow you to stage your thoughts in a safe place without being impacted by work going on in the master branch.
+Create a branch for major edits. You can create a branch by following these steps:
+
+- Edit the book of interest.
+- Click the "branch" dropdown in the top right of the GitBook web UI.
+- Select "New branch"
+- Name the branch.
 
 ## Getting started
 
