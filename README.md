@@ -6,6 +6,8 @@ New to the team? Check out the chapter on [Essentials](essentials.md).
 
 Most of our work is guided by the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/).
 
+Our short-term priorities are documented in our [Roadmaps](roadmaps/).
+
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
