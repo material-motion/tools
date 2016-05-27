@@ -47,13 +47,12 @@ Versions of software we use:
 
 ## Experimental work
 
-Each platform and language has an `experiments` GitHub repo. We use these repos to 
-To start working on an experiment please run the following:
+Each platform and language has an `experiments` GitHub repo. We use these repos to house code that isn't ready for production use.
 
-    git clone git@github.com:material-motion/material-<yourproject>.git
-    cd material-<yourproject>
+    git clone git@github.com:material-motion/material-motion-experiments-<yourproject>.git
+    cd material-motion-experiments-<yourproject>
     
-    mkdir -p experiments/<some name>
+    mkdir -p material-motion-experiments-/<some name>
 
 You can now begin working within your new experimental folder.
 
