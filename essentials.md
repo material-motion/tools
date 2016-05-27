@@ -28,7 +28,7 @@ TODO: Flesh this out.
 - Disable issue tracking.
 
     ssh keys
-    git clone <url>
+    git clone url
     git checkout -b experimental
 
 ## Tools we use
