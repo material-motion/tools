@@ -21,9 +21,15 @@ For ourselves as a team:
 
 ## Experimental work
 
+TODO: Flesh this out.
+
 - Create an `experimental` branch on a repo and do work there.
 - README.md needs to include some sort of "This is an experiment and not actively supported".
 - Disable issue tracking.
+
+    ssh keys
+    git clone <url>
+    git checkout -b experimental
 
 ## Tools we use
 
