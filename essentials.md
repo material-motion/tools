@@ -46,15 +46,18 @@ Versions of software we use:
 
 ## Experimental work
 
-TODO: Flesh this out.
+We're using an `experimental/` folder in each repository while we lay the foundation for the solutions we plan to build.
 
-- Create an `experimental` branch on a repo and do work there.
-- README.md needs to include some sort of "This is an experiment and not actively supported".
-- Disable issue tracking.
+To start working on an experiment please run the following:
 
-    ssh keys
-    git clone url
-    git checkout -b experimental
+    git clone git@github.com:material-motion/material-<yourproject>.git
+    cd material-<yourproject>
+    
+    mkdir -p experiments/<some name>
+
+You can now begin working within your new experimental folder.
+
+We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
 
 ## Getting started
 
