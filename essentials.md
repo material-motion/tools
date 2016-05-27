@@ -59,7 +59,6 @@ You can now begin working within your new experimental folder.
 
 We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
 
-
 ## Getting started
 
 New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
