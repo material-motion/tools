@@ -29,6 +29,7 @@ For ourselves as a team:
 
 ### GitHub
 
+- [Add SSH keys to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 - [Hello world](https://guides.github.com/activities/hello-world/) GitHub guide.
 
 ### Android
@@ -46,10 +47,7 @@ Versions of software we use:
 
 ## Experimental work
 
-TODO: Fix.
-
-We're using an `experimental/` folder in each repository while we lay the foundation for the solutions we plan to build.
-
+Each platform and language has an `experiments` GitHub repo. We use these repos to 
 To start working on an experiment please run the following:
 
     git clone git@github.com:material-motion/material-<yourproject>.git
