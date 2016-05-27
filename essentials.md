@@ -19,6 +19,31 @@ For ourselves as a team:
 
 - Operate in the open.
 
+## Tools we use
+
+- [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
+- GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
+- git for all version tracking.
+- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
+- [draw.io](https://www.draw.io) for SVG and flow-chart editing.
+
+### GitHub
+
+- [Hello world](https://guides.github.com/activities/hello-world/) GitHub guide.
+
+### Android
+
+Versions of software we use:
+
+- Android Studio 2.1
+
+### Objective-C/Swift
+
+Versions of software we use:
+
+- Xcode 7.3.
+- Swift 2.2.
+
 ## Experimental work
 
 TODO: Flesh this out.
@@ -30,23 +55,6 @@ TODO: Flesh this out.
     ssh keys
     git clone url
     git checkout -b experimental
-
-## Tools we use
-
-- [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
-- GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
-- git for all version tracking.
-- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
-- [draw.io](https://www.draw.io) for SVG and flow-chart editing.
-
-### Android
-
-- Android Studio 2.1
-
-### Objective-C/Swift
-
-- Xcode 7.3.
-- Swift 2.2.
 
 ## Getting started
 
