@@ -25,6 +25,7 @@ For ourselves as a team:
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
 - git for all version tracking.
 - The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
+- [draw.io](https://www.draw.io) for SVG and flow-chart editing.
 
 ### Android
 
