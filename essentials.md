@@ -19,6 +19,12 @@ For ourselves as a team:
 
 - Operate in the open.
 
+## Experimental work
+
+- Create an `experimental` branch on a repo and do work there.
+- README.md needs to include some sort of "This is an experiment and not actively supported".
+- Disable issue tracking.
+
 ## Tools we use
 
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
