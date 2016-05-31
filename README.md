@@ -4,7 +4,7 @@ The Material Motion team members may be found at https://github.com/orgs/materia
 
 New to the team? Check out our [Essentials](essentials.md).
 
-Most of our work is guided by the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/).
+The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
 
 Our short-term priorities are documented in our [Roadmaps](roadmaps/).
 
