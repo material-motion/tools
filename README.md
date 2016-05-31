@@ -2,7 +2,7 @@
 
 The Material Motion team members may be found at https://github.com/orgs/material-motion/teams/core-team.
 
-New to the team? Check out the chapter on [Essentials](essentials.md).
+New to the team? Check out our [Essentials](essentials.md).
 
 Most of our work is guided by the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/).
 
