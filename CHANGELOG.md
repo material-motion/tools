@@ -8,6 +8,8 @@ It's organized in reverse-chronological order, meaning as you scroll further dow
 
 This is the most recent changelog.
 
+- [2016 Week 23 (Start of June)](changelog/2016.23.md)
+
 # 2016
 
 We're just getting started.
