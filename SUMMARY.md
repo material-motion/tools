@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
-* Release process
+* [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Meta](roadmaps/meta.md)
    * [Android](roadmaps/android.md)
