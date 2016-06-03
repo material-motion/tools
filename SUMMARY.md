@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
+* [Updating our books](updating_our_books.md)
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Meta](roadmaps/meta.md)
