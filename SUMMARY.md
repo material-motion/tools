@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
+* Updating our books
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Meta](roadmaps/meta.md)
@@ -13,5 +14,4 @@
    * [2016 Week 23 (Start of June)](changelog/2016.23.md)
    * [2016 Week 22 (End of May)](changelog/2016.22.md)
 * [Random](random.md)
-* Updating our books
 
