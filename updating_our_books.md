@@ -19,4 +19,7 @@ The following commands show how to update the team book, but the steps apply to 
     
     git push origin master
 
-    
+## Cutting releases
+
+TODO: Determine how often we cut releases.
+TODO: Determine what we need to communicate in a release cut.
