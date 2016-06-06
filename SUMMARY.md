@@ -6,11 +6,11 @@
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Starmap](roadmaps/meta.md)
+   * Directors
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
    * [Swift](roadmaps/swift.md)
    * [JavaScript](roadmaps/web.md)
-   * Directors
 * [Changelog](CHANGELOG.md)
    * [2016 Week 23 (Start of June)](changelog/2016.23.md)
    * [2016 Week 22 (End of May)](changelog/2016.22.md)
