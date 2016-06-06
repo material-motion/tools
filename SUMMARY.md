@@ -5,7 +5,7 @@
 * [Updating our books](updating_our_books.md)
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
-   * [Meta](roadmaps/meta.md)
+   * [Starmap](roadmaps/meta.md)
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
    * [Swift](roadmaps/swift.md)
