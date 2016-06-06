@@ -6,7 +6,7 @@
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Starmap](roadmaps/meta.md)
-   * Directors
+   * [Directors](roadmaps/directors.md)
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
    * [Swift](roadmaps/swift.md)
