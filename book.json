@@ -1,7 +1,8 @@
 {
     "plugins": [
         "edit-link",
-        "anchors"
+        "anchors",
+        "videos"
     ],
     "pluginsConfig": {
         "edit-link": {
