@@ -3,7 +3,7 @@
 
 ## Communication
 
-We hang out on Discord. The channel is presently private.
+We hang out on Discord. The channel is presently private. Visit https://discord.gg/cerberus-venomous-sonic to join the server. A member of the core team will need to approve your account.
 
 All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
 
