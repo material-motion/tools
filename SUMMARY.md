@@ -5,7 +5,7 @@
 * [Updating our books](updating_our_books.md)
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
-   * Checklist
+   * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
    * [Android](roadmaps/android.md)
    * [Objective-C](roadmaps/objective-c.md)
