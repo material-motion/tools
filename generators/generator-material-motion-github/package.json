@@ -1,0 +1,20 @@
+{
+  "name": "generator-material-motion-github",
+  "version": "1.0.0",
+  "description": "A Material Motion github repository.",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Google Inc.",
+  "license": "Apache 2.0",
+  "dependencies": {
+    "titlecase": "^1.1.2",
+    "yeoman-generator": "^0.23.3"
+  }
+}
