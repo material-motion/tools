@@ -16,5 +16,8 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ The <%= name %> class <# summarized #>.
+ */
 @interface MMO<%= name %> : NSObject
 @end

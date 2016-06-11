@@ -16,6 +16,9 @@
 
 import Foundation
 
+/**
+ The <%= name %> class <# summarized #>.
+ */
 class <%= name %> {
 
 }
