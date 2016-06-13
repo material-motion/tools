@@ -14,7 +14,7 @@
  limitations under the License.
  */
 
-#import "MMO<%= name %>.h"
+#import "MDM<%= name %>.h"
 
-@implementation MMO<%= name %>
+@implementation MDM<%= name %>
 @end

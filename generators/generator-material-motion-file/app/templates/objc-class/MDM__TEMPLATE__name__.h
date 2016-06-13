@@ -19,5 +19,5 @@
 /**
  The <%= name %> class <# summarized #>.
  */
-@interface MMO<%= name %> : NSObject
+@interface MDM<%= name %> : NSObject
 @end
