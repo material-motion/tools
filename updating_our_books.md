@@ -1,4 +1,4 @@
-# Updating our books
+# Mirroring GitBooks to GitHub
 
 We strictly edit our books in the [GitBook](https://www.gitbook.com/) web UI. GitHub simply stores a copy of the book in a versioned format.
 
