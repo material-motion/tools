@@ -15,5 +15,5 @@
    * [2016 Week 23 (Start of June)](changelog/2016.23.md)
    * [2016 Week 22 (End of May)](changelog/2016.22.md)
 * [Random](random.md)
-* Giving feedback/code review
+* [Giving feedback/code review](giving_feedback.md)
 
