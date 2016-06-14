@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
-* [Updating our books](updating_our_books.md)
+* [Mirroring content from GitBooks to GitHub](updating_our_books.md)
 * [Release process](release_process.md)
 * [Roadmaps](roadmaps/README.md)
    * [Checklist](roadmaps/checklist.md)
