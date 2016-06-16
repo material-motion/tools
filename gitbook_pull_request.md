@@ -44,7 +44,7 @@ These commands assume that you have already created a branch in GitBook and made
 
 **Heed the dragon: do not merge the pull request via GitHub's web UI**.
 
-Instead, push your branch back to GitBook and merge the branch via GitBook's web UI:
+Once your pull request is LGTM'd, push your branch back to GitBook and merge the branch via GitBook's web UI:
 
     git push yourbranch gitbook/yourbranch
     
