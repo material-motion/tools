@@ -11,8 +11,8 @@ These commands assume that you have already created a branch in GitBook and made
     git remote add gitbook https://git.gitbook.com/material-motion/material-motion-team.git
     git remote add origin git@github.com:material-motion/material-motion-team.git
     
-    # Update the gitbook branches
-    git fetch gitbook
+    # Update the branches
+    git fetch gitbook origin
     # Enter your GitBook email/password
     
     # Create a branch for your GitBook branch
