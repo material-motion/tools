@@ -22,3 +22,11 @@ These commands assume that you have already created a branch in GitBook and made
     git push origin yourbranch
     
     # Start a pull request on the web ui
+
+Do not merge the pull request via GitHub's web UI. Instead, push your branch back to GitBook and merge the branch via GitBook's web UI:
+
+    git push yourbranch gitbook/yourbranch
+    
+    # Merge your branch into master on GitBook
+
+Optional: you can now follow our typical [mirroring workflow](updating_our_books.md) to update the GitHub repo with your latest changes.
