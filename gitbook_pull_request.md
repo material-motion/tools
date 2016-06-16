@@ -23,7 +23,26 @@ These commands assume that you have already created a branch in GitBook and made
     
     # Start a pull request on the web ui
 
-**Do not merge the pull request via GitHub's web UI**.
+---
+
+               |\___/|
+              (,\  /,)\
+              /     /  \       DRAGON SAYS HALT:
+             (@_^_@)/   \      DO NOT MERGE GITBOOK PULL
+              W//W_/     \     REQUESTS VIA GITHUB UI.
+            (//) |        \    
+          (/ /) _|_ /   )  \
+        (// /) '/,_ _ _/  (~^-.
+      (( // )) ,-{        _    `.
+     (( /// ))  '/\      /       \
+     (( ///))     `.   {       }  \
+      ((/ ))    .----~-.\   \-'    ~-__
+               ///.----..>   \ \_      ~--____
+                ///-._ _  _ _}    ~--------------
+
+---
+
+**Heed the dragon: do not merge the pull request via GitHub's web UI**.
 
 Instead, push your branch back to GitBook and merge the branch via GitBook's web UI:
 
