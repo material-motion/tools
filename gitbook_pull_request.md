@@ -4,11 +4,10 @@ These steps explain how to create a pull request for one of our GitBook books. I
 
 These commands assume that you have already created a branch in GitBook and made the changes on that branch.
 
+    # First-time setup
     mkdir team
     cd team
     git init
-    
-    # First-time setup
     git remote add gitbook https://git.gitbook.com/material-motion/material-motion-team.git
     git remote add origin git@github.com:material-motion/material-motion-team.git
     
