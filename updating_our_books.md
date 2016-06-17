@@ -1,12 +1,13 @@
-# Updating our books
+# Mirroring GitBooks to GitHub
 
-We strictly edit our books in the [GitBook](https://www.gitbook.com/) web UI. GitHub simply stores a copy of the book in a versioned format.
+We strictly edit our books in the [GitBook](https://www.gitbook.com/) web UI. GitHub is a mirror.
 
 The following commands show how to update the team book, but the steps apply to every book in the [material-motion GitBook organization](https://www.gitbook.com/@material-motion/dashboard).
 
-    cd team
-    
     # First-time setup
+    mkdir team
+    cd team
+    git init
     git remote add gitbook https://git.gitbook.com/material-motion/material-motion-team.git
     git remote add origin git@github.com:material-motion/material-motion-team.git
     
