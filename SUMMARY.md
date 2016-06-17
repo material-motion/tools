@@ -8,7 +8,6 @@
 * [Roadmaps](roadmaps/README.md)
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
-   * [Objective-C](roadmaps/objective-c.md)
    * [Swift](roadmaps/swift.md)
    * [JavaScript](roadmaps/web.md)
 * [Changelog](CHANGELOG.md)
