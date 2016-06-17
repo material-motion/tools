@@ -21,21 +21,48 @@ module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
   },
+  
+  initializing: function() {
+    var authorsPath = this.destinationPath('AUTHORS');
+    if (this.fs.exists(authorsPath)) {
+      var authors = this.fs.read(authorsPath);
+
+      var re = /^# This is the list of (.+?) authors for copyright purposes\./; 
+      var m;
+      if ((m = re.exec(authors)) !== null) {
+        if (m.index === re.lastIndex) {
+          re.lastIndex++;
+        }
+        this.name = m[1];
+      }
+    }
+  },
 
   prompting: function () {
-    return this.prompt([{
-      type    : 'input',
-      name    : 'name',
-      message : 'Project name',
-      default : this.appname // Default to current folder name
-    }]).then(function (answers) {
-      this.name = toLaxTitleCase(answers.name);
+    var prompts = [];
+    if (!this.name) {
+      prompts.push({
+        type    : 'input',
+        name    : 'name',
+        message : 'Project name',
+        default : this.appname // Default to current folder name
+      });
+    }
+    return this.prompt(prompts).then(function (answers) {
+      if (answers.name) {
+        this.name = toLaxTitleCase(answers.name);
+      }
     }.bind(this));
   },
 
   writing: function () {
     this.fs.copyTpl(
       this.templatePath('*'),
+      this.destinationPath(''),
+      { name: this.name }
+    );
+    this.fs.copyTpl(
+      this.templatePath('.*'),
       this.destinationPath(''),
       { name: this.name }
     );

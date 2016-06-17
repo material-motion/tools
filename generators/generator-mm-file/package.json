@@ -1,7 +1,7 @@
 {
-  "name": "generator-material-motion-github",
+  "name": "generator-mm-file",
   "version": "1.0.0",
-  "description": "Yeoman generator for a Material Motion github repository.",
+  "description": "Yeoman generator for a Material Motion file.",
   "files": [
     "app"
   ],
@@ -14,7 +14,6 @@
   "author": "Google Inc.",
   "license": "Apache 2.0",
   "dependencies": {
-    "titlecase": "^1.1.2",
     "yeoman-generator": "^0.23.3"
   }
 }
