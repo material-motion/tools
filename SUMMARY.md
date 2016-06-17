@@ -8,7 +8,6 @@
 * [Roadmaps](roadmaps/README.md)
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
-   * [Swift](roadmaps/swift.md)
    * [JavaScript](roadmaps/web.md)
 * [Changelog](CHANGELOG.md)
    * [2016 Week 23 (Start of June)](changelog/2016.23.md)
