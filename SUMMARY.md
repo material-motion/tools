@@ -8,8 +8,5 @@
 * [Roadmaps](roadmaps/README.md)
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
-* [Changelog](CHANGELOG.md)
-   * [2016 Week 23 (Start of June)](changelog/2016.23.md)
-   * [2016 Week 22 (End of May)](changelog/2016.22.md)
 * [Random](random.md)
 
