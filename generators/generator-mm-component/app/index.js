@@ -28,7 +28,7 @@ module.exports = generators.Base.extend({
     return this.prompt([{
       type    : 'list',
       name    : 'type',
-      message : 'Choose the type of component',
+      message : 'Choose the type of component:',
       choices : function() {
         return fs.readdirSync(this.sourceRoot()).filter(function(file) {
           return file.substr(0, 1) != '.';
@@ -37,11 +37,11 @@ module.exports = generators.Base.extend({
     }, {
       type    : 'input',
       name    : 'name',
-      message : 'Component name (no prefix, e.g. Runtime)'
+      message : 'Component name (no prefix, e.g. Runtime):'
     }, {
       type    : 'input',
       name    : 'description',
-      message : 'Single line description'
+      message : 'Single line description:'
     }]).then(function (answers) {
       this.type = answers.type;
       this.name = answers.name;
