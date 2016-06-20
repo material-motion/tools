@@ -16,6 +16,7 @@
 
 var generators = require('yeoman-generator');
 var toLaxTitleCase = require('titlecase').toLaxTitleCase;
+const spawn = require('child_process').spawn;
 
 module.exports = generators.Base.extend({
   constructor: function () {
@@ -66,5 +67,21 @@ module.exports = generators.Base.extend({
       this.destinationPath(''),
       { name: this.name }
     );
+  },
+
+  install: function () {
+    const done = this.async();
+    spawn('git', ['submodule', 'init']).on('close', function(code) {
+
+      spawn('git', [
+          'submodule',
+          'add',
+          'https://github.com/google/arc-proselint.git',
+          'third_party/arc-proselint'
+      ]).on('close', function(code) {
+        done();
+      });
+      done();
+    });
   }
 });
