@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "<%= name %>"
+  s.name         = "MaterialMotion<%= name %>"
   s.summary      = "<%= description %>"
   s.version      = "1.0.0"
   s.authors      = "The Material Motion Authors."

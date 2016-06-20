@@ -17,19 +17,7 @@
 var generators = require('yeoman-generator');
 var fs = require('fs');
 var mkdirp = require('mkdirp');
-
-// https://gist.github.com/kethinov/6658166
-var walkSync = function(dir, filelist) {
-  files = fs.readdirSync(dir);
-  filelist = filelist || [];
-  files.forEach(function(file) {
-    filelist.push(file);
-    if (fs.statSync(dir + '/' + file).isDirectory()) {
-      filelist = walkSync(dir + '/' + file, filelist);
-    }
-  });
-  return filelist;
-};
+var file = require('file');
 
 module.exports = generators.Base.extend({
   constructor: function () {
@@ -41,11 +29,15 @@ module.exports = generators.Base.extend({
       type    : 'list',
       name    : 'type',
       message : 'Choose the type of component',
-      choices : fs.readdirSync(this.sourceRoot())
+      choices : function() {
+        return fs.readdirSync(this.sourceRoot()).filter(function(file) {
+          return file.substr(0, 1) != '.';
+        });
+      }.bind(this)()
     }, {
       type    : 'input',
       name    : 'name',
-      message : 'Component name'
+      message : 'Component name (no prefix, e.g. Runtime)'
     }, {
       type    : 'input',
       name    : 'description',
@@ -59,18 +51,17 @@ module.exports = generators.Base.extend({
 
   writing: function () {
     var base_path = this.templatePath(this.type);
-    var files = walkSync(base_path);
-    for (var i in files) {
-      var file = files[i];
-      if (fs.statSync(base_path + '/' + file).isDirectory()) {
-        mkdirp.sync(this.destinationPath(file.replace('__TEMPLATE__name__', this.name)));
-      } else {
+
+    file.walkSync(base_path, function (start, dirs, names) {
+      for (var i in names) {
+        var file = start + '/' + names[i];
+        file = file.substr(base_path.length + 1);
         this.fs.copyTpl(
           base_path + '/' + file,
-          this.destinationPath(file.replace('__TEMPLATE__name__', this.name)),
+          this.destinationPath(file.replace(/__TEMPLATE__name__/g, this.name)),
           { name: this.name, description: this.description }
         );
       }
-    }
+    }.bind(this));
   }
 });

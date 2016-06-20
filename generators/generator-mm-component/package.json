@@ -14,6 +14,7 @@
   "author": "Google Inc.",
   "license": "Apache 2.0",
   "dependencies": {
+    "file": "^0.2.2",
     "yeoman-generator": "^0.23.3"
   }
 }
