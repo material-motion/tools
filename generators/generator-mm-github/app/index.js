@@ -16,6 +16,7 @@
 
 var generators = require('yeoman-generator');
 var fs = require('fs');
+var async = require('async');
 var toLaxTitleCase = require('titlecase').toLaxTitleCase;
 const spawn = require('child_process').spawn;
 
@@ -90,18 +91,45 @@ module.exports = generators.Base.extend({
   },
 
   install: function () {
-    const done = this.async();
-    spawn('git', ['submodule', 'init']).on('close', function(code) {
+    var submodules = {
+      'basic': {
+        'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git'
+      },
+      'objc': {
+        'third_party/clang-format-linter': 'https://github.com/vhbit/clang-format-linter.git',
+        'third_party/arc-jazzy-linter': 'https://github.com/google/arc-jazzy-linter.git',
+        'third_party/arc-xcode-test-engine': 'https://github.com/google/arc-xcode-test-engine.git'
+      }
+    };
 
-      spawn('git', [
-          'submodule',
-          'add',
-          'https://github.com/google/arc-proselint.git',
-          'third_party/arc-proselint'
-      ]).on('close', function(code) {
-        done();
-      });
-      done();
-    });
+    spawn('git', ['init']).on('close', function(code) {
+      spawn('git', ['submodule', 'init']).on('close', function(code) {
+        var installModules = function(type, cb) {
+          var modules = submodules[type];
+
+          async.forEachOfSeries(modules, function(module, path, callback) {
+            spawn('git', [
+                'submodule',
+                'add',
+                module,
+                path
+            ]).on('close', function(code) {
+              callback();
+            });
+          }, function(err) {
+            if (cb) {
+              cb();
+            }
+          });
+        }.bind(this);
+
+        if (this.type != 'basic') {
+          installModules('basic');
+        }
+        const done = this.async();
+        installModules(this.type, done);
+      }.bind(this));
+
+    }.bind(this));
   }
 });
