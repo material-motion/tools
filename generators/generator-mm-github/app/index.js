@@ -15,6 +15,7 @@
  */
 
 var generators = require('yeoman-generator');
+var fs = require('fs');
 var toLaxTitleCase = require('titlecase').toLaxTitleCase;
 const spawn = require('child_process').spawn;
 
@@ -49,24 +50,43 @@ module.exports = generators.Base.extend({
         default : this.appname // Default to current folder name
       });
     }
+
+    prompts.push({
+      type    : 'list',
+      name    : 'type',
+      message : 'Choose the type of repo:',
+      choices : function() {
+        return fs.readdirSync(this.sourceRoot()).filter(function(file) {
+          return file.substr(0, 1) != '.';
+        });
+      }.bind(this)()
+    });
     return this.prompt(prompts).then(function (answers) {
       if (answers.name) {
         this.name = toLaxTitleCase(answers.name);
       }
+      this.type = answers.type;
     }.bind(this));
   },
 
   writing: function () {
-    this.fs.copyTpl(
-      this.templatePath('*'),
-      this.destinationPath(''),
-      { name: this.name }
-    );
-    this.fs.copyTpl(
-      this.templatePath('.*'),
-      this.destinationPath(''),
-      { name: this.name }
-    );
+    var copyAll = function(type) {
+      this.fs.copyTpl(
+        this.templatePath(type + '/*'),
+        this.destinationPath(''),
+        { name: this.name }
+      );
+      this.fs.copyTpl(
+        this.templatePath(type + '/.*'),
+        this.destinationPath(''),
+        { name: this.name }
+      );
+    }.bind(this);
+
+    if (this.type != 'basic') {
+      copyAll('basic');
+    }
+    copyAll(this.type);
   },
 
   install: function () {
