@@ -29,8 +29,13 @@ For ourselves as a team:
 
 ### Installing our tools
 
+We have a team command line tool that we use to gather all of our essential commands together.
+
     git clone git@github.com:material-motion/material-motion-team.git
-    
+    cd material-motion-team
+    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH" >> ~/.bash_profile
+    source ~/.bash_profile
+    mdm tools install
 
 ### GitHub
 
