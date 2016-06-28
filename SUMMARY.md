@@ -11,5 +11,5 @@
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* Best practices
+* [Best practices](best_practices/README.md)
 
