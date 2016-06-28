@@ -27,6 +27,11 @@ For ourselves as a team:
 - The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
 - [draw.io](https://www.draw.io) for SVG and flow-chart editing.
 
+### Installing our tools
+
+    git clone git@github.com:material-motion/material-motion-team.git
+    
+
 ### GitHub
 
 - [Add SSH keys to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
