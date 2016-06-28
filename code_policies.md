@@ -2,6 +2,7 @@
 
 This article defines the core contributor coding policies we expect implementations of the Starmap to follow.
 
+
 ## Branches
 
 Primary development branch: **develop**
