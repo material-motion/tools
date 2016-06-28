@@ -12,6 +12,6 @@
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
 * [Team practices](best_practices/README.md)
-   * [OS](best_practices/appleos.md)
+   * [OS](team_practices/appleos.md)
    * Android
 
