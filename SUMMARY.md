@@ -11,7 +11,7 @@
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* [Best practices](best_practices/README.md)
+* [Team practices](best_practices/README.md)
    * [OS](best_practices/appleos.md)
    * Android
 
