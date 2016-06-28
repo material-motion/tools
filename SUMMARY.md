@@ -13,4 +13,5 @@
 * [Random](random.md)
 * [Best practices](best_practices/README.md)
    * [OS](best_practices/appleos.md)
+   * Android
 
