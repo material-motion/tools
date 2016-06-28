@@ -36,7 +36,7 @@ For ourselves as a team:
 
 Versions of software we use:
 
-- Android Studio 2.1
+- Android Studio 2.2 Preview 4
 
 ### Objective-C/Swift
 
