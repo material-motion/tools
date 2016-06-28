@@ -1,2 +1,2 @@
-# Best practices
+# Team practices
 
