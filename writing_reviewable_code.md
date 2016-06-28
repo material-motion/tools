@@ -25,6 +25,7 @@ Phabricator makes it possible to mark a diff as depending on another diff.
 
 Here's one workflow for doing work on two dependent diffs:
 
+    git fetch # Get the latest from origin
     arc feature foo  # Start a new feature, "foo"
     
     # make changes
