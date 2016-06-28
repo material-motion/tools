@@ -10,7 +10,7 @@
 * [Team practices](team_practices/README.md)
    * [OS](team_practices/appleos.md)
    * [Android](team_practices/android.md)
-   * Web
+   * [Web](team_practices/web.md)
 * [Roadmaps](roadmaps/README.md)
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
