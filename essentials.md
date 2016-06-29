@@ -49,12 +49,14 @@ Versions of software we use:
 
 - Android Studio 2.2 Preview 4
 
-### Objective-C/Swift
+### OS
 
 Versions of software we use:
 
-- Xcode 7.3.
-- Swift 2.2.
+- Objective-C: 
+  - Xcode 7.3.
+- Swift 3.0: 
+  - Xcode 8 beta
 
 ## Experimental work
 
