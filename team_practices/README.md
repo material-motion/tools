@@ -10,7 +10,7 @@ The exception to the above is GitBook markdown. The GitBook editor is designed a
 
 ## Copyright comments
 
-All files must have the following comment. There should be no whitespace nor characters before it. Be sure to inspect auto-generated files and open packages, such as Xcode Playgrounds; they often have files that aren't easily seen.
+All files **must** have the following comment. There should be no whitespace nor characters before it. Be sure to inspect auto-generated files and open packages, such as Xcode Playgrounds; they often have files that aren't easily seen.
 
 
     /*
