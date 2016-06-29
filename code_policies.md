@@ -73,9 +73,3 @@ The process for this is:
 ## Addendum
 
 For instructions on installing our yeoman generator, go to [Installing our tools](./essentials.md#installing-our-tools).
-
-    git clone git@github.com:material-motion/material-motion-team.git
-    cd material-motion-team
-    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH" >> ~/.bash_profile
-    source ~/.bash_profile
-    mdm tools install
