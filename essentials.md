@@ -23,9 +23,10 @@ For ourselves as a team:
 
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
-- git for all version tracking.
-- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
-- [draw.io](https://www.draw.io) for SVG and flow-chart editing.
+- git for all version tracking
+- [Phabricator Differential](https://www.phacility.com/phabricator/differential/) and [Arcanist](https://secure.phabricator.com/book/phabricator/article/arcanist/) for code-review
+- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline
+- [draw.io](https://www.draw.io) for SVG and flow-chart editing
 
 ### Installing our tools
 
