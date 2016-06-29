@@ -7,6 +7,10 @@ We hang out on Discord. The channel is presently private. Visit https://discord.
 
 All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
 
+Mailing list: material-motion@googlegroups.com
+
+Announcement mailing list: material-motion-announce@googlegroups.com
+
 ## Team goals
 
 For each of the ideas explored in the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/):
