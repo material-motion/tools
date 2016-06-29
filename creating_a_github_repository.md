@@ -1,6 +1,6 @@
 # Creating a GitHub repository
 
-GitHub repository creation on the `material-motion` org is restricted to a small set of Googlers.
+GitHub repository creation rights for the `material-motion` org is restricted to a small set of Googlers.
 
 ## Conventions
 
