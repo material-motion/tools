@@ -72,7 +72,7 @@ The process for this is:
 
 ## Addendum
 
-To install our yeoman generator, run the following:
+For instructions on installing our yeoman generator, go to [Installing our tools](../content/essentials#installing-our-tools).
 
     git clone git@github.com:material-motion/material-motion-team.git
     cd material-motion-team
