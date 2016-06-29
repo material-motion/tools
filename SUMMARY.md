@@ -4,7 +4,7 @@
 * [Essentials](essentials.md)
 * [Mirroring GitBooks to GitHub](updating_our_books.md)
 * [Creating a GitBook pull request](gitbook_pull_request.md)
-* Creating a GitHub repository
+* [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
 * [Release process](release_process.md)
