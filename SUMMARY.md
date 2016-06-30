@@ -8,7 +8,7 @@
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
 * [Release process](release_process/README.md)
-   * Android
+   * [Android](release_process/android.md)
    * OS
    * Web
 * [Team practices](team_practices/README.md)
