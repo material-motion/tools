@@ -10,6 +10,10 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ## Supported tool versions
 
+### Cocoapods
+
+We use Cocoapods 1.0.1.
+
 ### Xcode
 
 We use Xcode 7.3.1 and Xcode 8 (for Swift 3).
