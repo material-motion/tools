@@ -10,7 +10,7 @@ We use two categories of label: `flow` and `type`. Every issue must have at leas
 
 We use milestones to plan out our work.
 
-Each project has a "Next release" milestone. We cut releases on Wednesdays each week.
+Each project has a "Next release" milestone. We cut releases on Wednesdays each week. See our [release process](https://material-motion.gitbooks.io/material-motion-team/content/release_process/).
 
 ## Triaging issues
 
