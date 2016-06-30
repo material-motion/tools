@@ -10,6 +10,7 @@
 * [Release process](release_process/README.md)
    * Android
    * OS
+   * Web
 * [Team practices](team_practices/README.md)
    * [OS](team_practices/appleos.md)
    * [Android](team_practices/android.md)
