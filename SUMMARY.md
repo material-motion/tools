@@ -16,7 +16,7 @@
    * [Web](release_process/web.md)
 * [Team practices](team_practices/README.md)
    * [Android](team_practices/android.md)
-   * [OS](team_practices/appleos.md)
+   * [appleOS](team_practices/appleos.md)
    * [Web](team_practices/web.md)
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
