@@ -9,7 +9,7 @@
 * [Writing reviewable code](writing_reviewable_code.md)
 * [On: writing le code](code_policies.md)
 * [On: issues/bugs/feature requests](issue_policies.md)
-* [On: code of conduct](code_of_conduct.md)
+* [Code of conduct](code_of_conduct.md)
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
    * [OS](release_process/appleos.md)
