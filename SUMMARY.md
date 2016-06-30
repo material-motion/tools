@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Essentials](essentials.md)
 * Communication
+* [Essentials](essentials.md)
 * [Mirroring GitBooks to GitHub](updating_our_books.md)
 * [Creating a GitBook pull request](gitbook_pull_request.md)
 * [Creating a GitHub repository](creating_a_github_repository.md)
