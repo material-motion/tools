@@ -28,7 +28,11 @@ We have a team command line tool that installs the different commands.
 
     git clone git@github.com:material-motion/material-motion-team.git
     cd material-motion-team
-    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH" >> ~/.bash_profile
+    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
+    
+This output should be added to your `~/.bashrc` or `~/.bash_profile`.
+    
+    # edit ~/.bash_profile
     source ~/.bash_profile
     mdm tools install
 
