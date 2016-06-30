@@ -20,4 +20,5 @@
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
+* Community policies
 
