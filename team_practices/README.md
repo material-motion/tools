@@ -29,4 +29,7 @@ All files **must** have the following comment. There should be no whitespace nor
     limitations under the License.
     */
 
+## File names
+
+File names should not have spaces in them. If a space is needed for clarity, use upper snake case (This_Is_Snake_Case_BTW.h)
 
