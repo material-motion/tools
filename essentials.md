@@ -3,9 +3,13 @@
 
 ## Communication
 
-We hang out on Discord. The channel is presently private. Visit https://discord.gg/cerberus-venomous-sonic to join the server. A member of the core team will need to approve your account.
+We hang out on Discord. The channel is presently private. Visit https://discord.gg/AJbyYDf to join the server. A member of the core team will need to approve your account.
 
 All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
+
+Mailing list: material-motion@googlegroups.com
+
+Announcement mailing list: material-motion-announce@googlegroups.com
 
 ## Team goals
 
@@ -23,9 +27,20 @@ For ourselves as a team:
 
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
-- git for all version tracking.
-- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline.
-- [draw.io](https://www.draw.io) for SVG and flow-chart editing.
+- git for all version tracking
+- [Phabricator Differential](https://www.phacility.com/phabricator/differential/) for code-review
+- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline
+- [draw.io](https://www.draw.io) for SVG and flow-chart editing
+
+### Installing our tools
+
+We have a team command line tool that installs the different commands.
+
+    git clone git@github.com:material-motion/material-motion-team.git
+    cd material-motion-team
+    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH" >> ~/.bash_profile
+    source ~/.bash_profile
+    mdm tools install
 
 ### GitHub
 
@@ -36,14 +51,16 @@ For ourselves as a team:
 
 Versions of software we use:
 
-- Android Studio 2.1
+- Android Studio 2.2 Preview 4
 
-### Objective-C/Swift
+### OS
 
 Versions of software we use:
 
-- Xcode 7.3.
-- Swift 2.2.
+- Objective-C: 
+  - Xcode 7.3.
+- Swift 3.0: 
+  - Xcode 8 beta
 
 ## Experimental work
 
@@ -57,12 +74,6 @@ Each platform and language has an `experiments` GitHub repo. We use these repos 
 You can now begin working within your new experimental folder.
 
 We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
-
-
-
-## Getting started
-
-New to the material-motion team? Start by browsing the [Roadmaps](roadmaps/) to learn more about what the team is up to.
 
 ## GitBook etiquette
 
