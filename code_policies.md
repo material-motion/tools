@@ -1,4 +1,4 @@
-# Code policies
+# Writing code
 
 This article defines the core contributor coding policies we expect implementations of the Starmap to follow.
 
