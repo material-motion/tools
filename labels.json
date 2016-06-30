@@ -1,0 +1,35 @@
+{
+  "map": {
+    "bug": "type: Bug",
+    "duplicate": "type: Duplicate",
+    "enhancement": "type: Feature request",
+    "help wanted": null,
+    "invalid": "type: Won't fix",
+    "question": "type: Question",
+    "wontfix": "type: Won't fix",
+    "Test label": null,
+    "In Code Review": "flow: In review",
+    "In Progress": "flow: In progress"
+  },
+  "labels": {
+    "flow: Blocking next release": "F44336",
+    "flow: Needing clarification": "F29E73",
+    "flow: Needing research": "F29E73",
+    "flow: Blocked": "F44336",
+    "flow: Ready for action": "4CAF50",
+    "flow: In progress": "4CAF50",
+    "flow: In review": "4CAF50",
+    "type: API change": "BBDEFB",
+    "type: Bug": "F44336",
+    "type: Documentation": "BBDEFB",
+    "type: Duplicate": "EEEEEE",
+    "type: Feature request": "BBDEFB",
+    "type: Internal cleanup": "BBDEFB",
+    "type: Process": "BBDEFB",
+    "type: Question": "673AB7",
+    "type: Visual bug": "F44336",
+    "type: Won't fix": "EEEEEE",
+    "type: Working as intended": "EEEEEE",
+    "Newbie friendly": "333333"
+  }
+}
