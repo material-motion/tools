@@ -1,2 +1,2 @@
-# Community culture
+# Code of conduct
 
