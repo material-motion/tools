@@ -9,6 +9,7 @@
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
 * [Issue policies](issue_policies.md)
+* Community policies
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
    * [OS](release_process/appleos.md)
@@ -20,5 +21,4 @@
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* Community policies
 
