@@ -21,3 +21,7 @@ Update the default branch for your repository by visiting your repository's bran
 You can now delete the `master` branch.
 
     git push origin :master
+
+Set up your repository's labels by running the following from a local copy of the material-motion-team repo:
+
+    gh label templatize --template labels.json -u material-motion -r material-motion-repo-name
