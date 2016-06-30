@@ -19,4 +19,5 @@
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
+* Issue policies
 
