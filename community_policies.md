@@ -1,2 +1,2 @@
-# Community policies
+# Community culture
 
