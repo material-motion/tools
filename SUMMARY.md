@@ -7,7 +7,7 @@
 * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
-* [Release process](release_process.md)
+* [Release process](release_process/README.md)
 * [Team practices](team_practices/README.md)
    * [OS](team_practices/appleos.md)
    * [Android](team_practices/android.md)
