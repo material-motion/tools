@@ -1,3 +1,6 @@
 [submodule "third_party/arc-proselint"]
 	path = third_party/arc-proselint
 	url = https://github.com/google/arc-proselint.git
+[submodule "third_party/gh"]
+	path = third_party/gh
+	url = git@github.com:material-motion/gh.git
