@@ -7,6 +7,7 @@
 * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
+* Issue policies
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
    * [OS](release_process/appleos.md)
@@ -19,5 +20,4 @@
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* Issue policies
 
