@@ -43,7 +43,7 @@ Versions of software we use:
 
 - Android Studio 2.2 Preview 4
 
-### OS
+### appleOS
 
 Versions of software we use:
 
