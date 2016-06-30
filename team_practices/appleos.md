@@ -10,6 +10,16 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ## Supported tool versions
 
+### Xcode
+
+We presently use Xcode 7.2.1 and Xcode 8.
+
+### Swift
+
+We write Swift 3 code.
+
+### psych
+
 We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to the Podfile.lock after a `pod install`. Older versions removed the quotes.
 
 View your version:
