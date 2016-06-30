@@ -8,7 +8,7 @@
 * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [On: writing le code](code_policies.md)
-* [Issue policies](issue_policies.md)
+* [On: issues/bugs/feature requests](issue_policies.md)
 * [Community policies](community_policies.md)
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
