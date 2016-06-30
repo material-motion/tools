@@ -18,7 +18,6 @@
    * [OS](team_practices/appleos.md)
    * [Web](team_practices/web.md)
 * [Roadmaps](roadmaps/README.md)
-   * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
 
