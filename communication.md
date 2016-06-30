@@ -7,3 +7,5 @@ All of our work lives in the [material-motion](https://github.com/material-motio
 Mailing list: material-motion@googlegroups.com
 
 Announcement mailing list: material-motion-announce@googlegroups.com
+
+Twitter: [@material_motion](http://twitter.com/material_motion)
