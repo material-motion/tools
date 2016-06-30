@@ -4,7 +4,9 @@ We host all of our issues on GitHub.
 
 ## Labels
 
-We use two categories of label: `flow` and `type`. Every issue must have at least one label from each category.
+We use two categories of label: `flow` and `type`.
+
+Every issue must have at least one label from each category.
 
 - [See example of our labels](https://github.com/material-motion/material-motion-team/labels)
 
