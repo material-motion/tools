@@ -1,5 +1,7 @@
 # Issue policies
 
+We host all of our issues on GitHub.
+
 ## Labels
 
 We use two categories of label: `flow` and `type`. Every issue must have at least one label from each category.
@@ -8,7 +10,7 @@ We use two categories of label: `flow` and `type`. Every issue must have at leas
 
 ## Milestones
 
-We use milestones to plan out our work.
+We use GitHub milestones to plan out our work.
 
 Each project has a "Next release" milestone. We cut releases on Wednesdays each week. See our [release process](https://material-motion.gitbooks.io/material-motion-team/content/release_process/).
 
