@@ -9,7 +9,7 @@
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Code policies](code_policies.md)
 * [Issue policies](issue_policies.md)
-* Community policies
+* [Community policies](community_policies.md)
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
    * [OS](release_process/appleos.md)
