@@ -12,7 +12,7 @@
 * [Code of conduct](code_of_conduct.md)
 * [Release process](release_process/README.md)
    * [Android](release_process/android.md)
-   * [OS](release_process/appleos.md)
+   * [appleOS](release_process/appleos.md)
    * [Web](release_process/web.md)
 * [Team practices](team_practices/README.md)
    * [Android](team_practices/android.md)
