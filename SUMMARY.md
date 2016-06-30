@@ -9,6 +9,7 @@
 * [Code policies](code_policies.md)
 * [Release process](release_process/README.md)
    * Android
+   * OS
 * [Team practices](team_practices/README.md)
    * [OS](team_practices/appleos.md)
    * [Android](team_practices/android.md)
