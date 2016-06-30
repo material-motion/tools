@@ -22,6 +22,12 @@ You can now delete the `master` branch.
 
     git push origin :master
 
+Set up the `gh` command line tool:
+
+    git clone git@github.com:material-motion/gh.git
+    cd gh
+    sudo npm link
+
 Set up your repository's labels by running the following from a local copy of the material-motion-team repo:
 
     gh label templatize --template labels.json -u material-motion -r material-motion-repo-name
