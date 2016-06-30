@@ -12,7 +12,7 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ### Xcode
 
-We use Xcode 7.2.1 and Xcode 8 (for Swift 3).
+We use Xcode 7.3.1 and Xcode 8 (for Swift 3).
 
 ### Swift
 
