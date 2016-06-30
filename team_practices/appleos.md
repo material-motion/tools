@@ -10,7 +10,7 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ## Supported tool versions
 
-We use version 2.1.0 of the `psych` gem.
+We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to the Podfile.lock after a `pod install`. Older versions removed the quotes.
 
 View your version:
 
