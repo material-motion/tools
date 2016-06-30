@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
+* Communication
 * [Mirroring GitBooks to GitHub](updating_our_books.md)
 * [Creating a GitBook pull request](gitbook_pull_request.md)
 * [Creating a GitHub repository](creating_a_github_repository.md)
@@ -20,5 +21,4 @@
    * [Checklist](roadmaps/checklist.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* Communication
 
