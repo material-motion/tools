@@ -1,12 +1,10 @@
 # Material Motion team documents
 
-The Material Motion team members may be found at https://github.com/orgs/material-motion/teams/core-team.
+Welcome to the Material Motion's team documentation. This is the central place to learn about how we operate as a team and as a community.
 
-New to the team? Check out our [Essentials](essentials.md).
+Want to know where we're going? The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals. We plan our weekly milestones and roadmap on Discord. [Join our channel](https://discord.gg/AJbyYDf).
 
-The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
-
-Our [Roadmaps](roadmaps/) define our shorter-term goals as a team and on specific platforms/languages.
+Want to contribute? Already contributing? Check out our [Contributor essentials](essentials/).
 
 ## License
 

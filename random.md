@@ -1,5 +1,9 @@
 # Random
 
+https://runcommand.io/2016/06/26/my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project/
+
+- Discusses open source maintenance.
+
 http://yeoman.io/generators/
 
 - Nice list of generators for yeoman.
@@ -25,3 +29,6 @@ http://framer-spring.s3-website-us-east-1.amazonaws.com/
 
 - Interactive spring playground.
 
+http://ncase.me/polygons/
+
+- Delightful message. Delightful interactions.

@@ -41,3 +41,21 @@ Set up the `gh` command line tool:
 Set up your repository's labels by running the following from a local copy of the material-motion-team repo:
 
     gh label templatize --template labels.json -u material-motion -r material-motion-repo-name
+
+## Step 6: Disable the Wiki
+
+Open the Settings and options pages. Disable the Wiki.
+
+## Step 7: Disable merge commits
+
+Open the Settings and options pages. Disable "Allow merge commits".
+
+## Step 8: Initial commit
+
+If you're creating a new repo then you can run our github yeoman generator like so:
+
+    mkdir new-repo
+    cd new-repo
+    yo mm-github
+
+This will create the scaffolding `.arc` and open source licensing files. See the bottom of this article for help installing our yeoman generators.
