@@ -14,19 +14,6 @@ For ourselves as a team:
 
 - Operate in the open.
 
-## Experimental work
-
-Each platform and language has an `experiments` GitHub repo. We use these repos to house code that isn't ready for production use. This means that APIs are subject to change at **any point in time** without warning.
-
-    git clone git@github.com:material-motion/material-motion-experiments-<yourproject>.git
-    cd material-motion-experiments-<yourproject>
-    
-    mkdir -p material-motion-experiments-/<some name>
-
-You can now begin working within your new experimental folder.
-
-We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
-
 ## GitBook etiquette
 
 GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.
