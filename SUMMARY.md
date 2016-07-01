@@ -9,10 +9,10 @@
 * [Code contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
-   * Casual contributors
-   * Regular contributors
-       * [Onboarding](onboarding.md)
-       * [Tools](tools.md)
+   * [Casual contributors](essentials/casual_contributors/README.md)
+   * [Regular contributors](essentials/regular_contributors/README.md)
+   * 
+       * [Tools](essentials/regular_contributors/tools.md)
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
