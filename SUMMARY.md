@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
-   * Team goals
+   * [Team goals](team_goals.md)
    * [Code of conduct](code_of_conduct.md)
    * [Communication](communication.md)
    * [Experiments](experiments.md)
