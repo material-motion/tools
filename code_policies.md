@@ -12,16 +12,6 @@ Develop features locally on feature branches. Use `arc feature <name>` to start 
 
 We will reserve branches in the primary repos for critical fixes and feature work.
 
-## Code review
-
-Send all code for review via `arc diff`. If you're creating a new repo then you can run our github yeoman generator like so:
-
-    mkdir new-repo
-    cd new-repo
-    yo mm-github
-
-This will create the scaffolding `.arc` and open source licensing files. See the bottom of this article for help installing our yeoman generators.
-
 ## Versioning
 
 Follow strict [semantic versioning](http://semver.org/).
