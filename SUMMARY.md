@@ -8,7 +8,7 @@
    * [Code of conduct](community/code_of_conduct.md)
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
-   * [Experiments](experiments.md)
+   * [Experiments](essentials/experiments.md)
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Team practices](team_practices/README.md)
