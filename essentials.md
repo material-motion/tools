@@ -100,16 +100,11 @@ Create a branch for major edits. You can create a branch by following these step
 
 Once you've created a branch you can freely make changes on it. Your branch is now on its own.
 
-#### Pulling in the latest changes
-
-Changes may land in master while you're working on your branch. To update your branch with these latest changes you can merge `master` into your branch.
-
-To do so, select the "branch" dropdown menu and select "Merge branches". Merge **from** master **to** your branch. Your branch will now include the latest changes from master.
-
-#### Pushing your changes to the master branch
-
-To do so, select the "branch" dropdown menu and select "Merge branches". Merge **from** your branch **to** master. The master branch will now include all of your changes.
-
 ### Handling conflicts
 
 If GitBook detects a conflict when attempting to merge two branches it will open [the conflict resolution](https://www.gitbook.com/blog/features/merge-conflicts) page.
+
+Learn more about GitBook editing by reading:
+
+- [Mirroring GitBooks to GitHub](updating_our_books.md)
+- [Creating a GitBook pull request](gitbook_pull_request.md)
