@@ -70,7 +70,7 @@ Versions of software we use:
 
 ## Experimental work
 
-Each platform and language has an `experiments` GitHub repo. We use these repos to house code that isn't ready for production use.
+Each platform and language has an `experiments` GitHub repo. We use these repos to house code that isn't ready for production use. This means that APIs are subject to change at **any point in time** without warning.
 
     git clone git@github.com:material-motion/material-motion-experiments-<yourproject>.git
     cd material-motion-experiments-<yourproject>
