@@ -27,6 +27,6 @@
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
        * [Mirroring GitBooks to GitHub](starmap_essentials/gitbook/updating_our_books.md)
-       * [Creating a GitBook pull request](starmap_essentials/gitbook/gitbook_pull_request.md)
+       * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Random](random.md)
 
