@@ -13,9 +13,9 @@
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Tools](essentials/regular_contributors/tools.md)
 * [Starmap contributor essentials](starmap_essentials/README.md)
-* [GitBook](gitbook.md)
-   * [Mirroring GitBooks to GitHub](updating_our_books.md)
-   * [Creating a GitBook pull request](gitbook_pull_request.md)
+    * [GitBook](gitbook.md)
+       * [Mirroring GitBooks to GitHub](updating_our_books.md)
+       * [Creating a GitBook pull request](gitbook_pull_request.md)
 * GitHub
    * [Creating a GitHub repository](creating_a_github_repository.md)
    * [Issues/bugs/feature requests](issue_policies.md)
