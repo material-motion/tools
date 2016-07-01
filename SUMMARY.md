@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Essentials for regular contributors](essentials.md)
+* [Essentials](essentials.md)
    * [Code of conduct](code_of_conduct.md)
    * [Communication](communication.md)
    * Casual contributors
