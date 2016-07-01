@@ -26,5 +26,5 @@
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
-* Community
+* [Community](community/README.md)
 
