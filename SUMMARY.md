@@ -2,6 +2,10 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
+   * [Community](community/README.md)
+       * [Contributing](CONTRIBUTING.md)
+       * [Communication](community/communication.md)
+       * [Governance](community/governance.md)
    * [Team goals](team_goals.md)
    * [Code of conduct](code_of_conduct.md)
    * [Communication](communication.md)
@@ -31,9 +35,5 @@
    * [Web](team_practices/web.md)
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
-* [Community](community/README.md)
-   * [Contributing](CONTRIBUTING.md)
-   * [Communication](community/communication.md)
-   * [Governance](community/governance.md)
 * [Random](random.md)
 
