@@ -4,7 +4,7 @@ We use the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap
 
 As a team we **operate in the open**.
 
-For every idea we take on:
+Our general philosophy:
 
 - Elevate existing solutions. Avoid re-inventing wheels.
 - In the absence of existing solutions, build great ones.
