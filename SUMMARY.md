@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Community](community/README.md)
-   * [Contributing](CONTRIBUTING.md)
    * [Communication](community/communication.md)
+   * [Contributing](CONTRIBUTING.md)
    * [Governance](community/governance.md)
 * [Contributor essentials](essentials.md)
    * [Team goals](team_goals.md)
