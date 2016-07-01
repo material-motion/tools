@@ -1,6 +1,10 @@
 # Summary
 
 * [Introduction](README.md)
+* [Community](community/README.md)
+   * [Contributing](CONTRIBUTING.md)
+   * [Communication](community/communication.md)
+   * [Governance](community/governance.md)
 * [Essentials](essentials.md)
    * [Community](community/README.md)
        * [Contributing](CONTRIBUTING.md)
