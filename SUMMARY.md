@@ -8,6 +8,7 @@
    * Regular contributors
        * [Onboarding](onboarding.md)
        * [Tools](tools.md)
+   * Experiments
 * GitBook
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
