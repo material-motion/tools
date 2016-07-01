@@ -19,7 +19,6 @@
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Writing code](code_policies.md)
-       * GitHub
        * [Creating a GitHub repository](creating_a_github_repository.md)
        * [Tools](essentials/regular_contributors/tools.md)
        * [Release process](release_process/README.md)
