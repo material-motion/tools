@@ -18,7 +18,7 @@
    * [Frequent contributors](essentials/frequent_contributors/README.md)
        * [Code review](essentials/frequent_contributors/code_review.md)
        * [Writing code](essentials/frequent_contributors/writing_code.md)
-       * [Tools](essentials/regular_contributors/tools.md)
+       * [Tools](essentials/frequent_contributors/tools.md)
    * [Core team contributors](essentials/core_team_contributors/README.md)
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
        * [Release process](essentials/core_team_contributors/release_process.md)
