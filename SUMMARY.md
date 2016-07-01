@@ -1,8 +1,8 @@
 # Summary
 
 * [Introduction](README.md)
-* [Communication](communication.md)
 * [Essentials](essentials.md)
+    * [Communication](communication.md)
     * [Onboarding](onboarding.md)
     * [Code of conduct](code_of_conduct.md)
 * GitBook
