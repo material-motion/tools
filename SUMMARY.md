@@ -11,7 +11,7 @@
 * GitHub
    * [Creating a GitHub repository](creating_a_github_repository.md)
    * [Issues/bugs/feature requests](issue_policies.md)
-* Writing prose
+* [Writing prose](writing_prose.md)
 * [Writing code](code_policies.md)
    * [Writing reviewable code](writing_reviewable_code.md)
    * [Bash style](bash_style.md)
