@@ -12,7 +12,7 @@
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Team practices](essentials/team_practices/README.md)
-       * [appleOS](team_practices/appleos.md)
+       * [appleOS](essentials/team_practices/appleos.md)
        * [Bash style](team_practices/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
