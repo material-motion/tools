@@ -4,9 +4,11 @@
 * [Communication](communication.md)
 * [Essentials](essentials.md)
    * [Onboarding](onboarding.md)
-* [Mirroring GitBooks to GitHub](updating_our_books.md)
-* [Creating a GitBook pull request](gitbook_pull_request.md)
-* [Creating a GitHub repository](creating_a_github_repository.md)
+* GitBook
+    * [Mirroring GitBooks to GitHub](updating_our_books.md)
+    * [Creating a GitBook pull request](gitbook_pull_request.md)
+* GitHub
+    * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Writing code](code_policies.md)
    * [Bash style](bash_style.md)
