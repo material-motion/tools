@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Essentials](essentials.md)
+   * Team goals
    * [Code of conduct](code_of_conduct.md)
    * [Communication](communication.md)
    * [Experiments](experiments.md)
@@ -9,7 +10,6 @@
    * Regular contributors
        * [Onboarding](onboarding.md)
        * [Tools](tools.md)
-   * Team goals
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
