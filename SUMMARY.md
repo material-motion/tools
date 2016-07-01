@@ -1,6 +1,5 @@
 # Summary
 
-
 * [Introduction](README.md)
 * [Community](community/README.md)
    * [Communication](community/communication.md)
