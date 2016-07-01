@@ -5,7 +5,7 @@
    * [Communication](community/communication.md)
    * [Contributing](CONTRIBUTING.md)
    * [Governance](community/governance.md)
-   * [Code of conduct](code_of_conduct.md)
+   * [Code of conduct](community/code_of_conduct.md)
 * [Contributor essentials](essentials.md)
    * [Team goals](team_goals.md)
    * [Experiments](experiments.md)
