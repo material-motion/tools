@@ -25,7 +25,7 @@
    * [Web](team_practices/web.md)
 * [Roadmap](roadmaps/README.md)
    * [Directors](roadmaps/directors.md)
-* [Random](random.md)
 * [Community](community/README.md)
    * [Contributing](CONTRIBUTING.md)
+* [Random](random.md)
 
