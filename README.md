@@ -1,4 +1,3 @@
-<p class="github-only">This book is best-formatted on GitBook. <a href="https://material-motion.gitbooks.io/material-motion-team/content/">Read it there</a>.</p>
 # Material Motion team documents
 
 View the Material Motion [core team members](https://github.com/orgs/material-motion/teams/core-team).
@@ -7,7 +6,7 @@ New to the team? Check out our [Essentials](essentials.md).
 
 The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
 
-We plan our weekly milestones and roadmap on Discord.
+We plan our weekly milestones and roadmap on Discord. [Join our channel](https://discord.gg/AJbyYDf).
 
 ## License
 
