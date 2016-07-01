@@ -1,12 +1,12 @@
 # Material Motion team documents
 
-View the Material Motion [core team members](https://github.com/orgs/material-motion/teams/core-team).
-
-New to the team? Check out our [Essentials](essentials.md).
+Welcome to the Material Motion's team documentation.
 
 The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
 
 We plan our weekly milestones and roadmap on Discord. [Join our channel](https://discord.gg/AJbyYDf).
+
+New to the team? Check out our [Essentials](essentials.md).
 
 ## License
 
