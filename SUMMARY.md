@@ -12,7 +12,7 @@
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Tools](essentials/regular_contributors/tools.md)
-* Starmap contributor essentials
+* [Starmap contributor essentials](starmap_essentials/README.md)
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
