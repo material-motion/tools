@@ -1,3 +1,3 @@
 # Contributor essentials
 
-These documents are written for any contributor to the Material Motion project, whether casual, regular, or core.
+We welcome contributions. The documents in this chapter are written for anyone interested in contributing to the Material Motion project.
