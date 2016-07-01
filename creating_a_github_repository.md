@@ -46,6 +46,6 @@ Set up your repository's labels by running the following from a local copy of th
 
 Open the Settings and options pages. Disable the Wiki.
 
-## Step 6: Disable merge commits
+## Step 7: Disable merge commits
 
 Open the Settings and options pages. Disable "Allow merge commits".
