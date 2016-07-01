@@ -28,5 +28,6 @@
 * [Community](community/README.md)
    * [Contributing](CONTRIBUTING.md)
    * [Communication](community/communication.md)
+   * Governance
 * [Random](random.md)
 
