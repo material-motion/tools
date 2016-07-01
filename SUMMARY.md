@@ -12,7 +12,7 @@
    * [Casual contributors](essentials/casual/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Onboarding](essentials/regular_contributors/onboarding.md)
-       * [Tools](tools.md)
+       * [Tools](essentials/regular_contributors/tools.md)
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
