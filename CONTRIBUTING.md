@@ -26,6 +26,8 @@ Agreement](https://cla.developers.google.com/about/google-corporate).
 
 ## Contributing to the Starmap
 
+The Starmap represents our long-term plans as a team. Contributions made to the Starmap go through a somewhat altered review process which we've outlined below.
+
 ### Patch acceptance process
 
 - Read the [Governance](governance.md) article.
