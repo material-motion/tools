@@ -10,7 +10,10 @@ Before we can use your code, you must sign the [Google Individual Contributor Li
 ## Code reviews
 
 All submissions, including submissions by project members, require review.
-We use GitHub pull requests for this purpose.
+
+For core and regular contributors we use [Phabricator](http://codereview.cc/) for all code reviews.
+
+We encourage everyone else to issue GitHub pull requests as you would with any GitHub project.
 
 ### The small print
 
