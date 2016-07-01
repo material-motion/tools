@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [Communication](communication.md)
 * [Essentials](essentials.md)
+  * [Onboarding](onboarding.md)
 * [Mirroring GitBooks to GitHub](updating_our_books.md)
 * [Creating a GitBook pull request](gitbook_pull_request.md)
 * [Creating a GitHub repository](creating_a_github_repository.md)
