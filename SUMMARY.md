@@ -10,7 +10,7 @@
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
    * [Casual contributors](essentials/casual/README.md)
-   * Regular contributors
+   * [Regular contributors](essentials/regular_contributors/README.md)
        * [Onboarding](onboarding.md)
        * [Tools](tools.md)
 * [GitBook](gitbook.md)
