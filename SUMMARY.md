@@ -27,5 +27,5 @@
    * [Directors](roadmaps/directors.md)
 * [Random](random.md)
 * [Community](community/README.md)
-   * Contributing
+   * [Contributing](CONTRIBUTING.md)
 
