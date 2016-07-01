@@ -7,7 +7,7 @@
    * [Governance](community/governance.md)
    * [Code of conduct](community/code_of_conduct.md)
 * [Contributor essentials](essentials/README.md)
-   * [Team goals](team_goals.md)
+   * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
    * Casual contributors
    * Regular contributors
