@@ -9,4 +9,4 @@ Our general philosophy:
 - Elevate existing solutions. Avoid re-inventing wheels.
 - In the absence of existing solutions, build great ones.
 - Add more ideas to the Starmap as drafts, flesh them out, and then encourage their development across platforms.
-- List solutions in the Starmap's [Community index](https://material-motion.gitbooks.io/material-motion-starmap/content/community/).
+- List solutions in the Starmap's [Community index](https://material-motion.gitbooks.io/material-motion-starmap/content/community_index/).
