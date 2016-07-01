@@ -18,9 +18,9 @@ Agreement](https://cla.developers.google.com/about/google-corporate).
 
 All submissions, including submissions by project members, require peer review.
 
-For core and regular contributors we use [Phabricator](http://codereview.cc/) for all code reviews.
+For casual contributors, issue GitHub pull requests as you would with any GitHub project.
 
-We encourage everyone else to issue GitHub pull requests as you would with any GitHub project.
+For core and regular contributors, use [Phabricator](http://codereview.cc/) for all code reviews.
 
 ---
 
