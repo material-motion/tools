@@ -52,9 +52,21 @@ Versions of software we use:
 Versions of software we use:
 
 - Objective-C: 
-  - Xcode 7.3.
+  - Xcode 7.3.1.
 - Swift 3.0: 
   - Xcode 8 beta
+- Cocoapods 1.0.1
+- psych 2.1.0
+
+  We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to the Podfile.lock after a `pod install`. Older versions removed the quotes.
+
+  View your version:
+
+      gem list | grep psych
+
+  Update your version:
+
+      sudo gem update psych
 
 ## Experimental work
 
