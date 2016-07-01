@@ -2,7 +2,7 @@
 
 We use the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) to guide our ongoing development.
 
-As a team we plan to **operate in the open**. 
+As a team we plan to **operate in the open**.
 
 For every idea we take on:
 
