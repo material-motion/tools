@@ -9,7 +9,7 @@
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
-   * [Casual contributors](essentials/casual/README.md)
+   * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Onboarding](essentials/regular_contributors/onboarding.md)
        * [Tools](essentials/regular_contributors/tools.md)
