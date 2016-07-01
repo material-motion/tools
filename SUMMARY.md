@@ -24,6 +24,7 @@
            * [appleOS](release_process/appleos.md)
            * [Web](release_process/web.md)
            * [GitBook](release_process/gitbook.md)
+       * Code review
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](writing_prose.md)
    * [GitBook](gitbook.md)
