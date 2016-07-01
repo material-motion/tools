@@ -85,10 +85,6 @@ We recommend creating a README.md in your experimental folder outlining the scop
 
 GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.
 
-### Releasing
-
-We will periodically publish "releases" of our books. We are ok with the `master` branch being in a perpetual state of drafting.
-
 ### Making minor edits
 
 If you intend to make minor edits, feel free to do so on the master branch. Use good judgment.
