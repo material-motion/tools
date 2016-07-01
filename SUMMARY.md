@@ -19,7 +19,7 @@
        * [Code review](essentials/regular_contributors/code_review.md)
        * [Writing code](code_policies.md)
        * [Tools](essentials/regular_contributors/tools.md)
-   * [Core contributors](essentials/core_contributors/README.md)
+   * [Core team contributors](essentials/core_contributors/README.md)
        * [Creating a GitHub repository](creating_a_github_repository.md)
        * [Release process](release_process/README.md)
        * [Deprecation policy](essentials/core_contributors/deprecation_policy.md)
