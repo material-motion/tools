@@ -16,7 +16,7 @@
    * [Android](release_process/android.md)
    * [appleOS](release_process/appleos.md)
    * [Web](release_process/web.md)
-   * GitBook
+   * [GitBook](release_process/gitbook.md)
 * [Team practices](team_practices/README.md)
    * [Android](team_practices/android.md)
    * [appleOS](team_practices/appleos.md)
