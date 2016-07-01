@@ -6,13 +6,13 @@
    * [Contributing](CONTRIBUTING.md)
    * [Governance](community/governance.md)
    * [Code of conduct](community/code_of_conduct.md)
-* [Code contributor essentials](essentials/README.md)
+* [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
-   * 
        * [Tools](essentials/regular_contributors/tools.md)
+
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
