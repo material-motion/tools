@@ -12,7 +12,6 @@ Develop features locally on feature branches. Use `arc feature <name>` to start 
 
 We will reserve branches in the primary repos for critical fixes and feature work.
 
-
 ## Deprecation policy
 
 There will come a time where we have to deprecate an API.
