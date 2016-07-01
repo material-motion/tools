@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Essentials](essentials.md)
    * [Onboarding](onboarding.md)
-   * Tools we use
+   * Tools
    * [Communication](communication.md)
    * [Code of conduct](code_of_conduct.md)
 * GitBook
