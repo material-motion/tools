@@ -7,7 +7,7 @@ New to the team? Check out our [Essentials](essentials.md).
 
 The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
 
-Our [Roadmaps](roadmaps/) define our shorter-term goals as a team and on specific platforms/languages.
+We plan our weekly milestones and roadmap on Discord.
 
 ## License
 
