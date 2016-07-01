@@ -22,7 +22,6 @@
    * [Core contributors](essentials/core_contributors/README.md)
        * [Creating a GitHub repository](creating_a_github_repository.md)
        * [Release process](release_process/README.md)
-           * [Web](release_process/web.md)
            * [GitBook](release_process/gitbook.md)
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](writing_prose.md)
