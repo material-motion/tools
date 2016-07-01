@@ -4,11 +4,10 @@
 * [Community](community/README.md)
    * [Communication](community/communication.md)
    * [Contributing](CONTRIBUTING.md)
+   * [Code of conduct](code_of_conduct.md)
    * [Governance](community/governance.md)
-* [Code of conduct](code_of_conduct.md)
 * [Contributor essentials](essentials.md)
    * [Team goals](team_goals.md)
-   * [Code of conduct](code_of_conduct.md)
    * [Experiments](experiments.md)
    * Casual contributors
    * Regular contributors
