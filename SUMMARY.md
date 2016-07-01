@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Essentials](essentials.md)
+* [Essentials for regular contributors](essentials.md)
    * [Onboarding](onboarding.md)
    * [Tools](tools.md)
    * [Communication](communication.md)
