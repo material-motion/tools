@@ -17,8 +17,8 @@
         * [Android](team_practices/android.md)
         * [appleOS](team_practices/appleos.md)
         * [Web](team_practices/web.md)
-   * [Casual contributors](essentials/casual_contributors/README.md)
-   * [Regular contributors](essentials/regular_contributors/README.md)
+    * [Casual contributors](essentials/casual_contributors/README.md)
+    * [Regular contributors](essentials/regular_contributors/README.md)
         * GitHub
         * [Creating a GitHub repository](creating_a_github_repository.md)
         * [Tools](essentials/regular_contributors/tools.md)
