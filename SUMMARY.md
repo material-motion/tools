@@ -4,7 +4,7 @@
 * [Essentials](essentials.md)
    * [Code of conduct](code_of_conduct.md)
    * [Communication](communication.md)
-   * Experiments
+   * [Experiments](experiments.md)
    * Casual contributors
    * Regular contributors
        * [Onboarding](onboarding.md)
