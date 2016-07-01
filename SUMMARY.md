@@ -13,7 +13,7 @@
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
-       * [Bash style](team_practices/bash_style.md)
+       * [Bash style](essentials/team_practices/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Code review](essentials/regular_contributors/code_review.md)
