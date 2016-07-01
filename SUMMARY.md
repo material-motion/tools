@@ -7,7 +7,7 @@
 * [Creating a GitBook pull request](gitbook_pull_request.md)
 * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
-* [On: writing le code](code_policies.md)
+* [Writing code](code_policies.md)
 * [On: issues/bugs/feature requests](issue_policies.md)
 * [Code of conduct](code_of_conduct.md)
 * [Release process](release_process/README.md)
