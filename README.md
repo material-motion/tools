@@ -1,6 +1,6 @@
 # Material Motion team documents
 
-The Material Motion team members may be found at https://github.com/orgs/material-motion/teams/core-team.
+View the Material Motion [core team members](https://github.com/orgs/material-motion/teams/core-team).
 
 New to the team? Check out our [Essentials](essentials.md).
 
