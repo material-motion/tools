@@ -22,7 +22,7 @@
    * [Core contributors](essentials/core_contributors/README.md)
        * [Creating a GitHub repository](creating_a_github_repository.md)
        * [Release process](release_process/README.md)
-       * Deprecation policy
+       * [Deprecation policy](essentials/core_contributors/deprecation_policy.md)
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](writing_prose.md)
    * [GitBook](gitbook.md)
