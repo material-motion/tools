@@ -10,7 +10,7 @@
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
    * [Issues/bugs/feature requests](issue_policies.md)
-   * [Writing reviewable code](writing_reviewable_code.md)
+   * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Team practices](team_practices/README.md)
        * [appleOS](team_practices/appleos.md)
        * [Bash style](team_practices/bash_style.md)
