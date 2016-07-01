@@ -15,10 +15,10 @@
        * [Android](team_practices/android.md)
        * [appleOS](team_practices/appleos.md)
        * [Web](team_practices/web.md)
+       * [Bash style](bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Writing code](code_policies.md)
-           * [Bash style](bash_style.md)
        * GitHub
        * [Creating a GitHub repository](creating_a_github_repository.md)
        * [Tools](essentials/regular_contributors/tools.md)
