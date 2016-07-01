@@ -19,3 +19,7 @@ Agreement](https://cla.developers.google.com/about/google-corporate).
 ### Ready to continue?
 
 Read the [Code contributor essentials](essentials/) chapter.
+
+## Contributing to the Starmap?
+
+See our [Starmap contributor essentials](starmap_essentials).
