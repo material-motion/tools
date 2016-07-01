@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [Essentials](essentials.md)
    * [Onboarding](onboarding.md)
+   * Tools we use
    * [Communication](communication.md)
    * [Code of conduct](code_of_conduct.md)
-   * Tools we use
 * GitBook
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
    * [Creating a GitBook pull request](gitbook_pull_request.md)
