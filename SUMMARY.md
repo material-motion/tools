@@ -10,6 +10,7 @@
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
    * [Issues/bugs/feature requests](issue_policies.md)
+   * [Writing reviewable code](writing_reviewable_code.md)
    * [Team practices](team_practices/README.md)
        * [Android](team_practices/android.md)
        * [appleOS](team_practices/appleos.md)
@@ -17,7 +18,6 @@
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Writing code](code_policies.md)
-           * [Writing reviewable code](writing_reviewable_code.md)
            * [Bash style](bash_style.md)
        * GitHub
        * [Creating a GitHub repository](creating_a_github_repository.md)
