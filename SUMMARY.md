@@ -9,7 +9,7 @@
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](experiments.md)
-   * [Issues/bugs/feature requests](issue_policies.md)
+   * [Issues/bugs/feature requests](essentials/issues.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Team practices](team_practices/README.md)
        * [appleOS](team_practices/appleos.md)
