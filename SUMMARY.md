@@ -17,7 +17,7 @@
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Code review](essentials/regular_contributors/code_review.md)
-       * [Writing code](code_policies.md)
+       * [Writing code](essentials/regular_contributors/writing_code.md)
        * [Tools](essentials/regular_contributors/tools.md)
    * [Core team contributors](essentials/core_team_contributors/README.md)
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
