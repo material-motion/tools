@@ -14,7 +14,6 @@
    * [Team practices](team_practices/README.md)
        * [Bash style](bash_style.md)
        * [appleOS](team_practices/appleos.md)
-       * [Web](team_practices/web.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
        * [Writing code](code_policies.md)
