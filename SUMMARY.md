@@ -15,7 +15,7 @@
        * [appleOS](essentials/team_practices/appleos.md)
        * [Bash style](essentials/team_practices/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
-   * [Regular contributors](essentials/regular_contributors/README.md)
+   * [Frequent contributors](essentials/regular_contributors/README.md)
        * [Code review](essentials/regular_contributors/code_review.md)
        * [Writing code](essentials/regular_contributors/writing_code.md)
        * [Tools](essentials/regular_contributors/tools.md)
