@@ -9,7 +9,7 @@
 * [Creating a GitHub repository](creating_a_github_repository.md)
 * [Writing reviewable code](writing_reviewable_code.md)
 * [Writing code](code_policies.md)
-   * Bash style
+   * [Bash style](bash_style.md)
 * [Issues/bugs/feature requests](issue_policies.md)
 * [Code of conduct](code_of_conduct.md)
 * [Release process](release_process/README.md)
