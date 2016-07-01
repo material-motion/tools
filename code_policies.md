@@ -12,25 +12,6 @@ Develop features locally on feature branches. Use `arc feature <name>` to start 
 
 We will reserve branches in the primary repos for critical fixes and feature work.
 
-## Cutting releases
-
-Cut new releases every Wednesday. We want to automate as much of this as possible.
-
-Every platform/language will have a different release process. We will formalize each one here as we begin to cut releases.
-
-## Release-blocking clients
-
-A release-blocking client has the power to stop a release.
-
-Our release-blocking clients include:
-
-- Google
-
-Adding a release-blocking client is expensive and is done with great care.
-
-Examples of how a client can block a release:
-
-- We cut a release that we thought was minor, but is in fact major. We identify that it's major because when a release-blocking client upgrades to it, its builds break.
 
 ## Deprecation policy
 
