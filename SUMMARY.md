@@ -11,7 +11,7 @@
    * [Experiments](experiments.md)
    * [Casual contributors](essentials/casual/README.md)
    * [Regular contributors](essentials/regular_contributors/README.md)
-       * [Onboarding](onboarding.md)
+       * [Onboarding](essentials/regular_contributors/onboarding.md)
        * [Tools](tools.md)
 * [GitBook](gitbook.md)
    * [Mirroring GitBooks to GitHub](updating_our_books.md)
