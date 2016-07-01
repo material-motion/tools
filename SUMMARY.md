@@ -25,7 +25,7 @@
        * [Deprecation policy](essentials/core_team_contributors/deprecation_policy.md)
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
-   * [GitBook](gitbook.md)
+   * [GitBook](starmap_essentials/gitbook/README.md)
        * [Mirroring GitBooks to GitHub](updating_our_books.md)
        * [Creating a GitBook pull request](gitbook_pull_request.md)
 * [Random](random.md)
