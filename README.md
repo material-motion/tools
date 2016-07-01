@@ -4,9 +4,7 @@ Welcome to the Material Motion's team documentation. This is the central place t
 
 Want to know where we're going? The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals. We plan our weekly milestones and roadmap on Discord. [Join our channel](https://discord.gg/AJbyYDf).
 
-Want to contribute? Check out our 
-
-New to the team? Check out our [Essentials](essentials.md).
+Want to contribute? Check out our [Contributor essentials](essentials/).
 
 ## License
 
