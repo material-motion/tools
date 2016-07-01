@@ -1,6 +1,6 @@
 # Material Motion team documents
 
-Welcome to the Material Motion's team documentation.
+Welcome to the Material Motion's team documentation. This is the central place to learn about how we operate as a team and as a community.
 
 The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals.
 
