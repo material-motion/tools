@@ -12,7 +12,6 @@
    * [Issues/bugs/feature requests](issue_policies.md)
    * [Writing reviewable code](writing_reviewable_code.md)
    * [Team practices](team_practices/README.md)
-       * [Android](team_practices/android.md)
        * [Bash style](bash_style.md)
        * [appleOS](team_practices/appleos.md)
        * [Web](team_practices/web.md)
