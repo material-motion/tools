@@ -1,3 +1,4 @@
+<p class="github-only">This book is best-formatted on GitBook. <a href="https://material-motion.gitbooks.io/material-motion-team/content/">Read it there</a>.</p>
 # Material Motion team documents
 
 Welcome to the Material Motion's team documentation. This is the central place to learn about how we operate as a team and as a community.
