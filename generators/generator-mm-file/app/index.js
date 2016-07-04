@@ -16,14 +16,48 @@
 
 var generators = require('yeoman-generator');
 var fs = require('fs');
+var _ = require('lodash');
+
+var optionOrPrompt = function(prompts, callback) {
+  // This method will only show prompts that haven't been supplied as options. This makes the generator more composable.
+  var filteredPrompts = [];
+  var props = {};
+
+  prompts.forEach(function(prompt) {
+    this.option(prompt.name);
+    var option = this.options[prompt.name];
+
+    if (option !== undefined) {
+      // Options supplied, add to props
+      props[prompt.name] = option;
+    } else {
+      // No option supplied, user will be prompted
+      filteredPrompts.push(prompt);
+    }
+  }, this);
+
+  if (filteredPrompts.length) {
+    this.prompt(filteredPrompts).then(function(mergeProps) {
+      // Merge mergeProps into props/
+      _.assign(props, mergeProps);
+      callback && callback(props);
+    });
+  } else {
+    // No prompting required call the callback right away.
+    callback && callback(props);
+  }
+}
 
 module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
   },
 
+  _optionOrPrompt: optionOrPrompt,
+
   prompting: function () {
-    return this.prompt([{
+    var done = this.async();
+    return this._optionOrPrompt([{
       type    : 'list',
       name    : 'type',
       message : 'Choose the type of file',
@@ -32,15 +66,17 @@ module.exports = generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'File name'
-    }]).then(function (answers) {
+    }], function (answers) {
       this.type = answers.type;
       this.name = answers.name;
+      done();
     }.bind(this));
   },
 
   writing: function () {
     var base_path = this.templatePath(this.type);
     var files = fs.readdirSync(base_path);
+    console.log(this.name);
     for (var i in files) {
       var file = files[i];
       this.fs.copyTpl(
