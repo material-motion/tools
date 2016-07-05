@@ -20,6 +20,10 @@
     "spelling": {
       "type": "spelling",
       "include": "(\\.(md)$)"
+    },
+    "php": {
+      "type": "php",
+      "include": "(\\.(php)$)"
     }
   }
 }
