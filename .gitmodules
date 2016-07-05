@@ -4,3 +4,6 @@
 [submodule "third_party/gh"]
 	path = third_party/gh
 	url = git@github.com:material-motion/gh.git
+[submodule "third_party/arc-hook-conphig"]
+	path = third_party/arc-hook-conphig
+	url = https://github.com/material-foundation/arc-hook-conphig.git
