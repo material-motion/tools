@@ -12,6 +12,7 @@
    * [Experiments](essentials/experiments.md)
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
+   * Communicating via GitHub issues
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
        * [Bash style](essentials/team_practices/bash_style.md)
@@ -24,7 +25,6 @@
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
        * [Release process](essentials/core_team_contributors/release_process.md)
        * [Deprecation policy](essentials/core_team_contributors/deprecation_policy.md)
-   * Communicating via GitHub issues
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
