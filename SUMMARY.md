@@ -6,6 +6,7 @@
    * [Contributing](CONTRIBUTING.md)
    * [Governance](community/governance.md)
    * [Code of conduct](community/code_of_conduct.md)
+   * Dashboards
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](essentials/experiments.md)
