@@ -12,7 +12,7 @@
    * [Experiments](essentials/experiments.md)
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
-   * [GitHub issue flow](essentials/github_issue_flow.md)
+   * [Communicating early and often](essentials/github_issue_flow.md)
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
        * [Bash style](essentials/team_practices/bash_style.md)
