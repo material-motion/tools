@@ -32,3 +32,7 @@ http://framer-spring.s3-website-us-east-1.amazonaws.com/
 http://ncase.me/polygons/
 
 - Delightful message. Delightful interactions.
+
+https://www.youtube.com/watch?v=BOvAbjfJ0x1
+
+- Iterated Prisoner's Dilemma and The Evolution of Cooperation

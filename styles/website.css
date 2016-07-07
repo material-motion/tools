@@ -1,0 +1,22 @@
+/* Blatantly copied from material-motion-starmap */
+
+.github-only {
+  display: none;
+}
+
+.markdown-section .github-only + p + h1 {
+    margin-top: 0!important;
+}
+
+.markdown-section a.glossary-term {
+  color: inherit;
+  border-bottom: 1px dotted #AAA;
+  text-decoration: none;
+}
+
+.markdown-section blockquote {
+  padding: .85em 8px 1px 16px;
+  background-color: #e8f0fe;
+  border-left: 4px solid #3367d6;
+  color: #333;
+}
