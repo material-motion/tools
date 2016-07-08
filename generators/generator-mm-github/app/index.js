@@ -24,13 +24,13 @@ module.exports = generators.Base.extend({
   constructor: function () {
     generators.Base.apply(this, arguments);
   },
-  
+
   initializing: function() {
     var authorsPath = this.destinationPath('AUTHORS');
     if (this.fs.exists(authorsPath)) {
       var authors = this.fs.read(authorsPath);
 
-      var re = /^# This is the list of (.+?) authors for copyright purposes\./; 
+      var re = /^# This is the list of (.+?) authors for copyright purposes\./;
       var m;
       if ((m = re.exec(authors)) !== null) {
         if (m.index === re.lastIndex) {
@@ -42,45 +42,98 @@ module.exports = generators.Base.extend({
   },
 
   prompting: function () {
+    // Add new prompts here.
+    // Platform-specific prompts should use `when: isType()`.
+    // All required `type: input` prompts should either have `default:` set,
+    // or use `validate: isNotEmpty()`.
+
     var prompts = [];
+    var isType = function(type) {
+      return function(answers) {
+        return answers.type === type;
+      };
+    };
+    var isNotEmpty = function(str) {
+      if (!str || !str.length) {
+        return "Cannot be empty."
+      }
+      return true;
+    };
+
     if (!this.name) {
       prompts.push({
-        type    : 'input',
-        name    : 'name',
-        message : 'Project name',
-        default : this.appname // Default to current folder name
+        type: 'input',
+        name: 'name',
+        message: 'Project name:',
+        default: this.appname, // Default to current folder name
       });
     }
 
     prompts.push({
-      type    : 'list',
-      name    : 'type',
-      message : 'Choose the type of repo:',
-      choices : function() {
-        return fs.readdirSync(this.sourceRoot()).filter(function(file) {
-          return file.substr(0, 1) != '.';
-        });
-      }.bind(this)()
+      type: 'list',
+      name: 'type',
+      message: 'Choose the type of repo:',
+      choices: function() {
+        return ['basic'].concat(
+          fs.readdirSync(this.sourceRoot()).filter(function(file) {
+            return file.substr(0, 1) != '.' && file != 'basic';
+          })
+        );
+      }.bind(this)(),
     });
+
+    prompts.push({
+      type: 'input',
+      name: 'package',
+      message: 'Package name:',
+      validate: isNotEmpty,
+      when: isType('android'),
+    });
+
+    prompts.push({
+      type: 'input',
+      name: 'owner',
+      message: 'Github owner:',
+      default: 'material-motion',
+      when: isType('android'),
+    });
+
     return this.prompt(prompts).then(function (answers) {
+      // Store prompted fields from answers to `this` to be used later.
       if (answers.name) {
         this.name = toLaxTitleCase(answers.name);
       }
       this.type = answers.type;
+      this.package = answers.package;
+      this.owner = answers.owner;
     }.bind(this));
   },
 
   writing: function () {
     var copyAll = function(type) {
+      // Add fields to the mapping to use in templates like <%= name %>.
+      var mapping = {
+        name: this.name,
+        package: this.package,
+        owner: this.owner,
+      };
+
+      // Template all non-jar/png files.
       this.fs.copyTpl(
-        this.templatePath(type + '/*'),
+        this.templatePath(type + '/**/!(*.jar|*.png)'),
         this.destinationPath(''),
-        { name: this.name }
+        mapping
       );
       this.fs.copyTpl(
-        this.templatePath(type + '/.*'),
+        this.templatePath(type + '/.**'),
         this.destinationPath(''),
-        { name: this.name }
+        mapping
+      );
+
+      // Copy all jar/png files.
+      this.fs.copy(
+        this.templatePath(type + '/**/{*.jar,*.png}'),
+        this.destinationPath('')
       );
     }.bind(this);
 
@@ -88,6 +141,25 @@ module.exports = generators.Base.extend({
       copyAll('basic');
     }
     copyAll(this.type);
+
+    if (this.type === 'android') {
+      // Moves the file located in parent/ to parent/packagePath/
+      var moveToPackagePath = function(parent, file, packagePath) {
+        this.fs.move(
+          // Globbing does not work with this.fs.move() despite documentation.
+          this.destinationPath(parent + '/' + file),
+          this.destinationPath(parent + '/' + packagePath + '/' + file)
+        );
+      }.bind(this);
+
+      var packagePath = this.package.replace(/\./g, "/");
+      moveToPackagePath(
+        'library/src/androidTest/java', 'ApplicationTest.java', packagePath);
+      moveToPackagePath(
+        'library/src/main/java', 'Library.java', packagePath);
+      moveToPackagePath(
+        'sample/src/main/java', 'MainActivity.java', packagePath + "/sample");
+    }
   },
 
   install: function () {
