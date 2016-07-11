@@ -36,7 +36,7 @@ module.exports = generators.Base.extend({
         if (m.index === re.lastIndex) {
           re.lastIndex++;
         }
-        this.name = m[1];
+        this.oldName = m[1];
       }
     }
   },
@@ -60,14 +60,16 @@ module.exports = generators.Base.extend({
       return true;
     };
 
-    if (!this.name) {
-      prompts.push({
-        type: 'input',
-        name: 'name',
-        message: 'Project name:',
-        default: this.appname, // Default to current folder name
-      });
+    if (!this.oldName) {
+      this.oldName = this.appname; // Default to current folder name
     }
+
+    prompts.push({
+      type: 'input',
+      name: 'name',
+      message: 'Project name:',
+      default: this.oldName,
+    });
 
     prompts.push({
       type: 'list',
