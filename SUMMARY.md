@@ -26,6 +26,7 @@
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
        * [Release process](essentials/core_team_contributors/release_process.md)
        * [Deprecation policy](essentials/core_team_contributors/deprecation_policy.md)
+       * Testing
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
