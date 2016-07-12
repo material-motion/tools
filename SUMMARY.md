@@ -16,6 +16,7 @@
        * [appleOS](essentials/testing/appleos.md)
        * [JavaScript](essentials/testing/javascript.md)
    * [Communicating early and often](essentials/github_issue_flow.md)
+   * GitHub issue label flow
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
@@ -29,7 +30,6 @@
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
        * [Release process](essentials/core_team_contributors/release_process.md)
        * [Deprecation policy](essentials/core_team_contributors/deprecation_policy.md)
-   * GitHub issue label flow
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
