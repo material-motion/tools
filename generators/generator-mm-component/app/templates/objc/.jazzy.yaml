@@ -1,0 +1,5 @@
+module: MaterialMotion<%= name %>
+module_version: 1.0.0
+umbrella_header: src/MaterialMotion<%= name %>.h
+objc: true
+sdk: iphonesimulator
