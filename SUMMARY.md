@@ -14,6 +14,7 @@
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Testing](essentials/testing/README.md)
        * [JavaScript](essentials/testing/javascript.md)
+       * appleOS
    * [Communicating early and often](essentials/github_issue_flow.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Team practices](essentials/team_practices/README.md)
