@@ -167,7 +167,9 @@ module.exports = generators.Base.extend({
   install: function () {
     var submodules = {
       'basic': {
-        'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git'
+        'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git',
+        'third_party/arc-hook-conphig': 'https://github.com/material-foundation/arc-hook-conphig.git',
+        '.arc-hooks/post-diff/arc-hook-github-issues': 'https://github.com/material-foundation/arc-hook-github-issues.git'
       },
       'objc': {
         'third_party/clang-format-linter': 'https://github.com/vhbit/clang-format-linter.git',
