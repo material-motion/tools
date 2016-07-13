@@ -181,7 +181,7 @@ module.exports = generators.Base.extend({
         var installModules = function(type, cb) {
           var modules = submodules[type];
 
-          async.forEachOfSeries(modules, function(module, path, callback) {
+          async.eachOfSeries(modules, function(module, path, callback) {
             spawn('git', [
                 'submodule',
                 'add',
