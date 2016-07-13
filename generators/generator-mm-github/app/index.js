@@ -192,7 +192,7 @@ module.exports = generators.Base.extend({
             });
           }, function(err) {
             if (cb) {
-              cb();
+              cb(err);
             }
           });
         }.bind(this);
