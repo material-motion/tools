@@ -16,7 +16,6 @@
        * [appleOS](essentials/testing/appleos.md)
        * [JavaScript](essentials/testing/javascript.md)
    * [Communicating early and often](essentials/github_issue_flow.md)
-   * [GitHub issue label flow](essentials/github_issue_label_flow.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
