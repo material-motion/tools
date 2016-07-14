@@ -15,7 +15,7 @@
    * [Testing](essentials/testing/README.md)
        * [appleOS](essentials/testing/appleos.md)
        * [JavaScript](essentials/testing/javascript.md)
-   * [Communicating early and often](essentials/github_issue_flow.md)
+   * [Communicating early and often](essentials/communicate_early.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Team practices](essentials/team_practices/README.md)
        * [appleOS](essentials/team_practices/appleos.md)
