@@ -37,5 +37,6 @@
        * [Mirroring GitBooks to GitHub](starmap_essentials/gitbook/updating_our_books.md)
        * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Weekly updates](weekly_updates/README.md)
+   * July 7-13, 2016
 * [Random](random.md)
 
