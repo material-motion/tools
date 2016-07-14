@@ -37,4 +37,5 @@
        * [Mirroring GitBooks to GitHub](starmap_essentials/gitbook/updating_our_books.md)
        * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Random](random.md)
+* Weekly updates
 
