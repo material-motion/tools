@@ -18,6 +18,7 @@ var generators = require('yeoman-generator');
 var path = require('path');
 var fs = require('fs');
 var async = require('async');
+var file = require('file');
 var toLaxTitleCase = require('titlecase').toLaxTitleCase;
 const spawn = require('child_process').spawn;
 
@@ -102,6 +103,14 @@ module.exports = generators.Base.extend({
 
     prompts.push({
       type: 'input',
+      name: 'componentName',
+      message: 'Component name (no prefix, e.g. Runtime):',
+      validate: isNotEmpty,
+      when: isType('objc'),
+    });
+
+    prompts.push({
+      type: 'input',
       name: 'package',
       message: 'Java package name:',
       validate: isNotEmpty,
@@ -114,6 +123,7 @@ module.exports = generators.Base.extend({
       this.repoOwner = answers.repoOwner;
       this.name = answers.name;
       this.type = answers.type;
+      this.componentName = answers.componentName;
       this.package = answers.package;
     }.bind(this));
   },
@@ -125,26 +135,42 @@ module.exports = generators.Base.extend({
         repoName: this.repoName,
         repoOwner: this.repoOwner,
         name: this.name,
+        componentName: this.componentName,
         package: this.package,
       };
 
-      // Template all non-jar/png files.
-      this.fs.copyTpl(
-        this.templatePath(type + '/**/!(*.jar|*.png)'),
-        this.destinationPath(''),
-        mapping
-      );
-      this.fs.copyTpl(
-        this.templatePath(type + '/.**'),
-        this.destinationPath(''),
-        mapping
-      );
+      // Replace instances of __TEMPLATE__<mapping key>__ with the corresponding `mapping` value.
+      function templatizedFilename(filename) {
+        for (var key in mapping) {
+          var regex = new RegExp("__TEMPLATE__" + key + "__", "g");
+          filename = filename.replace(regex, mapping[key]);
+        }
+        return filename;
+      };
 
-      // Copy all jar/png files.
-      this.fs.copy(
-        this.templatePath(type + '/**/{*.jar,*.png}'),
-        this.destinationPath('')
-      );
+      // Will only templatize non-blacklisted files.
+      var binarySafeCopy = function(sourcePath, destinationPath, mapping) {
+        if (sourcePath.endsWith('.jar') || sourcePath.endsWith('.png')) {
+          this.fs.copy(sourcePath, destinationPath, mapping);
+        } else {
+          this.fs.copyTpl(sourcePath, destinationPath, mapping);
+        }
+      }.bind(this);
+
+      var base_path = this.templatePath(type);
+
+      file.walkSync(base_path, function (start, dirs, names) {
+        names.forEach(function(name) {
+          var absoluteFilePath = start + '/' + name;
+          var filename = absoluteFilePath.substr(base_path.length + 1);
+
+          binarySafeCopy(
+            absoluteFilePath,
+            this.destinationPath(templatizedFilename(filename)),
+            mapping
+          );
+        }, this);
+      }.bind(this));
     }.bind(this);
 
     if (this.type != 'basic') {
@@ -170,6 +196,10 @@ module.exports = generators.Base.extend({
       moveToPackagePath(
         'sample/src/main/java', 'MainActivity.java', packagePath + "/sample");
     }
+
+    var arcconfig = this.fs.readJSON(this.destinationPath('.arcconfig'));
+    arcconfig.load = arcconfig.load.sort();
+    this.fs.writeJSON(this.destinationPath('.arcconfig'), arcconfig);
   },
 
   install: function () {
