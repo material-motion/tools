@@ -3,6 +3,13 @@ apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.<%= repoOwner %>'
 
+install {
+  repositories.mavenInstaller {
+    pom.version = 'local'
+    pom.artifactId = '<%= repoName %>'
+  }
+}
+
 android {
   compileSdkVersion 23
   buildToolsVersion "23.0.2"
