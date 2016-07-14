@@ -137,6 +137,7 @@ module.exports = generators.Base.extend({
         name: this.name,
         componentName: this.componentName,
         package: this.package,
+        packagePath: this.package.replace(/\./g, '/'),
       };
 
       // Replace instances of __TEMPLATE__<mapping key>__ with the corresponding `mapping` value.
@@ -177,25 +178,6 @@ module.exports = generators.Base.extend({
       copyAll('basic');
     }
     copyAll(this.type);
-
-    if (this.type === 'android') {
-      // Moves the file located in parent/ to parent/packagePath/
-      var moveToPackagePath = function(parent, file, packagePath) {
-        this.fs.move(
-          // Globbing does not work with this.fs.move() despite documentation.
-          this.destinationPath(parent + '/' + file),
-          this.destinationPath(parent + '/' + packagePath + '/' + file)
-        );
-      }.bind(this);
-
-      var packagePath = this.package.replace(/\./g, "/");
-      moveToPackagePath(
-        'library/src/androidTest/java', 'ApplicationTest.java', packagePath);
-      moveToPackagePath(
-        'library/src/main/java', 'Library.java', packagePath);
-      moveToPackagePath(
-        'sample/src/main/java', 'MainActivity.java', packagePath + "/sample");
-    }
 
     var arcconfig = this.fs.readJSON(this.destinationPath('.arcconfig'));
     arcconfig.load = arcconfig.load.sort();
