@@ -15,6 +15,7 @@
  */
 
 var generators = require('yeoman-generator');
+var path = require('path');
 var fs = require('fs');
 var async = require('async');
 var toLaxTitleCase = require('titlecase').toLaxTitleCase;
@@ -26,6 +27,8 @@ module.exports = generators.Base.extend({
   },
 
   initializing: function() {
+    this.defaultRepoName = path.basename(this.destinationRoot());
+
     var authorsPath = this.destinationPath('AUTHORS');
     if (this.fs.exists(authorsPath)) {
       var authors = this.fs.read(authorsPath);
@@ -36,8 +39,11 @@ module.exports = generators.Base.extend({
         if (m.index === re.lastIndex) {
           re.lastIndex++;
         }
-        this.oldName = m[1];
+        this.defaultName = m[1];
       }
+    }
+    if (!this.defaultName) {
+      this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
   },
 
@@ -60,15 +66,25 @@ module.exports = generators.Base.extend({
       return true;
     };
 
-    if (!this.oldName) {
-      this.oldName = this.appname; // Default to current folder name
-    }
+    prompts.push({
+      type: 'input',
+      name: 'repoName',
+      message: 'Github repo name:',
+      default: this.defaultRepoName,
+    });
+
+    prompts.push({
+      type: 'input',
+      name: 'repoOwner',
+      message: 'Github repo owner:',
+      default: 'material-motion',
+    });
 
     prompts.push({
       type: 'input',
       name: 'name',
       message: 'Project name:',
-      default: this.oldName,
+      default: this.defaultName,
     });
 
     prompts.push({
@@ -87,27 +103,18 @@ module.exports = generators.Base.extend({
     prompts.push({
       type: 'input',
       name: 'package',
-      message: 'Package name:',
+      message: 'Java package name:',
       validate: isNotEmpty,
-      when: isType('android'),
-    });
-
-    prompts.push({
-      type: 'input',
-      name: 'owner',
-      message: 'Github owner:',
-      default: 'material-motion',
       when: isType('android'),
     });
 
     return this.prompt(prompts).then(function (answers) {
       // Store prompted fields from answers to `this` to be used later.
-      if (answers.name) {
-        this.name = toLaxTitleCase(answers.name);
-      }
+      this.repoName = answers.repoName;
+      this.repoOwner = answers.repoOwner;
+      this.name = answers.name;
       this.type = answers.type;
       this.package = answers.package;
-      this.owner = answers.owner;
     }.bind(this));
   },
 
@@ -115,9 +122,10 @@ module.exports = generators.Base.extend({
     var copyAll = function(type) {
       // Add fields to the mapping to use in templates like <%= name %>.
       var mapping = {
+        repoName: this.repoName,
+        repoOwner: this.repoOwner,
         name: this.name,
         package: this.package,
-        owner: this.owner,
       };
 
       // Template all non-jar/png files.
