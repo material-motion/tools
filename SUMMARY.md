@@ -38,5 +38,6 @@
        * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Weekly updates](weekly_updates/README.md)
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
+   * June 30-July 6, 2016
 * [Random](random.md)
 
