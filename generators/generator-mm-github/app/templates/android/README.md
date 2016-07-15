@@ -4,10 +4,7 @@ The <%= name %> repo.
 
 ## Depending on the library
 
-### Using Jitpack
-
-Jitpack allows you to easily add a dependency on any of the [published releases](https://github.com/<%= repoOwner %>/<%= repoName %>/releases)
-for this library.
+Use Jitpack to depend on any of our [public releases](https://github.com/<%= repoOwner %>/<%= repoName %>/releases).
 
 Add the Jitpack repository to your project's `build.gradle`:
 
@@ -56,18 +53,29 @@ For more information regarding versioning, see:
 
 ### Using the files from a folder local to the machine
 
-If you would like to edit this library in tandem with its client project
-you can use `:local`.
+You can have a copy of this library with local changes and test it in
+tandem with its client project. To add a local dependency on this
+library, add this library's identifier to your project's
+`local.dependencies`:
 
-```gradle
-dependencies {
-    compile 'com.github.<%= repoOwner %>:<%= repoName %>:local'
-}
+```
+com.github.<%= repoOwner %>:<%= repoName %>
 ```
 
-To use this option, you must run `gradle install` from the library's
-project root every time you want local changes in the library to
-propagate to the clients.
+> Because `local.dependencies` is never to be checked into Version
+Control Systems, you must also ensure that any local dependencies are
+also defined in `build.gradle` as explained in the previous section.
+
+**Important**
+
+For each local dependency listed, you *must* run `gradle install` from
+its project root every time you make a change to it. That command will
+publish your latest changes to the local maven repository. If your local
+dependencies have local dependencies of their own, you must
+`gradle install` them as well. See [Issue #16](https://github.com/material-motion/material-motion-runtime-android/issues/16).
+
+You must `gradle clean` your project every time you add or remove a
+local dependency.
 
 ## Contributing
 

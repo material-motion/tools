@@ -31,7 +31,7 @@ android {
 }
 
 dependencies {
-  // add dependencies here
+  // If you are developing any dependencies locally, also list them in local.dependencies.
 }
 
 // build a jar with source files
