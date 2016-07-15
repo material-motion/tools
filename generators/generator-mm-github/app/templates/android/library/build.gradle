@@ -10,13 +10,6 @@ install {
   }
 }
 
-install {
-  repositories.mavenInstaller {
-    pom.version = 'local'
-    pom.artifactId = '<%= repoName %>'
-  }
-}
-
 android {
   compileSdkVersion 23
   buildToolsVersion "23.0.2"
