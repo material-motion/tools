@@ -23,7 +23,7 @@ var toLaxTitleCase = require('titlecase').toLaxTitleCase;
 const spawn = require('child_process').spawn;
 
 module.exports = generators.Base.extend({
-  constructor: function () {
+  constructor: function() {
     generators.Base.apply(this, arguments);
   },
 
@@ -48,7 +48,7 @@ module.exports = generators.Base.extend({
     }
   },
 
-  prompting: function () {
+  prompting: function() {
     // Add new prompts here.
     // Platform-specific prompts should use `when: isType()`.
     // All required `type: input` prompts should either have `default:` set,
@@ -117,7 +117,7 @@ module.exports = generators.Base.extend({
       when: isType('android'),
     });
 
-    return this.prompt(prompts).then(function (answers) {
+    return this.prompt(prompts).then(function(answers) {
       // Store prompted fields from answers to `this` to be used later.
       this.repoName = answers.repoName;
       this.repoOwner = answers.repoOwner;
@@ -128,7 +128,7 @@ module.exports = generators.Base.extend({
     }.bind(this));
   },
 
-  writing: function () {
+  writing: function() {
     var copyAll = function(type) {
       // Add fields to the mapping to use in templates like <%= name %>.
       var mapping = {
@@ -141,7 +141,7 @@ module.exports = generators.Base.extend({
       };
 
       // Replace instances of __TEMPLATE__<mapping key>__ with the corresponding `mapping` value.
-      function templatizedFilename(filename) {
+      var templatizedFilename = function(filename) {
         for (var key in mapping) {
           var regex = new RegExp("__TEMPLATE__" + key + "__", "g");
           filename = filename.replace(regex, mapping[key]);
@@ -160,7 +160,7 @@ module.exports = generators.Base.extend({
 
       var base_path = this.templatePath(type);
 
-      file.walkSync(base_path, function (start, dirs, names) {
+      file.walkSync(base_path, function(start, dirs, names) {
         names.forEach(function(name) {
           var absoluteFilePath = start + '/' + name;
           var filename = absoluteFilePath.substr(base_path.length + 1);
@@ -184,7 +184,7 @@ module.exports = generators.Base.extend({
     this.fs.writeJSON(this.destinationPath('.arcconfig'), arcconfig);
   },
 
-  install: function () {
+  install: function() {
     var submodules = {
       'basic': {
         'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git',
