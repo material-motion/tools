@@ -28,24 +28,32 @@ module.exports = generators.Base.extend({
   },
 
   initializing: function() {
+    // Returns the first parenthetical match, or null.
+    var extractRegexMatchFromFile = function(path, regex) {
+      if (this.fs.exists(path)) {
+        var file = this.fs.read(path);
+        var m;
+        if ((m = regex.exec(file)) !== null) {
+          return m[1];
+        }
+        return null;
+      }
+    }.bind(this);
+
     this.defaultRepoName = path.basename(this.destinationRoot());
 
-    var authorsPath = this.destinationPath('AUTHORS');
-    if (this.fs.exists(authorsPath)) {
-      var authors = this.fs.read(authorsPath);
-
-      var re = /^# This is the list of (.+?) authors for copyright purposes\./;
-      var m;
-      if ((m = re.exec(authors)) !== null) {
-        if (m.index === re.lastIndex) {
-          re.lastIndex++;
-        }
-        this.defaultName = m[1];
-      }
-    }
+    this.defaultName = extractRegexMatchFromFile(
+      this.destinationPath('AUTHORS'),
+      /^# This is the list of (.+?) authors for copyright purposes\./
+    );
     if (!this.defaultName) {
       this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
+
+    this.defaultPackage = extractRegexMatchFromFile(
+      this.destinationPath('library/src/main/AndroidManifest.xml'),
+      /package="(.+?)"/
+    );
   },
 
   prompting: function() {
@@ -71,6 +79,7 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'repoName',
       message: 'Github repo name:',
+      validate: isNotEmpty,
       default: this.defaultRepoName,
     });
 
@@ -78,6 +87,7 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'repoOwner',
       message: 'Github repo owner:',
+      validate: isNotEmpty,
       default: 'material-motion',
     });
 
@@ -85,6 +95,7 @@ module.exports = generators.Base.extend({
       type: 'input',
       name: 'name',
       message: 'Project name:',
+      validate: isNotEmpty,
       default: this.defaultName,
     });
 
@@ -114,6 +125,7 @@ module.exports = generators.Base.extend({
       name: 'package',
       message: 'Java package name:',
       validate: isNotEmpty,
+      default: this.defaultPackage,
       when: isType('android'),
     });
 
