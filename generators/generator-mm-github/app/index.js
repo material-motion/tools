@@ -40,6 +40,9 @@ module.exports = generators.Base.extend({
       }
     }.bind(this);
 
+    // For each prompt, try to find the default for an existing repo,
+    // then try to generate the default for a new repo.
+
     this.defaultRepoName = path.basename(this.destinationRoot());
 
     this.defaultName = extractRegexMatchFromFile(
@@ -50,10 +53,32 @@ module.exports = generators.Base.extend({
       this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
 
+    if (this.fs.exists('build.gradle')) {
+      this.defaultType = 'android';
+    } else if (this.fs.exists('.clang-format')) {
+      this.defaultType = 'objc';
+    }
+    if (!this.defaultType) {
+      var suffix = this.defaultRepoName.split('-').slice(-1)[0];
+      if (suffix === 'android') {
+        this.defaultType = 'android'
+      } else if (suffix === 'objc' || suffix === 'swift') {
+        this.defaultType = 'objc'
+      }
+    }
+
     this.defaultPackage = extractRegexMatchFromFile(
       this.destinationPath('library/src/main/AndroidManifest.xml'),
       /package="(.+?)"/
     );
+    if (!this.defaultPackage) {
+      this.defaultPackage =
+        'com.google.android.material.motion.'
+        + this.defaultRepoName
+          .replace(/^material-motion-/, '')
+          .replace(/-android$/, '')
+          .replace(/-/, '.');
+    }
   },
 
   prompting: function() {
@@ -103,13 +128,12 @@ module.exports = generators.Base.extend({
       type: 'list',
       name: 'type',
       message: 'Choose the type of repo:',
-      choices: function() {
-        return ['basic'].concat(
-          fs.readdirSync(this.sourceRoot()).filter(function(file) {
-            return file.substr(0, 1) != '.' && file != 'basic';
-          })
-        );
-      }.bind(this)(),
+      choices: ['basic'].concat(
+        fs.readdirSync(this.sourceRoot()).filter(function(file) {
+          return file.substr(0, 1) != '.' && file != 'basic';
+        })
+      ),
+      default: this.defaultType,
     });
 
     prompts.push({
