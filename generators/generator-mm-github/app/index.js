@@ -130,43 +130,43 @@ module.exports = generators.Base.extend({
     });
 
     return this.prompt(prompts).then(function(answers) {
-      // Store prompted fields from answers to `this` to be used later.
-      this.repoName = answers.repoName;
-      this.repoOwner = answers.repoOwner;
-      this.name = answers.name;
       this.type = answers.type;
-      this.componentName = answers.componentName;
-      this.package = answers.package;
+
+      // Store prompt answers to `this.mapping` to be used in templates like <%= name %>.
+      this.mapping = {
+        repoName: answers.repoName,
+        repoOwner: answers.repoOwner,
+        name: answers.name,
+        componentName: answers.componentName,
+        package: answers.package,
+      }
+
+      // Calculate derivative values.
+      if (this.type == 'android') {
+        this.mapping.packagePath = this.mapping.package.replace(/\./g, '/');
+      }
     }.bind(this));
   },
 
   writing: function() {
     var copyAll = function(type) {
-      // Add fields to the mapping to use in templates like <%= name %>.
-      var mapping = {
-        repoName: this.repoName,
-        repoOwner: this.repoOwner,
-        name: this.name,
-        componentName: this.componentName,
-        package: this.package,
-        packagePath: this.package.replace(/\./g, '/'),
-      };
-
-      // Replace instances of __TEMPLATE__<mapping key>__ with the corresponding `mapping` value.
+      // Replace instances of __TEMPLATE__<key>__ with the corresponding `this.mapping` value.
       var templatizedFilename = function(filename) {
-        for (var key in mapping) {
-          var regex = new RegExp("__TEMPLATE__" + key + "__", "g");
-          filename = filename.replace(regex, mapping[key]);
-        }
+        Object.keys(this.mapping).forEach(
+          key => {
+            var regex = new RegExp("__TEMPLATE__" + key + "__", "g");
+            filename = filename.replace(regex, this.mapping[key]);
+          }
+        );
         return filename;
-      };
+      }.bind(this);
 
       // Will only templatize non-blacklisted files.
-      var binarySafeCopy = function(sourcePath, destinationPath, mapping) {
+      var binarySafeCopy = function(sourcePath, destinationPath) {
         if (sourcePath.endsWith('.jar') || sourcePath.endsWith('.png')) {
-          this.fs.copy(sourcePath, destinationPath, mapping);
+          this.fs.copy(sourcePath, destinationPath, this.mapping);
         } else {
-          this.fs.copyTpl(sourcePath, destinationPath, mapping);
+          this.fs.copyTpl(sourcePath, destinationPath, this.mapping);
         }
       }.bind(this);
 
@@ -179,8 +179,7 @@ module.exports = generators.Base.extend({
 
           binarySafeCopy(
             absoluteFilePath,
-            this.destinationPath(templatizedFilename(filename)),
-            mapping
+            this.destinationPath(templatizedFilename(filename))
           );
         }, this);
       }.bind(this));
