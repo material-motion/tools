@@ -1,0 +1,14 @@
+abstract_target 'MaterialMotion<%= componentName %>' do
+  pod 'MaterialMotion<%= componentName %>', :path => './'
+
+  workspace 'MaterialMotion<%= componentName %>.xcworkspace'
+  use_frameworks!
+
+  target "Catalog" do
+    project 'examples/apps/Catalog/Catalog.xcodeproj'
+  end
+
+  target "UnitTests" do
+    project 'examples/apps/Catalog/Catalog.xcodeproj'
+  end
+end
