@@ -53,17 +53,18 @@ module.exports = generators.Base.extend({
       this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
 
-    if (this.fs.exists('build.gradle')) {
-      this.defaultType = 'android';
-    } else if (this.fs.exists('.clang-format')) {
-      this.defaultType = 'objc';
-    }
     if (!this.defaultType) {
       var suffix = this.defaultRepoName.split('-').slice(-1)[0];
       if (suffix === 'android') {
-        this.defaultType = 'android'
-      } else if (suffix === 'objc' || suffix === 'swift') {
-        this.defaultType = 'objc'
+        this.defaultType = 'android';
+      } else if (suffix === 'objc') {
+        this.defaultType = 'objc';
+      } else if (suffix === 'swift') {
+        this.defaultType = 'swift';
+      } else if (this.fs.exists('build.gradle')) {
+        this.defaultType = 'android';
+      } else if (this.fs.exists('.clang-format')) {
+        this.defaultType = 'objc';
       }
     }
 
@@ -141,7 +142,7 @@ module.exports = generators.Base.extend({
       name: 'componentName',
       message: 'Component name (no prefix, e.g. Runtime):',
       validate: isNotEmpty,
-      when: isType('objc'),
+      when: isType('objc') || isType('swift'),
     });
 
     prompts.push({
