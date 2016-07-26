@@ -89,9 +89,17 @@ module.exports = generators.Base.extend({
     // or use `validate: isNotEmpty()`.
 
     var prompts = [];
-    var isType = function(type) {
+    var isType = function(types) {
+      if (typeof types === 'string') {
+        types = [types];
+      }
       return function(answers) {
-        return answers.type === type;
+        for (var index in types) {
+          if (answers.type === types[index]) {
+            return true;
+          }
+        }
+        return false;
       };
     };
     var isNotEmpty = function(str) {
@@ -142,7 +150,7 @@ module.exports = generators.Base.extend({
       name: 'componentName',
       message: 'Component name (no prefix, e.g. Runtime):',
       validate: isNotEmpty,
-      when: isType('objc') || isType('swift'),
+      when: isType(['objc', 'swift']),
     });
 
     prompts.push({
