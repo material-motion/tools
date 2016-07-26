@@ -53,18 +53,24 @@ module.exports = generators.Base.extend({
       this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
 
+    var suffix = this.defaultRepoName.split('-').slice(-1)[0];
+
+    if (this.fs.exists('build.gradle')) {
+      this.defaultType = 'android';
+    } else if (this.fs.exists('.clang-format')) {
+      if (suffix == 'swift') {
+        this.defaultType = 'swift';
+      } else {
+        this.defaultType = 'objc';
+      }
+    }
     if (!this.defaultType) {
-      var suffix = this.defaultRepoName.split('-').slice(-1)[0];
       if (suffix === 'android') {
         this.defaultType = 'android';
       } else if (suffix === 'objc') {
         this.defaultType = 'objc';
       } else if (suffix === 'swift') {
         this.defaultType = 'swift';
-      } else if (this.fs.exists('build.gradle')) {
-        this.defaultType = 'android';
-      } else if (this.fs.exists('.clang-format')) {
-        this.defaultType = 'objc';
       }
     }
 
