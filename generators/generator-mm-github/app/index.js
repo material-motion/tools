@@ -52,6 +52,10 @@ module.exports = generators.Base.extend({
     if (!this.defaultName) {
       this.defaultName = toLaxTitleCase(this.appname); // Base on folder name
     }
+    this.defaultComponentName = extractRegexMatchFromFile(
+      this.destinationPath('Podfile'),
+      /^abstract_target 'MaterialMotion(.+?)' do/
+    );
 
     var suffix = this.defaultRepoName.split('-').slice(-1)[0];
 
@@ -157,6 +161,7 @@ module.exports = generators.Base.extend({
       message: 'Component name (no prefix, e.g. Runtime):',
       validate: isNotEmpty,
       when: isType(['objc', 'swift']),
+      default: this.defaultComponentName,
     });
 
     prompts.push({
