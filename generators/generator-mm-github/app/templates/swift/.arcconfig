@@ -16,7 +16,7 @@
       "workspace": "MaterialMotion<%= componentName %>.xcworkspace",
       "scheme": "UnitTests",
       "configuration": "Debug",
-      "destination": "platform=iOS Simulator,name=iPhone 6S"
+      "destination": "platform=iOS Simulator,name=iPhone 6s"
     },
     "coverage": {
       "product": "MaterialMotion<%= componentName %>.framework/MaterialMotion<%= componentName %>"
