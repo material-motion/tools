@@ -240,17 +240,19 @@ module.exports = generators.Base.extend({
   },
 
   install: function() {
+    var applemodules = {
+      'third_party/clang-format-linter': 'https://github.com/vhbit/clang-format-linter.git',
+      'third_party/arc-jazzy-linter': 'https://github.com/google/arc-jazzy-linter.git',
+      'third_party/arc-xcode-test-engine': 'https://github.com/google/arc-xcode-test-engine.git'
+    };
     var submodules = {
       'basic': {
         'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git',
         'third_party/arc-hook-conphig': 'https://github.com/material-foundation/arc-hook-conphig.git',
         '.arc-hooks/post-diff/arc-hook-github-issues': 'https://github.com/material-foundation/arc-hook-github-issues.git'
       },
-      'objc': {
-        'third_party/clang-format-linter': 'https://github.com/vhbit/clang-format-linter.git',
-        'third_party/arc-jazzy-linter': 'https://github.com/google/arc-jazzy-linter.git',
-        'third_party/arc-xcode-test-engine': 'https://github.com/google/arc-xcode-test-engine.git'
-      }
+      'objc': applemodules,
+      'swift': applemodules
     };
 
     spawn('git', ['init']).on('close', function(code) {
