@@ -1,15 +1,6 @@
-[submodule "third_party/arc-proselint"]
-	path = third_party/arc-proselint
-	url = https://github.com/google/arc-proselint.git
 [submodule "third_party/gh"]
 	path = third_party/gh
 	url = https://github.com/material-foundation/gh.git
-[submodule "third_party/arc-hook-conphig"]
-	path = third_party/arc-hook-conphig
-	url = https://github.com/material-foundation/arc-hook-conphig.git
-[submodule ".arc-hooks/post-diff/arc-hook-github-issues"]
-	path = .arc-hooks/post-diff/arc-hook-github-issues
-	url = https://github.com/material-foundation/arc-hook-github-issues.git
 [submodule "third_party/apidiff"]
 	path = third_party/apidiff
 	url = https://github.com/material-motion/material-motion-apidiff.git
