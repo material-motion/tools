@@ -240,49 +240,7 @@ module.exports = generators.Base.extend({
   },
 
   install: function() {
-    var applemodules = {
-      'third_party/clang-format-linter': 'https://github.com/vhbit/clang-format-linter.git',
-      'third_party/arc-jazzy-linter': 'https://github.com/google/arc-jazzy-linter.git',
-      'third_party/arc-xcode-test-engine': 'https://github.com/google/arc-xcode-test-engine.git'
-    };
-    var submodules = {
-      'basic': {
-        'third_party/arc-proselint': 'https://github.com/google/arc-proselint.git',
-        'third_party/arc-hook-conphig': 'https://github.com/material-foundation/arc-hook-conphig.git',
-        '.arc-hooks/post-diff/arc-hook-github-issues': 'https://github.com/material-foundation/arc-hook-github-issues.git'
-      },
-      'objc': applemodules,
-      'swift': applemodules
-    };
-
-    spawn('git', ['init']).on('close', function(code) {
-      spawn('git', ['submodule', 'init']).on('close', function(code) {
-        var installModules = function(type, cb) {
-          var modules = submodules[type];
-
-          async.eachOfSeries(modules, function(module, path, callback) {
-            spawn('git', [
-                'submodule',
-                'add',
-                module,
-                path
-            ]).on('close', function(code) {
-              callback();
-            });
-          }, function(err) {
-            if (cb) {
-              cb(err);
-            }
-          });
-        }.bind(this);
-
-        if (this.type != 'basic') {
-          installModules('basic');
-        }
-        const done = this.async();
-        installModules(this.type, done);
-      }.bind(this));
-
-    }.bind(this));
+    const done = this.async();
+    spawn('git', ['init']).on('close', done);
   }
 });
