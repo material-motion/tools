@@ -9,7 +9,7 @@
    * [Dashboards](community/dashboards.md)
 * Culture
    * [Team goals](culture/team_goals.md)
-   * [Experiments](essentials/experiments.md)
+   * [Experiments](culture/experiments.md)
    * [Communicating early and often](essentials/communicate_early.md)
 * Planning
    * [Issues/bugs/feature requests](essentials/issues.md)
