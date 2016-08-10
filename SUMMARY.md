@@ -15,7 +15,6 @@
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
-   * [Communicating early and often](essentials/communicate_early.md)
    * [Testing](essentials/testing/README.md)
        * [appleOS](essentials/testing/appleos.md)
        * [JavaScript](essentials/testing/javascript.md)
@@ -45,4 +44,5 @@
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
    * [June 30-July 6, 2016](weekly_updates/2016-07-06.md)
 * [Random](random.md)
+* Planning
 
