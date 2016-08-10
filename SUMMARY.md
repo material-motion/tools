@@ -12,8 +12,8 @@
    * [Experiments](essentials/experiments.md)
    * [Communicating early and often](essentials/communicate_early.md)
 * Planning
-* [Issues/bugs/feature requests](essentials/issues.md)
-* [How we prioritize](essentials/how_we_prioritize.md)
+   * [Issues/bugs/feature requests](essentials/issues.md)
+   * [How we prioritize](essentials/how_we_prioritize.md)
 * [Contributor essentials](essentials/README.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
