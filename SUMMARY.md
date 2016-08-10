@@ -11,6 +11,7 @@
    * [Team goals](essentials/team_goals.md)
    * [Experiments](essentials/experiments.md)
    * [Communicating early and often](essentials/communicate_early.md)
+* [Issues/bugs/feature requests](essentials/issues.md)
 * Planning
 * [Contributor essentials](essentials/README.md)
    * [Issues/bugs/feature requests](essentials/issues.md)
