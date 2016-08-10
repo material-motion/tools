@@ -22,7 +22,7 @@
        * [Bash](essentials/style/bash.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
        * [Life of a change](essentials/casual_contributors/life_of_a_change.md)
-   * [Frequent contributors](essentials/frequent_contributors/README.md)
+   * [Frequent and core contributors](essentials/frequent_contributors/README.md)
        * [Life of a change](essentials/frequent_contributors/life_of_a_change.md)
        * [Branches](essentials/frequent_contributors/branches.md)
        * [Tools](essentials/frequent_contributors/tools.md)
