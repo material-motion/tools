@@ -10,7 +10,7 @@
 * Culture
    * [Team goals](culture/team_goals.md)
    * [Experiments](culture/experiments.md)
-   * [Communicating early and often](essentials/communicate_early.md)
+   * [Communicating early and often](culture/communicate_early.md)
 * Planning
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
