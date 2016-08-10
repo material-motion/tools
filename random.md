@@ -36,3 +36,11 @@ http://ncase.me/polygons/
 https://www.youtube.com/watch?v=BOvAbjfJ0x1
 
 - Iterated Prisoner's Dilemma and The Evolution of Cooperation
+
+https://gist.github.com/cabeca/3ff77007204e5479f7af
+
+- Removes and recreates all Xcode simulators.
+
+https://gist.github.com/andymatuschak/d5f0a8730ad601bcccae97e8398e25b2
+
+- A composable pattern for pure state machines with effects
