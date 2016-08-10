@@ -21,6 +21,7 @@
        * [appleOS](essentials/team_practices/appleos.md)
        * [Bash style](essentials/team_practices/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
+       * Life of a casual change
    * [Frequent contributors](essentials/frequent_contributors/README.md)
        * [Code review](essentials/frequent_contributors/code_review.md)
        * [Branches](essentials/frequent_contributors/branches.md)
