@@ -24,7 +24,6 @@
        * [Life of a change](essentials/casual_contributors/life_of_a_change.md)
    * [Frequent contributors](essentials/frequent_contributors/README.md)
        * [Life of a change](essentials/frequent_contributors/life_of_a_change.md)
-       * [Code review](essentials/frequent_contributors/code_review.md)
        * [Branches](essentials/frequent_contributors/branches.md)
        * [Tools](essentials/frequent_contributors/tools.md)
    * [Core team contributors](essentials/core_team_contributors/README.md)
