@@ -11,7 +11,7 @@
    * [Team goals](culture/team_goals.md)
    * [Experiments](culture/experiments.md)
    * [Communicating early and often](culture/communicate_early.md)
-* Planning
+* [Planning](planning/README.md)
    * [Issues/bugs/feature requests](planning/issues.md)
    * [How we prioritize](planning/how_we_prioritize.md)
 * [Contributor essentials](essentials/README.md)
