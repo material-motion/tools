@@ -9,8 +9,8 @@
    * [Dashboards](community/dashboards.md)
 * Culture
 * [Team goals](essentials/team_goals.md)
+* [Experiments](essentials/experiments.md)
 * [Contributor essentials](essentials/README.md)
-   * [Team goals](essentials/team_goals.md)
    * [Experiments](essentials/experiments.md)
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
