@@ -7,6 +7,7 @@
    * [Governance](community/governance.md)
    * [Code of conduct](community/code_of_conduct.md)
    * [Dashboards](community/dashboards.md)
+* Culture
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](essentials/experiments.md)
@@ -43,5 +44,4 @@
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
    * [June 30-July 6, 2016](weekly_updates/2016-07-06.md)
 * [Random](random.md)
-* Culture
 
