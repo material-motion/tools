@@ -12,7 +12,7 @@
    * [Experiments](culture/experiments.md)
    * [Communicating early and often](culture/communicate_early.md)
 * Planning
-   * [Issues/bugs/feature requests](essentials/issues.md)
+   * [Issues/bugs/feature requests](planning/issues.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
 * [Contributor essentials](essentials/README.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
