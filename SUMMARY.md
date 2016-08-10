@@ -8,6 +8,7 @@
    * [Code of conduct](community/code_of_conduct.md)
    * [Dashboards](community/dashboards.md)
 * Culture
+* [Team goals](essentials/team_goals.md)
 * [Contributor essentials](essentials/README.md)
    * [Team goals](essentials/team_goals.md)
    * [Experiments](essentials/experiments.md)
