@@ -19,7 +19,7 @@
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Style](essentials/style/README.md)
        * [appleOS](essentials/style/appleos.md)
-       * [Bash style](essentials/team_practices/bash_style.md)
+       * [Bash style](essentials/style/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
        * [Life of a change](essentials/casual_contributors/life_of_a_change.md)
    * [Frequent contributors](essentials/frequent_contributors/README.md)
