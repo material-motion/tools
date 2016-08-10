@@ -2,7 +2,8 @@
     "plugins": [
         "edit-link",
         "ga",
-        "-collapsible-menu"
+        "-collapsible-menu",
+        "collapsible-chapters"
     ],
     "pluginsConfig": {
         "edit-link": {
