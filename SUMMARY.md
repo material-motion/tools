@@ -18,7 +18,7 @@
    * [Communicating early and often](essentials/communicate_early.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
    * [Style](essentials/style/README.md)
-       * [appleOS](essentials/team_practices/appleos.md)
+       * [appleOS](essentials/style/appleos.md)
        * [Bash style](essentials/team_practices/bash_style.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
        * [Life of a change](essentials/casual_contributors/life_of_a_change.md)
