@@ -25,7 +25,7 @@
    * [Frequent and core contributors](essentials/frequent_contributors/README.md)
        * [Life of a change](essentials/frequent_contributors/life_of_a_change.md)
        * [Branches](essentials/frequent_contributors/branches.md)
-       * [Deprecation policy](essentials/core_team_contributors/deprecation_policy.md)
+       * [Deprecation policy](essentials/frequent_contributors/deprecation_policy.md)
        * [Tools](essentials/frequent_contributors/tools.md)
    * [Core team contributors](essentials/core_team_contributors/README.md)
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
