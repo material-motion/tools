@@ -8,14 +8,13 @@
    * [Code of conduct](community/code_of_conduct.md)
    * [Dashboards](community/dashboards.md)
 * Culture
-   * [Team goals](essentials/team_goals.md)
+   * [Team goals](culture/team_goals.md)
    * [Experiments](essentials/experiments.md)
    * [Communicating early and often](essentials/communicate_early.md)
 * Planning
    * [Issues/bugs/feature requests](essentials/issues.md)
    * [How we prioritize](essentials/how_we_prioritize.md)
 * [Contributor essentials](essentials/README.md)
-   * [How we prioritize](essentials/how_we_prioritize.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Testing](essentials/testing/README.md)
        * [appleOS](essentials/testing/appleos.md)
