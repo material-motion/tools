@@ -1,5 +1,9 @@
 # Random
 
+http://graphics.pixar.com/usd/docs/index.html
+
+- Pixar's universal scene description
+
 https://runcommand.io/2016/06/26/my-condolences-youre-now-the-maintainer-of-a-popular-open-source-project/
 
 - Discusses open source maintenance.
