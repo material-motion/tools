@@ -7,7 +7,7 @@
    * [Governance](community/governance.md)
    * [Code of conduct](community/code_of_conduct.md)
    * [Dashboards](community/dashboards.md)
-* [Culture](culture/README.md)
+* Culture
    * [Team goals](culture/team_goals.md)
    * [Experiments](culture/experiments.md)
 * [Planning](planning/README.md)
