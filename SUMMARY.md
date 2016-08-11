@@ -10,7 +10,6 @@
 * [Culture](culture/README.md)
    * [Team goals](culture/team_goals.md)
    * [Experiments](culture/experiments.md)
-   * [Communicating early and often](culture/communicate_early.md)
 * [Planning](planning/README.md)
    * [Working on issues](planning/working_on_issues.md)
    * [Issues/bugs/feature requests](planning/issues.md)
