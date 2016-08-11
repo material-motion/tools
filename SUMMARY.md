@@ -14,6 +14,7 @@
 * [Planning](planning/README.md)
    * [Issues/bugs/feature requests](planning/issues.md)
    * [How we prioritize](planning/how_we_prioritize.md)
+   * Working on issues
 * [Contributor essentials](essentials/README.md)
    * [Writing reviewable code](essentials/writing_reviewable_code.md)
    * [Casual contributors](essentials/casual_contributors/README.md)
