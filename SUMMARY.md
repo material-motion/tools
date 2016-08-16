@@ -19,7 +19,7 @@
    * [Casual contributors](essentials/casual_contributors/README.md)
        * [Life of a change](essentials/casual_contributors/life_of_a_change.md)
    * [Frequent and core contributors](essentials/frequent_contributors/README.md)
-       * Onboarding
+       * [Onboarding](essentials/frequent_contributors/onboarding.md)
        * [Life of a change](essentials/frequent_contributors/life_of_a_change.md)
        * [Branches](essentials/frequent_contributors/branches.md)
        * [Deprecation policy](essentials/frequent_contributors/deprecation_policy.md)
