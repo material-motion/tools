@@ -23,6 +23,7 @@
        * [Branches](essentials/frequent_contributors/branches.md)
        * [Deprecation policy](essentials/frequent_contributors/deprecation_policy.md)
        * [Tools](essentials/frequent_contributors/tools.md)
+   * Onboarding
    * [Core team contributors](essentials/core_team_contributors/README.md)
        * [Creating a GitHub repository](essentials/core_team_contributors/creating_a_github_repository.md)
        * [Release process](essentials/core_team_contributors/release_process.md)
@@ -33,7 +34,6 @@
    * [Style](essentials/style/README.md)
        * [appleOS](essentials/style/appleos.md)
        * [Bash](essentials/style/bash.md)
-   * Onboarding
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
