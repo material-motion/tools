@@ -9,7 +9,7 @@
    * [Dashboards](community/dashboards.md)
 * Culture
    * [Team goals](culture/team_goals.md)
-   * [Experiments](culture/experiments/)
+   * [Experiments](culture/experiments/README.md)
      * [Assorted](culture/experiments/assorted.md)
 * [Planning](planning/README.md)
    * [Working on issues](planning/working_on_issues.md)
