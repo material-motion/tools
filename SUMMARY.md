@@ -10,7 +10,7 @@
 * Culture
    * [Team goals](culture/team_goals.md)
    * [Experiments](culture/experiments/README.md)
-     * [Assorted](culture/experiments/assorted.md)
+       * [Assorted](culture/experiments/assorted.md)
 * [Planning](planning/README.md)
    * [Working on issues](planning/working_on_issues.md)
    * [Issues/bugs/feature requests](planning/issues.md)
@@ -48,5 +48,6 @@
    * [July 14-20, 2016](weekly_updates/2016-07-20.md)
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
    * [June 30-July 6, 2016](weekly_updates/2016-07-06.md)
+   * August 18-24, 2016
 * [Random](random.md)
 
