@@ -4,6 +4,10 @@ https://developer.apple.com/library/ios/samplecode/sc2284/Introduction/Intro.htm
 
 - Shows how to leverage Core Animation’s timing and rendering callbacks to implement custom animatable properties for CALayer subclasses. This technique is supported whether your CALayer subclass belongs to a UIView or is standalone. Both explicit and implicit animation triggers are demonstrated, as well as basic and keyframe animation types.
 
+http://waaark.com/
+
+- Many animations and subtle interactions.
+
 http://graphics.pixar.com/usd/docs/index.html
 
 - Pixar's universal scene description
