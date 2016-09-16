@@ -7,22 +7,38 @@
 
 ### Installation with CocoaPods
 
-Add `<%= componentName %>` to your `Podfile`:
+> CocoaPods is a dependency manager for Objective-C and Swift libraries. CocoaPods automates the
+> process of using third-party libraries in your projects. See
+> [the Getting Started guide](https://guides.cocoapods.org/using/getting-started.html) for more
+> information. You can install it with the following command:
+>
+>     gem install cocoapods
 
-    pod '<%= componentName %>'
+Add `MaterialMotion<%= componentName %>` to your `Podfile`:
+
+    pod 'MaterialMotion<%= componentName %>'
 
 Then run the following command:
 
     pod install
 
+### Usage
+
+Import the framework:
+
+    @import MaterialMotion<%= componentName %>;
+
+You will now have access to all of the APIs.
+
 ## Example apps/unit tests
 
-To check out a local copy of the repo and run our example apps you can run the following commands:
+Check out a local copy of the repo to access the Catalog application by running the following
+commands:
 
     git clone https://github.com/<%= repoOwner %>/<%= repoName %>.git
     cd <%= repoName %>
     pod install
-    open <%= componentName %>.xcworkspace
+    open MaterialMotion<%= componentName %>.xcworkspace
 
 ## Contributing
 
