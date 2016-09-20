@@ -35,6 +35,7 @@
    * [Style](essentials/style/README.md)
        * [appleOS](essentials/style/appleos.md)
        * [Bash](essentials/style/bash.md)
+   * Documentation
 * [Starmap contributor essentials](starmap_essentials/README.md)
    * [Writing prose](starmap_essentials/writing_prose.md)
    * [GitBook](starmap_essentials/gitbook/README.md)
