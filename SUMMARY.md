@@ -30,7 +30,7 @@
        * [Release process](essentials/core_team_contributors/release_process.md)
        * [Changes that don't need review](essentials/core_team_contributors/changes_that_dont_need_review.md)
    * Documentation
-       * [README.md](README.md)
+       * [README structure](essentials/documentation/readme_structure.md)
    * [Testing](essentials/testing/README.md)
        * [appleOS](essentials/testing/appleos.md)
        * [JavaScript](essentials/testing/javascript.md)
