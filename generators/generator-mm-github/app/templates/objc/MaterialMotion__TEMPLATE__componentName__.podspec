@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.authors      = "The Material Motion Authors"
   s.license      = "Apache 2.0"
   s.homepage     = "https://github.com/<%= repoOwner %>/<%= repoName %>"
-  s.source       = { :path => "./" }
+  s.source       = { :git => "https://github.com/<%= repoOwner %>/<%= repoName %>.git", :tag => "v" + s.version.to_s }
   s.platform     = :ios, "8.0"
   s.requires_arc = true
 
