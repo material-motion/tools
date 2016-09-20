@@ -1,8 +1,13 @@
 # <%= name %>
 
+[![Build Status](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>.svg?branch=develop)](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>)
+[![codecov](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>/branch/develop/graph/badge.svg)](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>)
+
 The <%= name %> repo.
 
-## Depending on the library
+## Installation
+
+### Installation with Jitpack
 
 Use Jitpack to depend on any of our [public releases](https://github.com/<%= repoOwner %>/<%= repoName %>/releases).
 
@@ -76,6 +81,34 @@ local dependencies of their own, you must `gradle install` them as well. See
 You must `gradle clean` your project every time you add or remove a local
 dependency.
 
+### Usage
+
+How to use the library in your project.
+
+#### Editing the library in Android Studio
+
+Open Android Studio,
+choose `File > New > Import`,
+choose the root `build.gradle` file.
+
+## Example apps/unit tests
+
+Check out a local copy of the repo to access the Catalog application by running the following
+commands:
+
+    git clone https://github.com/<%= repoOwner %>/<%= repoName %>.git
+    cd <%= repoName %>
+    gradle installDebug
+
+## Guides
+
+1. [Architecture](#architecture)
+2. [How to ...](#how-to-...)
+
+### Architecture
+
+### How to ...
+
 ## Contributing
 
 We welcome contributions!
@@ -85,16 +118,6 @@ Check out our [upcoming milestones](https://github.com/<%= repoOwner %>/<%= repo
 Learn more about [our team](https://material-motion.gitbooks.io/material-motion-team/content/),
 [our community](https://material-motion.gitbooks.io/material-motion-team/content/community/),
 and our [contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/essentials/).
-
-### Editing the library in Android Studio
-
-Open Android Studio,
-choose `File > New > Import`,
-choose the root `build.gradle` file.
-
-### Building the sample
-
-Run `gradle installDebug` from the project root.
 
 ## License
 

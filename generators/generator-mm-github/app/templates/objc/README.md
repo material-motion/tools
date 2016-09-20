@@ -40,6 +40,15 @@ commands:
     pod install
     open MaterialMotion<%= componentName %>.xcworkspace
 
+## Guides
+
+1. [Architecture](#architecture)
+2. [How to ...](#how-to-...)
+
+### Architecture
+
+### How to ...
+
 ## Contributing
 
 We welcome contributions!
