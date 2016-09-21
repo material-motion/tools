@@ -41,7 +41,7 @@
        * [Mirroring GitBooks to GitHub](starmap_essentials/gitbook/updating_our_books.md)
        * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Weekly updates](weekly_updates/README.md)
-   * [Current focus](weekly_updates/current_focus.md)
+   * [Current sprint](weekly_updates/current_focus.md)
    * [Stability](weekly_updates/stability.md)
    * [September 15-21, 2016](weekly_updates/2016-09-21.md)
    * [September 8-14, 2016](weekly_updates/2016-09-14.md)
