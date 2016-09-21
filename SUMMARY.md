@@ -41,6 +41,7 @@
        * [Mirroring GitBooks to GitHub](starmap_essentials/gitbook/updating_our_books.md)
        * [Creating a GitBook pull request](starmap_essentials/gitbook/pull_request.md)
 * [Weekly updates](weekly_updates/README.md)
+   * Roadmap
    * [September 15-21, 2016](weekly_updates/2016-09-21.md)
    * [September 8-14, 2016](weekly_updates/2016-09-14.md)
    * [August 18-24, 2016](weekly_updates/2016-08-24.md)
@@ -51,6 +52,5 @@
    * [July 14-20, 2016](weekly_updates/2016-07-20.md)
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
    * [June 30-July 6, 2016](weekly_updates/2016-07-06.md)
-   * Roadmap
 * [Random](random.md)
 
