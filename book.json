@@ -1,6 +1,18 @@
 {
     "plugins": [
+        "edit-link",
+        "ga",
+        "collapsible-chapters",
         "nocache"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "https://www.gitbook.com/book/material-motion/material-motion-team/edit#/edit/master/",
+            "label": "Edit This Page"
+        },
+        "ga": {
+            "token": "UA-80214706-2",
+            "configuration": "auto"
+        }
+    }
 }
