@@ -54,5 +54,6 @@
    * [July 14-20, 2016](weekly_updates/2016-07-20.md)
    * [July 7-13, 2016](weekly_updates/2016-07-13.md)
    * [June 30-July 6, 2016](weekly_updates/2016-07-06.md)
+   * 2016-10-05
 * [Random](random.md)
 
