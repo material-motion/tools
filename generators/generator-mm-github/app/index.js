@@ -88,7 +88,7 @@ module.exports = generators.Base.extend({
         + this.defaultRepoName
           .replace(/^material-motion-/, '')
           .replace(/-android$/, '')
-          .replace(/-/, '.');
+          .replace(/-/g, '.');
     }
   },
 
