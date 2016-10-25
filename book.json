@@ -1,7 +1,9 @@
 {
     "plugins": [
         "edit-link",
-        "ga"
+        "ga",
+        "collapsible-chapters",
+        "nocache"
     ],
     "pluginsConfig": {
         "edit-link": {
