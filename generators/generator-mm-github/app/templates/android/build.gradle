@@ -21,7 +21,7 @@ allprojects {
 subprojects {
   apply plugin: 'checkstyle'
   apply plugin: 'pmd'
-  
+
   checkstyle {
     configFile = rootProject.file('checkstyle.xml')
     toolVersion = '7.1'
