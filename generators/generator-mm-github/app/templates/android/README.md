@@ -93,12 +93,17 @@ choose the root `build.gradle` file.
 
 ## Example apps/unit tests
 
-Check out a local copy of the repo to access the Catalog application by running the following
-commands:
+To build the sample application, run the following commands:
 
     git clone https://github.com/<%= repoOwner %>/<%= repoName %>.git
     cd <%= repoName %>
     gradle installDebug
+
+To run all unit tests, run the following commands:
+
+    git clone https://github.com/<%= repoOwner %>/<%= repoName %>.git
+    cd <%= repoName %>
+    gradle test
 
 ## Guides
 
