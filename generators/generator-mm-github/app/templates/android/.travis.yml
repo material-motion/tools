@@ -1,16 +1,16 @@
 sudo: false
 language: android
-jdk: oraclejdk7
+jdk: oraclejdk8
 env:
   matrix:
-    - ANDROID_TARGET=android-23
+    - ANDROID_TARGET=android-24
 
 android:
   components:
     - platform-tools
     - tools
-    - android-23
-    - build-tools-23.0.2
+    - android-24
+    - build-tools-24.0.3
 
 licenses:
   - 'android-sdk-license-.+'
