@@ -43,7 +43,7 @@
 * [Weekly updates](weekly_updates/README.md)
    * [Current sprint](weekly_updates/current_focus.md)
    * [Stability](weekly_updates/stability.md)
-   * 2016-11-02
+   * [2016-11-02](weekly_updates/2016-11-02.md)
    * [October 20-26, 2016](weekly_updates/2016-10-26.md)
    * [October 13-19, 2016](weekly_updates/2016-10-19.md)
    * [October 06-12, 2016](weekly_updates/2016-10-12.md)
