@@ -3,4 +3,4 @@
 	url = https://github.com/material-foundation/gh.git
 [submodule "third_party/apidiff"]
 	path = third_party/apidiff
-	url = https://github.com/material-motion/material-motion-apidiff.git
+	url = https://github.com/material-motion/apidiff.git
