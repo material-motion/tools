@@ -1,4 +1,6 @@
 abstract_target 'MaterialMotion<%= componentName %>' do
+  pod 'CatalogByConvention'
+
   pod 'MaterialMotion<%= componentName %>', :path => './'
 
   workspace 'MaterialMotion<%= componentName %>.xcworkspace'
