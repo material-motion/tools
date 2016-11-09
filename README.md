@@ -1,13 +1,29 @@
-<p class="github-only">This book is best-formatted on GitBook. <a href="https://material-motion.gitbooks.io/material-motion-team/content/">Read it there</a>.</p>
-# Material Motion team documents
+# Material Motion Tools
 
-Welcome to the Material Motion's team documentation. This is the central place to learn about how we operate as a team and as a community.
+Welcome to the Material Motion's tools documentation.
 
-Want to know where we're going? The [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) describes our long-term, multi-year goals. We plan our weekly milestones and roadmap on Discord. [Join our channel](https://discord.gg/ZJyGXza).
+## Installation
 
-For casual contributions, check out our [Casual Contributors](essentials/casual_contributors) guides.
+Our team uses a custom tool called `mdm` to manage our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
-For frequent contributions, check out our [Frequent Contributors](essentials/frequent_contributors) guides.
+    git clone --recursive git@github.com:material-motion/tools.git
+    cd tools
+    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
+
+Add the output path to whichever file your shell uses to configure environment variables. This is often `~/.bash_profile` or `~/.bashrc`.
+
+    # edit ~/.bash_profile
+    source ~/.bash_profile
+
+You can now run the `mdm` tool installer like so:
+
+    mdm tools
+
+Or the automated variant:
+
+    mdm tools install
+
+Learn more about each `mdm` command by running `mdm help` or by [reading the docs on GitHub](https://github.com/material-motion/tools/tree/develop/contributor_tools).
 
 ## License
 
