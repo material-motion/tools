@@ -7,7 +7,7 @@ The <%= name %> repo.
 
 Learn more about the APIs defined in the library by reading our
 [technical documentation](https://jitpack.io/com/github/<%= repoOwner %>/<%= repoName %>/1.0.0/javadoc/) and our
-[Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/).
+[Starmap](https://material-motion.github.io/material-motion/starmap/).
 
 ## Installation
 
@@ -34,7 +34,7 @@ dependencies {
 
 For more information regarding versioning, see:
 
-- [Material Motion Versioning Policies](https://material-motion.gitbooks.io/material-motion-team/content/essentials/core_team_contributors/release_process.html#versioning)
+- [Material Motion Versioning Policies](https://material-motion.github.io/material-motion/team/essentials/core_team_contributors/release_process#versioning)
 
 ### Using the files from a folder local to the machine
 
@@ -55,8 +55,7 @@ Systems, you must also ensure that any local dependencies are also defined in
 For each local dependency listed, you *must* run `gradle install` from its
 project root every time you make a change to it. That command will publish your
 latest changes to the local maven repository. If your local dependencies have
-local dependencies of their own, you must `gradle install` them as well. See
-[Issue #16](https://github.com/material-motion/material-motion-runtime-android/issues/16).
+local dependencies of their own, you must `gradle install` them as well.
 
 You must `gradle clean` your project every time you add or remove a local
 dependency.
@@ -100,9 +99,9 @@ We welcome contributions!
 
 Check out our [upcoming milestones](https://github.com/<%= repoOwner %>/<%= repoName %>/milestones).
 
-Learn more about [our team](https://material-motion.gitbooks.io/material-motion-team/content/),
-[our community](https://material-motion.gitbooks.io/material-motion-team/content/community/),
-and our [contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/essentials/).
+Learn more about [our team](https://material-motion.github.io/material-motion/team/),
+[our community](https://material-motion.github.io/material-motion/team/community/), and
+our [contributor essentials](https://material-motion.github.io/material-motion/team/essentials/).
 
 ## License
 
