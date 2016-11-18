@@ -225,6 +225,15 @@ generate_release_notes() {
       origin/stable..release-candidate
   }
 
+  echo "## Breaking changes"
+  echo
+
+  echo "## New deprecations"
+  echo
+
+  echo "## New features"
+  echo
+
   echo "## Source changes"
   echo
 
