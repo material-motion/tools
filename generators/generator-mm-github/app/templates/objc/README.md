@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>.svg?branch=develop)](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>)
 [![codecov](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>/branch/develop/graph/badge.svg)](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/MaterialMotion<%= componentName %>.svg)](https://cocoapods.org/pods/MaterialMotion<%= componentName %>)
+[![Platform](https://img.shields.io/cocoapods/p/MaterialMotion<%= componentName %>.svg)](http://cocoadocs.org/docsets/MaterialMotion<%= componentName %>)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/MaterialMotion<%= componentName %>.svg)](http://cocoadocs.org/docsets/MaterialMotion<%= componentName %>)
 
 ## Installation
 
