@@ -85,6 +85,7 @@ check_all_tools() {
   check_tool yo
   check_tool pip
   check_tool proselint
+  check_tool tsc
 
   if [ "$(uname)" == "Darwin" ]; then
     check_tool clang-format
