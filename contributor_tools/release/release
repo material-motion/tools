@@ -203,6 +203,11 @@ bump_release() {
     sed -i.bak "s:$last_version:$new_version:g" $line
     rm $line.bak
   done
+
+  grep -Ilr "#develop#" . | grep -v -f "$dir/versionignore" | while read line; do
+    sed -i.bak "s:#develop#:$new_version:g" $line
+    rm $line.bak
+  done
 }
 
 generate_release_notes() {
