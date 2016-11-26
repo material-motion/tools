@@ -1,7 +1,7 @@
 module: MaterialMotion<%= componentName %>
-module_version: 1.0.0
+module_version: <%= version %>
 umbrella_header: src/MaterialMotion<%= componentName %>.h
 objc: true
 sdk: iphonesimulator
 github_url: https://github.com/<%= repoOwner %>/<%= repoName %>
-github_file_prefix: https://github.com/<%= repoOwner %>/<%= repoName %>/tree/v1.0.0
+github_file_prefix: https://github.com/<%= repoOwner %>/<%= repoName %>/tree/v<%= version %>

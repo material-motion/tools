@@ -56,7 +56,14 @@ module.exports = generators.Base.extend({
       this.destinationPath('Podfile'),
       /^abstract_target 'MaterialMotion(.+?)' do/
     );
-
+    if (this.fs.exists('.jazzy.yaml')) {
+      this.version = extractRegexMatchFromFile(
+        this.destinationPath('.jazzy.yaml'),
+        /module_version: (.+)/
+      );
+    } else {
+      this.version = "1.0.0";
+    }
     var suffix = this.defaultRepoName.split('-').slice(-1)[0];
 
     if (this.fs.exists('build.gradle')) {
@@ -183,6 +190,7 @@ module.exports = generators.Base.extend({
         name: answers.name,
         componentName: answers.componentName,
         package: answers.package,
+        version: this.version,
       }
 
       // Calculate derivative values.
