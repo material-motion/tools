@@ -14,14 +14,18 @@
  limitations under the License.
  */
 
-// MARK: Catalog by convention
+import UIKit
 
-// Example entry in the table of contents:
-// Extend a UIViewController instance and implement catalogBreadcrumbs(), returning the list of
-// breadcrumbs required to navigate to an instance of this view controller.
-//
-//extension ExampleViewController {
-//  class func catalogBreadcrumbs() -> [String] {
-//    return ["Example"]
-//  }
-//}
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+  var window: UIWindow?
+
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    let window = UIWindow(frame: UIScreen.main.bounds)
+    self.window = window
+    window.rootViewController = UINavigationController(rootViewController: UIViewController())
+    window.makeKeyAndVisible()
+    return true
+  }
+}

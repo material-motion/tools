@@ -15,16 +15,21 @@
  */
 
 import UIKit
+import CatalogByConvention
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
 
-  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-    let window = UIWindow(frame: UIScreen.main().bounds)
+  func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
+    let window = UIWindow(frame: UIScreen.main.bounds)
     self.window = window
-    window.rootViewController = UINavigationController(rootViewController: UIViewController())
+
+    let rootViewController = CBCNodeListViewController(node: CBCCreateNavigationTree())
+    rootViewController.title = "<%= name %>"
+    window.rootViewController = UINavigationController(rootViewController: rootViewController)
+
     window.makeKeyAndVisible()
     return true
   }

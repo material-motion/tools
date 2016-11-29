@@ -14,7 +14,14 @@
  limitations under the License.
  */
 
-import UIKit
+// MARK: Catalog by convention
 
-class ExampleViewController: UIViewController {
-}
+// Example entry in the table of contents:
+// Extend a UIViewController instance and implement catalogBreadcrumbs(), returning the list of
+// breadcrumbs required to navigate to an instance of this view controller.
+//
+//extension ExampleViewController {
+//  class func catalogBreadcrumbs() -> [String] {
+//    return ["Example"]
+//  }
+//}
