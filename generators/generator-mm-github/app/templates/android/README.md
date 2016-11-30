@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>.svg?branch=develop)](https://travis-ci.org/<%= repoOwner %>/<%= repoName %>)
 [![codecov](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>/branch/develop/graph/badge.svg)](https://codecov.io/gh/<%= repoOwner %>/<%= repoName %>)
+[![Release](https://img.shields.io/github/release/<%= repoOwner %>/<%= repoName %>.svg)](https://github.com/<%= repoOwner %>/<%= repoName %>/releases/latest)
+[![Docs](https://img.shields.io/badge/jitpack-docs-green.svg)](https://jitpack.io/com/github/<%= repoOwner %>/<%= repoName %>/stable-SNAPSHOT/javadoc/)
 
 The <%= name %> repo.
 
