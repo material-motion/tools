@@ -257,7 +257,7 @@ generate_release_notes() {
       umbrella_header="$(cd $rootdir; ls src/MaterialMotion*)"
       "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate objc "$umbrella_header"
     else
-      podspec_name="$(cd $rootdir; ls MaterialMotion*.podspec)"
+      podspec_name="$(cd $rootdir; ls *.podspec)"
       library_name="$(echo $podspec_name | cut -d'.' -f1)"
       "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate swift "$library_name.xcworkspace" "$library_name"
     fi
