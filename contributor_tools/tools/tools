@@ -88,6 +88,12 @@ check_all_tools() {
   check_tool tsc
   check_tool yarn
 
+  if [ ! -d "$ROOT_DIR/contributor_tools/shields/node_modules/" ]; then
+    missing_tool shields
+  else
+    found_tool shields
+  fi
+
   if [ "$(uname)" == "Darwin" ]; then
     check_tool clang-format
     check_tool pod

@@ -1,0 +1,17 @@
+{
+  "name": "mdm-shields",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node ./index.js"
+  },
+  "main": "./index.js",
+  "dependencies": {
+    "isomorphic-fetch": "2.2.1"
+  },
+  "author": "The Material Motion Tools Authors (see AUTHORS)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/com:material-motion/tools/issues/"
+  },
+  "homepage": "https://github.com/com:material-motion/tools/#readme"
+}
