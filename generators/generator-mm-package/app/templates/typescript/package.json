@@ -1,0 +1,58 @@
+{
+  "name": "<%= packageName %>",
+  "version": "0.0.0",
+  "description": "<%= description %>",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "$(npm bin)/karma start",
+    "clean": "rm -rf ./dist/*; mkdir -p ./dist/",
+    "build": "yarn run clean; node ./build.js"
+  },
+  "dependencies": {
+    "tslib": "^1.2.0"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "karma": "1.3.0",
+    "karma-chrome-launcher": "2.0.0",
+    "karma-firefox-launcher": "1.0.0",
+    "karma-mocha": "1.2.0",
+    "karma-safari-launcher": "1.0.0",
+    "karma-webpack": "1.8.0",
+    "mocha": "3.1.1",
+    "mocha-sugar-free": "1.3.1",
+    "pundle": "1.1.11",
+    "pundle-dev": "1.1.11",
+    "sinon": "2.0.0-pre.3",
+    "sinon-chai": "2.8.0",
+    "ts-loader": "0.9.0",
+    "typescript": "2.1",
+    "webpack": "2.1.0-beta.25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:material-motion/material-motion-js.git"
+  },
+  "keywords": [
+    "animation",
+    "gestures",
+    "interactive",
+    "material",
+    "motion",
+    "multitouch",
+    "observables",
+    "odeon",
+    "physics",
+    "springs",
+    "touch",
+    "transitions",
+    "tweens"
+  ],
+  "author": "The Material Motion Authors (see AUTHORS)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/material-motion/material-motion-js/issues/"
+  },
+  "homepage": "https://github.com/material-motion/material-motion-js/tree/develop/packages/<%= slug %>/#readme"
+}

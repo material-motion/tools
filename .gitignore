@@ -1,6 +1,14 @@
 lsc/*/repos/
 lsc/*/logs/
 
+# Filesystem cruft
+.DS_Store
+npm-debug.log
+
+# Generated files
+*.pyc
+*.js.map
+
 # Node rules:
 ## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt

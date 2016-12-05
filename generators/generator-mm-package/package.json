@@ -1,0 +1,22 @@
+{
+  "name": "generator-mm-package",
+  "version": "1.0.0",
+  "description": "Yeoman generator for a Material Motion package.",
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "async": "2.1.4",
+    "file": "0.2.2",
+    "yeoman-generator": "0.23.3"
+  },
+  "author": "The Material Motion Tools Authors (see AUTHORS)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/com:material-motion/tools/issues/"
+  },
+  "homepage": "https://github.com/com:material-motion/tools/#readme"
+}
