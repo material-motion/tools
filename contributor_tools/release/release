@@ -78,8 +78,7 @@ version_for_platform() {
   elif [ -f "$rootdir/build.gradle" ]; then
     echo "${user_version#v}"
   else
-    echo "Could not determine platform." >&2
-    exit 1
+    echo "v${user_version#v}"
   fi
 }
 
