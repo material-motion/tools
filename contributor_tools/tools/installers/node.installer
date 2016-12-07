@@ -18,7 +18,7 @@
 
 SHOULD_INSTALL=false
 
-REQUIRED_VERSION="4"
+REQUIRED_VERSION="6"
 VERSION=$(node --version 2> /dev/null)
 
 if [[ $? -ne 0 ]]; then
