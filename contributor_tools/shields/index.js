@@ -108,25 +108,25 @@ fetch(
 
 | Library | Build status | Coverage | Version | Docs | Issues |
 |---------|:------------:|:--------:|:-------:|:----:|:------:|
-${ android.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+${ android.map(repo => `| ${ repo.join(' | ') } |`).sort().join('\n') }
 
 ## Apple platform support
 
 | Library | Build status | Coverage | Version | Platforms | Docs | Issues |
 |---------|:------------:|:--------:|:-------:|:---------:|:----:|:------:|
-${ apple.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+${ apple.map(repo => `| ${ repo.join(' | ') } |`).sort().join('\n') }
 
 ## Web platform support
 
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
-${ js.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+${ js.map(repo => `| ${ repo.join(' | ') } |`).sort().join('\n') }
 
 ## Misc libraries
 
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
-${ misc.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+${ misc.map(repo => `| ${ repo.join(' | ') } |`).sort().join('\n') }
 
 `
 ).then(console.log)
