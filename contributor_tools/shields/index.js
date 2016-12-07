@@ -54,8 +54,8 @@ fetch(
       android: android.map(
         ({ orgAndRepoSlug, repoName, docsURL }) => [
           `[${ repoName }](https://github.com/${ orgAndRepoSlug }/)`,
-          `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
-          `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
+          `[![Build Status](https://img.shields.io/travis/${ orgAndRepoSlug }/develop.svg)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
+          `[![codecov](https://img.shields.io/codecov/c/github/${ orgAndRepoSlug }/develop.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
           `[![Release](https://img.shields.io/github/release/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/releases/latest/)`,
           `[![Docs](https://img.shields.io/badge/jitpack-docs-green.svg)](${ docsURL })`,
           `[![Open issues](https://img.shields.io/github/issues/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/issues/)`,
@@ -67,8 +67,8 @@ fetch(
 
           return [
             `[${ repoName }](https://github.com/${ orgAndRepoSlug })`,
-            `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
-            `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
+            `[![Build Status](https://img.shields.io/travis/${ orgAndRepoSlug }/develop.svg)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
+            `[![codecov](https://img.shields.io/codecov/c/github/${ orgAndRepoSlug }/develop.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
             `[![Release](https://img.shields.io/npm/v/${ packageName }.svg)](https://www.npmjs.com/package/${ packageName }/)`,
             `[![Open issues](https://img.shields.io/github/issues/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/issues/)`,
           ]
@@ -82,8 +82,8 @@ fetch(
 
           return [
             `[${ repoName }](https://github.com/${ orgAndRepoSlug })`,
-            `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
-            `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
+            `[![Build Status](https://img.shields.io/travis/${ orgAndRepoSlug }/develop.svg)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
+            `[![codecov](https://img.shields.io/codecov/c/github/${ orgAndRepoSlug }/develop.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
             `[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/${ packageName }.svg)](https://cocoapods.org/pods/${ packageName }/)`,
             `[![Platform](https://img.shields.io/cocoapods/p/${ packageName }.svg)](http://cocoadocs.org/docsets/${ packageName })`,
             `[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/${ packageName }.svg)](${ docsURL })`,
@@ -94,8 +94,8 @@ fetch(
       misc: misc.map(
         ({ orgAndRepoSlug, repoName, docsURL }) => [
           `[${ repoName }](https://github.com/${ orgAndRepoSlug }/)`,
-          `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
-          `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
+          `[![Build Status](https://img.shields.io/travis/${ orgAndRepoSlug }/develop.svg)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
+          `[![codecov](https://img.shields.io/codecov/c/github/${ orgAndRepoSlug }/develop.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
           `[![Release](https://img.shields.io/github/release/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/releases/latest/)`,
           `[![Open issues](https://img.shields.io/github/issues/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/issues/)`,
         ]
