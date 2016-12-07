@@ -25,6 +25,7 @@ fetch(
     repo => (
       {
         orgAndRepoSlug: repo.full_name,
+        repoName: repo.name,
         docsURL: repo.homepage,
       }
     )
@@ -41,14 +42,18 @@ fetch(
       apple: repoMetadata.filter(
         ({ orgAndRepoSlug }) => orgAndRepoSlug.endsWith('swift') || orgAndRepoSlug.endsWith('objc')
       ),
+      misc: repoMetadata.filter(
+        ({ orgAndRepoSlug }) => !orgAndRepoSlug.endsWith('swift') && !orgAndRepoSlug.endsWith('objc')
+                                && !orgAndRepoSlug.endsWith('js') && !orgAndRepoSlug.endsWith('android')
+      ),
     }
   )
 ).then(
-  ({ android, js, apple }) => (
+  ({ android, js, apple, misc }) => (
     {
       android: android.map(
-        ({ orgAndRepoSlug, docsURL }) => [
-          `[${ orgAndRepoSlug }](https://github.com/${ orgAndRepoSlug }/)`,
+        ({ orgAndRepoSlug, repoName, docsURL }) => [
+          `[${ repoName }](https://github.com/${ orgAndRepoSlug }/)`,
           `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
           `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
           `[![Release](https://img.shields.io/github/release/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/releases/latest/)`,
@@ -57,11 +62,11 @@ fetch(
         ]
       ),
       js: js.map(
-        ({ orgAndRepoSlug, docsURL }) => {
+        ({ orgAndRepoSlug, repoName, docsURL }) => {
           const packageName = orgAndRepoSlug.split('/').pop().replace('-js', '');
 
           return [
-            `[${ orgAndRepoSlug }](https://github.com/${ orgAndRepoSlug })`,
+            `[${ repoName }](https://github.com/${ orgAndRepoSlug })`,
             `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
             `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
             `[![Release](https://img.shields.io/npm/v/${ packageName }.svg)](https://www.npmjs.com/package/${ packageName }/)`,
@@ -70,13 +75,13 @@ fetch(
         }
       ),
       apple: apple.map(
-        ({ orgAndRepoSlug, docsURL }) => {
+        ({ orgAndRepoSlug, repoName, docsURL }) => {
           const packageName = docsURL
             ? (/http:\/\/cocoadocs.org\/docsets\/(\w+)/.exec(docsURL) || []).pop()
             : console.warn(`${ orgAndRepoSlug } doesn't have homepage set correctly!`) || '';
 
           return [
-            `[${ orgAndRepoSlug }](https://github.com/${ orgAndRepoSlug })`,
+            `[${ repoName }](https://github.com/${ orgAndRepoSlug })`,
             `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
             `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
             `[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/${ packageName }.svg)](https://cocoapods.org/pods/${ packageName }/)`,
@@ -86,26 +91,42 @@ fetch(
           ]
         }
       ),
+      misc: misc.map(
+        ({ orgAndRepoSlug, repoName, docsURL }) => [
+          `[${ repoName }](https://github.com/${ orgAndRepoSlug }/)`,
+          `[![Build Status](https://travis-ci.org/${ orgAndRepoSlug }.svg?branch=develop)](https://travis-ci.org/${ orgAndRepoSlug }/)`,
+          `[![codecov](https://codecov.io/gh/${ orgAndRepoSlug }/branch/develop/graph/badge.svg)](https://codecov.io/gh/${ orgAndRepoSlug }/)`,
+          `[![Release](https://img.shields.io/github/release/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/releases/latest/)`,
+          `[![Open issues](https://img.shields.io/github/issues/${ orgAndRepoSlug }.svg)](https://github.com/${ orgAndRepoSlug }/issues/)`,
+        ]
+      ),
     }
   )
 ).then(
-  ({ apple, android, js }) => `
-## Apple platform support
-| Library | Build status | Coverage | Version | Platforms | Docs | Issues |
-|---------|:------------:|:--------:|:-------:|:---------:|:----:|:------:|
-${ apple.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
-
+  ({ apple, android, js, misc }) => `
 ## Android platform support
-
 
 | Library | Build status | Coverage | Version | Docs | Issues |
 |---------|:------------:|:--------:|:-------:|:----:|:------:|
 ${ android.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+
+## Apple platform support
+
+| Library | Build status | Coverage | Version | Platforms | Docs | Issues |
+|---------|:------------:|:--------:|:-------:|:---------:|:----:|:------:|
+${ apple.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
 
 ## Web platform support
 
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
 ${ js.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+
+## Misc libraries
+
+| Library | Build status | Coverage | Version | Issues |
+|---------|:------------:|:--------:|:-------:|:------:|
+${ misc.map(repo => `| ${ repo.join(' | ') } |`).join('\n') }
+
 `
 ).then(console.log)
