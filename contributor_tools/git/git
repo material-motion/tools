@@ -21,6 +21,17 @@ usage() {
   $parentcmd help $cmd
 }
 
+new_branch() {
+  if [ -z "$1" ]; then
+    usage
+    exit 1
+  fi
+
+  echo "Creating new branch $1"
+  arc feature "$1"
+}
+
 case "$1" in
-  *)  usage ;;
+  new)  new_branch ${@:2} ;;
+  *)    usage ;;
 esac
