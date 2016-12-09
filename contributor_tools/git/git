@@ -67,7 +67,12 @@ abort_rebase() {
 export_diff() {
   sha="";
   flags=$@
-  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1 2>/dev/null)" == "commit" ]]; then
+  if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
+    if ! _is_local_sha "$1"; then
+      echo "sha $1 is not in local history. Run 'mdm git tree' to find a local sha."
+      exit 1
+    fi
+
     sha="$1";
     flags=${@:2}
   fi
@@ -89,7 +94,12 @@ export_diff() {
 submit_diff() {
   sha="";
   flags=$@
-  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1 2>/dev/null)" == "commit" ]]; then
+  if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
+    if ! _is_local_sha "$1"; then
+      echo "sha $1 is not in local history. Run 'mdm git tree' to find a local sha."
+      exit 1
+    fi
+
     sha="$1";
     flags=${@:2}
   fi
@@ -108,14 +118,24 @@ submit_diff() {
   fi
 }
 
-_get_branch_name () {
-  rebase_merge="$(git rev-parse --show-toplevel)/.git/rebase-merge";
-  if [ -d "$rebase_merge" ]; then
-    full_ref="$(cat $rebase_merge/head-name)";
-    git rev-parse --abbrev-ref --symbolic-full-name "$full_ref";
-  else
-    git rev-parse --abbrev-ref HEAD;
+_get_object_type() {
+  if [[ ! -z "$1" ]]; then
+    git cat-file -t "$1" 2>/dev/null
   fi
+}
+
+_is_local_sha() {
+  match="$(git rev-parse $1 2>/dev/null)"
+  shas="$(git rev-list origin/develop..HEAD)"
+  for sha in $shas; do
+    if [ "$sha" == "$match" ]; then
+      true
+      return
+    fi
+  done
+
+  false
+  return
 }
 
 _sync() {
@@ -143,7 +163,8 @@ case "$1" in
   submit)           submit_diff ${@:2} ;;
 
   # Private
-  _get_branch_name) _get_branch_name ${@:2} ;;
+  _get_object_type) _get_object_type ${@:2} ;;
+  _is_local_sha)    _is_local_sha ${@:2} ;;
   _sync)            _sync ${@:2} ;;
 
   # Help
