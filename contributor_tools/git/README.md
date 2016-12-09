@@ -42,3 +42,12 @@
     which you should resolve.
 
     This puts you in a clean state so you can continue to export or submit.
+
+    `mdm git abort`
+
+    Aborts edit mode previously entered in using `mdm git edit`.
+
+    This aborts the interactive rebase.
+    You will lose all your changes since entering interactive rebase.
+
+    This puts you in a clean state so you can continue to export or submit.
