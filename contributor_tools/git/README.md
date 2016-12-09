@@ -51,3 +51,17 @@
     You will lose all your changes since entering interactive rebase.
 
     This puts you in a clean state so you can continue to export or submit.
+
+## Step 3: Exporting each commit as a diff for review
+
+    `mdm git review [<sha>] [<flags>]`
+
+    Creates a Phabricator diff or updates an existing one for the commit that is determined by:
+
+        The [<sha>], if provided.
+        HEAD, otherwise.
+
+    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes more
+    often than you may expect.
+
+    The optional [<flags>] are passed directly to `arc diff`.

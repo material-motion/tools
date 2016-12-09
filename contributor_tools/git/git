@@ -58,6 +58,28 @@ abort_rebase() {
   git rebase --abort
 }
 
+export_diff() {
+  sha="";
+  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1)" == "commit" ]]; then
+    sha="$1";
+    set -- "${@:1:$(($#-1))}";
+  fi;
+  flags=$@
+
+  if [[ ! -z "$sha" ]]; then
+    echo "Checking out $sha via rebase";
+    edit_sha "$sha";
+  fi;
+
+  echo "Running arc diff HEAD~ $flags";
+  arc diff HEAD~ $flags;
+
+  if [[ ! -z "$sha" ]]; then
+    echo "Exiting rebase";
+    git rebase --continue;
+  fi;
+}
+
 _get_branch_name () {
   rebase_merge="$(git rev-parse --show-toplevel)/.git/rebase-merge";
   if [ -d "$rebase_merge" ]; then
@@ -83,10 +105,13 @@ _set_upstream() {
 
 case "$1" in
   new)              new_branch ${@:2} ;;
+
   tree)             print_tree ${@:2} ;;
   edit)             edit_sha ${@:2} ;;
   continue)         continue_rebase ${@:2} ;;
   abort)            abort_rebase ${@:2} ;;
+
+  review)           export_diff ${@:2} ;;
 
   _get_branch_name) _get_branch_name ${@:2} ;;
   _get_upstream)    _get_upstream ${@:2} ;;
