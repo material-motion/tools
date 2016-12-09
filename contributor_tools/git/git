@@ -47,7 +47,7 @@ edit_sha() {
     exit 1
   fi
 
-  sha="$1"
+  sha="$(_get_sha $1)"
   cmd="edit"
   if [ $# -ge 2 ]; then
       cmd="$2"
@@ -73,7 +73,7 @@ export_diff() {
       exit 1
     fi
 
-    sha="$1"
+    sha="$(_get_sha $1)"
     flags=${@:2}
   fi
 
@@ -82,7 +82,7 @@ export_diff() {
     edit_sha "$sha"
   fi
 
-  echo "Running arc diff HEAD~ $flags"
+  echo "Running 'arc diff HEAD~ $flags'"
   arc diff HEAD~ $flags
 
   if [[ ! -z "$sha" ]]; then
@@ -96,19 +96,19 @@ submit_diff() {
   flags=$@
   if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
     if ! _is_local_sha "$1"; then
-      echo "sha $1 is not in local history. Run 'mdm git tree' to find a local sha."
+      echo "sha $1 is not in local history. Run '$parentcmd $cmd tree' to find a local sha."
       exit 1
     fi
 
-    sha="$1"
+    sha="$(_get_sha $1)"
     flags=${@:2}
   fi
 
   if [[ ! -z "$sha" ]]; then
-    echo "Running arc land --keep-branch $flags $sha"
+    echo "Running 'arc land --keep-branch $flags $sha'"
     arc land --keep-branch $flags "$sha"
   else
-    echo "Running arc land $flags"
+    echo "Running 'arc land $flags'"
     arc land $flags
   fi
 
@@ -125,8 +125,8 @@ _get_object_type() {
 }
 
 _is_local_sha() {
-  match="$(git rev-parse $1 2>/dev/null)"
-  shas="$(git rev-list origin/develop..HEAD)"
+  match="$(_get_sha $1)"
+  shas="$(git rev-list --abbrev-commit origin/develop..HEAD)"
   for sha in $shas; do
     if [ "$sha" == "$match" ]; then
       true
@@ -136,6 +136,10 @@ _is_local_sha() {
 
   false
   return
+}
+
+_get_sha() {
+  git rev-parse --short "$1" 2>/dev/null
 }
 
 _sync() {
@@ -165,6 +169,7 @@ case "$1" in
   # Private
   _get_object_type) _get_object_type ${@:2} ;;
   _is_local_sha)    _is_local_sha ${@:2} ;;
+  _get_sha)         _get_sha ${@:2} ;;
   _sync)            _sync ${@:2} ;;
 
   # Help
