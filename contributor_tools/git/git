@@ -31,7 +31,40 @@ new_branch() {
   arc feature "$1"
 }
 
+tree() {
+  git log --oneline --abbrev-commit --graph --decorate --color $(_get_upstream)..HEAD
+}
+
+_get_branch_name () {
+  rebase_merge="$(git rev-parse --show-toplevel)/.git/rebase-merge";
+  if [ -d "$rebase_merge" ]; then
+    full_ref="$(cat $rebase_merge/head-name)";
+    git rev-parse --abbrev-ref --symbolic-full-name "$full_ref";
+  else
+    git rev-parse --abbrev-ref HEAD;
+  fi
+}
+
+_get_upstream() {
+  git rev-parse --abbrev-ref --symbolic-full-name $(_get_branch_name)@{u}
+}
+
+_set_upstream() {
+  if [ -z "$1" ]; then
+    usage
+    exit 1
+  fi
+
+  git branch --set-upstream-to="$1"
+}
+
 case "$1" in
-  new)  new_branch ${@:2} ;;
-  *)    usage ;;
+  new)              new_branch ${@:2} ;;
+  tree)             tree ${@:2} ;;
+
+  _get_branch_name) _get_branch_name ${@:2} ;;
+  _get_upstream)    _get_upstream ${@:2} ;;
+  _set_upstream)    _set_upstream ${@:2} ;;
+
+  *)                usage ;;
 esac

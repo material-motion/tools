@@ -17,3 +17,7 @@
     Make a linear series of commits on the branch using regular `git commit`.
     Split commits up so that each commit is a self-contained feature.
     Prune your local commit history with `git commit --amend` or `git rebase -i` as you see fit.
+
+    `mdm git tree`
+
+    Displays the linear series of pending commits.
