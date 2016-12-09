@@ -76,7 +76,7 @@ export_diff() {
 
   if [[ ! -z "$sha" ]]; then
     echo "Exiting rebase";
-    git rebase --continue;
+    continue_rebase;
   fi
 }
 
