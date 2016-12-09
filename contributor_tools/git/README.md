@@ -52,9 +52,12 @@
 
     This puts you in a clean state so you can continue to export or submit.
 
-## Step 3: Exporting each commit as a diff for review
+## Step 3: Exporting a commit as a diff for review
 
-    `mdm git review [<sha>] [<flags>]`
+    A commit should be exported when it is ready for review, and every time you have made changes
+    that you would like the existing Phabricator diff to reflect.
+
+    `mdm git export [<sha>] [<flags>]`
 
     Creates a Phabricator diff or updates an existing one for the commit that is determined by:
 
@@ -65,3 +68,20 @@
     often than you may expect.
 
     The optional [<flags>] are passed directly to `arc diff`.
+    For example, pass "--plan-changes" to set the diff state to "Changes Planned".
+
+## Step 4: Submit a commit
+
+    A commit should only be submitted after it has been exported.
+
+    `mdm git submit [<sha>] [<flags>]`
+
+    Lands the existing Phabricator diff for the commit that is determined by:
+
+        The [<sha>], if provided.
+        HEAD, otherwise.
+
+    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes more
+    often than you may expect.
+
+    The optional [<flags>] are passed directly to `arc land`.
