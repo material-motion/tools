@@ -60,11 +60,11 @@ abort_rebase() {
 
 export_diff() {
   sha="";
-  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1)" == "commit" ]]; then
-    sha="$1";
-    set -- "${@:1:$(($#-1))}";
-  fi
   flags=$@
+  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1 2>/dev/null)" == "commit" ]]; then
+    sha="$1";
+    flags=${@:2}
+  fi
 
   if [[ ! -z "$sha" ]]; then
     echo "Checking out $sha via rebase";
@@ -82,11 +82,11 @@ export_diff() {
 
 submit_diff() {
   sha="";
-  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1)" == "commit" ]]; then
-    sha="$1";
-    set -- "${@:1:$(($#-1))}";
-  fi;
   flags=$@
+  if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1 2>/dev/null)" == "commit" ]]; then
+    sha="$1";
+    flags=${@:2}
+  fi;
 
   if [[ ! -z "$sha" ]]; then
     echo "Running arc land --keep-branch $flags $sha";
