@@ -93,7 +93,7 @@ submit_diff() {
     arc land --keep-branch $flags "$sha";
   else
     echo "Running arc land $flags";
-    arc land "$flags"
+    arc land $flags
   fi
 
   if [ $? -eq 0 ]; then

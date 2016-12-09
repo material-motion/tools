@@ -27,8 +27,8 @@
     Enters edit mode for the commit with the given <sha>.
 
     Utilizes interactive rebase mode to automatically put you in an EDIT state.
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes more
-    often than you may expect.
+    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
+    the commit or its ancestors are modified in any way.
 
     If given, applies the optional <command> to the commit with the given <sha>.
     For example, "squash" will merge that commit with the preceding one.
@@ -64,8 +64,8 @@
         The [<sha>], if provided.
         HEAD, otherwise.
 
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes more
-    often than you may expect.
+    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
+    the commit or its ancestors are modified in any way.
 
     The optional [<flags>] are passed directly to `arc diff`.
     For example, pass "--plan-changes" to set the diff state to "Changes Planned".
@@ -81,7 +81,7 @@
         The [<sha>], if provided.
         HEAD, otherwise.
 
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes more
-    often than you may expect.
+    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
+    the commit or its ancestors are modified in any way.
 
     The optional [<flags>] are passed directly to `arc land`.
