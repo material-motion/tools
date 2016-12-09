@@ -32,7 +32,13 @@ new_branch() {
 }
 
 print_tree() {
-  git log --oneline --abbrev-commit --graph --decorate --color origin/develop..HEAD
+  tree="$(git log --oneline --abbrev-commit --graph --decorate --color origin/develop..HEAD)"
+
+  if [ -z "$tree" ]; then
+    echo "No commits yet."
+  else
+    echo "$tree"
+  fi
 }
 
 edit_sha() {
@@ -45,7 +51,7 @@ edit_sha() {
   cmd="edit";
   if [ $# -ge 2 ]; then
       cmd="$2";
-  fi;
+  fi
 
   EDITOR="sed -i -e 's/^pick $sha/$cmd $sha/'" git rebase -i
 }
@@ -86,7 +92,7 @@ submit_diff() {
   if [[ ! -z "$1" ]] && [[ "$(git cat-file -t $1 2>/dev/null)" == "commit" ]]; then
     sha="$1";
     flags=${@:2}
-  fi;
+  fi
 
   if [[ ! -z "$sha" ]]; then
     echo "Running arc land --keep-branch $flags $sha";
