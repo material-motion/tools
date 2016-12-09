@@ -47,10 +47,10 @@ edit_sha() {
     exit 1
   fi
 
-  sha="$1";
-  cmd="edit";
+  sha="$1"
+  cmd="edit"
   if [ $# -ge 2 ]; then
-      cmd="$2";
+      cmd="$2"
   fi
 
   EDITOR="sed -i -e 's/^pick $sha/$cmd $sha/'" git rebase -i
@@ -73,26 +73,26 @@ export_diff() {
       exit 1
     fi
 
-    sha="$1";
+    sha="$1"
     flags=${@:2}
   fi
 
   if [[ ! -z "$sha" ]]; then
-    echo "Checking out $sha via rebase";
-    edit_sha "$sha";
+    echo "Checking out $sha via rebase"
+    edit_sha "$sha"
   fi
 
-  echo "Running arc diff HEAD~ $flags";
-  arc diff HEAD~ $flags;
+  echo "Running arc diff HEAD~ $flags"
+  arc diff HEAD~ $flags
 
   if [[ ! -z "$sha" ]]; then
-    echo "Exiting rebase";
-    continue_rebase;
+    echo "Exiting rebase"
+    continue_rebase
   fi
 }
 
 submit_diff() {
-  sha="";
+  sha=""
   flags=$@
   if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
     if ! _is_local_sha "$1"; then
@@ -100,21 +100,21 @@ submit_diff() {
       exit 1
     fi
 
-    sha="$1";
+    sha="$1"
     flags=${@:2}
   fi
 
   if [[ ! -z "$sha" ]]; then
-    echo "Running arc land --keep-branch $flags $sha";
-    arc land --keep-branch $flags "$sha";
+    echo "Running arc land --keep-branch $flags $sha"
+    arc land --keep-branch $flags "$sha"
   else
-    echo "Running arc land $flags";
+    echo "Running arc land $flags"
     arc land $flags
   fi
 
   if [ $? -eq 0 ]; then
     echo "Submitted successfully. Syncing to latest."
-    _sync;
+    _sync
   fi
 }
 
@@ -139,11 +139,11 @@ _is_local_sha() {
 }
 
 _sync() {
-  git checkout develop;
-  git pull;
-  git checkout -;
+  git checkout develop
+  git pull
+  git checkout -
 
-  git rebase develop;
+  git rebase develop
 }
 
 case "$1" in
