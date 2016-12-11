@@ -54,9 +54,9 @@ enforce_release_cut() {
 enforce_changelog_version() {
   changelog_version=$(awk '/# (.+)/ { print $2; exit}' "$rootdir/CHANGELOG.md")
   changelog_version=$(version_for_platform $changelog_version)
-  if [ "$changelog_version" == "release-candidate" ]; then
+  if [ "$changelog_version" == "#develop#" ]; then
     echo "${B}You haven't updated CHANGELOG.md with the current version yet.${N}"
-    echo "Please update CHANGELOG.md before running this command again."
+    echo "Please run '$parentcmd $cmd bump [version]' before running this command again."
     exit 1
   elif [ "$version" != "$changelog_version" ]; then
     echo "Mismatch in CHANGELOG.md's latest version."
@@ -130,8 +130,8 @@ cut_release() {
   git checkout -b release-candidate $branch
 
   touch "$rootdir/CHANGELOG.md"
-  if ! grep "# release-candidate" "$rootdir/CHANGELOG.md" >> /dev/null; then
-    echo -e "# release-candidate\n\n TODO: Enumerate changes." | cat - "$rootdir/CHANGELOG.md" > /tmp/out && mv /tmp/out "$rootdir/CHANGELOG.md"
+  if ! grep "# #develop#" "$rootdir/CHANGELOG.md" >> /dev/null; then
+    echo -e "# #develop#\n\n TODO: Enumerate changes.\n\n" | cat - "$rootdir/CHANGELOG.md" > /tmp/out && mv /tmp/out "$rootdir/CHANGELOG.md"
   fi
   git add "$rootdir/CHANGELOG.md"
   git commit -m "Automatic changelog preparation for release."
