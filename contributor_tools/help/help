@@ -17,15 +17,15 @@
 parentcmd=$(basename "${BASH_SOURCE[1]}")
 
 function list {
-  echo "${b}NAME${N}"
+  echo "${B}NAME${N}"
   echo "     ${B}$parentcmd${N} - extendable tools for automating material motion work"
 
   echo
-  echo "${b}SYNOPSIS${N}"
+  echo "${B}SYNOPSIS${N}"
   echo "     ${B}$parentcmd${N} ${U}command${N} [${U}args${N}]"
 
   echo
-  echo "${b}COMMANDS${N}"
+  echo "${B}COMMANDS${N}"
   for path in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
     if [ "$path" == "$COMMAND_DIR" ]; then
       continue # Find includes the given folder

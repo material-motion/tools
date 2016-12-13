@@ -15,9 +15,15 @@
 # limitations under the License.
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-readonly B=$(tput bold)
-readonly U=$(tput smul)
-readonly N=$(tput sgr0)
+if [ -t 1 ] ; then # We're writing directly to terminal
+  readonly B=$(tput bold)
+  readonly U=$(tput smul)
+  readonly N=$(tput sgr0)
+else # We're in a pipe
+  readonly B=""
+  readonly U=""
+  readonly N=""
+fi
 readonly RUNNER_CMD=$( basename "${BASH_SOURCE[0]}" )
 readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
 readonly COMMAND_DIR=$( cd "$dir/../.." && pwd )
