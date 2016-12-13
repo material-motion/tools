@@ -35,7 +35,7 @@ print_tree() {
   tree="$(git log --oneline --abbrev-commit --graph --decorate --color origin/develop..HEAD)"
 
   if [ -z "$tree" ]; then
-    echo "No commits yet."
+    echo "All of your commits have already landed on origin/develop."
   else
     echo "$tree"
   fi
