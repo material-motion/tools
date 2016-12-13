@@ -124,11 +124,16 @@ _is_local_sha() {
 _get_sha() {
   ref="$1"
 
-  if [[ "$(echo $ref | tr '[:lower:]' '[:upper:]')" == "HEAD~-"* ]]; then
+  upper_ref="$(echo $ref | tr '[:lower:]' '[:upper:]')"
+  if [[ "$upper_ref" == "BASE" ]] || [[ "$upper_ref" == "BASE+"* ]]; then
     count="$(git rev-list --abbrev-commit origin/develop..HEAD | wc -l)"
-    index="${ref#HEAD~}"
 
-    ref="HEAD~$(($count + $index))"
+    index="${ref#BASE+}"
+    if [[ -z "$index" ]]; then
+      index="0"
+    fi
+
+    ref="HEAD~$(($count - $index - 1))"
   fi
 
   sha="$(git rev-parse --short $ref 2>/dev/null)"

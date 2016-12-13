@@ -86,5 +86,6 @@
     The recommended workflow is to provide a commit's sha directly from `mdm git tree`. Be aware
     that the sha changes when the commit or its ancestors are modified in any way.
 
-    For your convenience, a negative-index notation is also supported to indicate refs at the
-    bottom of the stack. `HEAD~-1` is the base ref, `HEAD~-2` is the 2nd from the bottom, and so on.
+    For your convenience, a BASE notation is also supported to indicate refs at the
+    bottom of the `mdm git tree` stack. `BASE` or `BASE+0` is the bottom ref, `BASE+1` is the 2nd
+    from the bottom, and so on.
