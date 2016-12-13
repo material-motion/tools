@@ -67,15 +67,9 @@ abort_rebase() {
 }
 
 export_diff() {
-  sha="";
+  sha="$(_get_sha $1)";
   flags=$@
-  if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
-    if ! _is_local_sha "$1"; then
-      echo "sha $1 is not in local history. Run 'mdm git tree' to find a local sha."
-      exit 1
-    fi
-
-    sha="$(_get_sha $1)"
+  if [[ ! -z "$sha" ]]; then
     flags=${@:2}
   fi
 
@@ -85,7 +79,7 @@ export_diff() {
   fi
 
   echo "Running 'arc diff HEAD~ $flags'"
-  arc diff HEAD~ $flags
+  arc diff HEAD~ $flags || true
 
   if [[ ! -z "$sha" ]]; then
     echo "Exiting rebase"
@@ -94,15 +88,9 @@ export_diff() {
 }
 
 submit_diff() {
-  sha=""
+  sha="$(_get_sha $1)";
   flags=$@
-  if [[ ! -z "$1" ]] && [[ "$(_get_object_type $1)" == "commit" ]]; then
-    if ! _is_local_sha "$1"; then
-      echo "sha $1 is not in local history. Run '$parentcmd $cmd tree' to find a local sha."
-      exit 1
-    fi
-
-    sha="$(_get_sha $1)"
+  if [[ ! -z "$sha" ]]; then
     flags=${@:2}
   fi
 
@@ -120,17 +108,10 @@ submit_diff() {
   fi
 }
 
-_get_object_type() {
-  if [[ ! -z "$1" ]]; then
-    git cat-file -t "$(_get_sha $1)" 2>/dev/null
-  fi
-}
-
 _is_local_sha() {
-  match="$(_get_sha $1)"
   shas="$(git rev-list --abbrev-commit origin/develop..HEAD)"
   for sha in $shas; do
-    if [ "$sha" == "$match" ]; then
+    if [ "$sha" == "$1" ]; then
       true
       return
     fi
@@ -150,7 +131,14 @@ _get_sha() {
     ref="HEAD~$(($count + $index))"
   fi
 
-  git rev-parse --short "$ref" 2>/dev/null
+  sha="$(git rev-parse --short $ref 2>/dev/null)"
+
+  if [[ ! -z "$sha" ]] && ! _is_local_sha "$sha"; then
+    echo "sha $1 is not in local history. Run '$parentcmd $cmd tree' to find a local sha." 1>&2
+    exit 1
+  fi
+
+  echo "$sha"
 }
 
 _sync() {
@@ -178,7 +166,6 @@ case "$1" in
   submit)           submit_diff ${@:2} ;;
 
   # Private
-  _get_object_type) _get_object_type ${@:2} ;;
   _is_local_sha)    _is_local_sha ${@:2} ;;
   _get_sha)         _get_sha ${@:2} ;;
   _sync)            _sync ${@:2} ;;
