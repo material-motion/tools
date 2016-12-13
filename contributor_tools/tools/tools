@@ -70,6 +70,13 @@ check_all_tools() {
 
   check_tool arc
 
+  arc_parent_dir=$(dirname $(dirname $(dirname $(which arc))))
+  if [ ! -d "$arc_parent_dir/material-arc-tools" ]; then
+    missing_tool material-arc-tools
+  else
+    found_tool material-arc-tools
+  fi
+
   if [ "$(uname)" == "Darwin" ]; then
     check_tool brew
   fi

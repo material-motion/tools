@@ -63,18 +63,6 @@ else
   fi
 fi
 
-echo
-
-if [ ! -d "${ARC_INSTALL_PATH}/material-arc-tools" ]; then
-  echo "Installing arc tools..."
-  git -C "${ARC_INSTALL_PATH}" clone --recursive git@github.com:material-foundation/material-arc-tools.git
-else
-  echo "Updating arc tools..."
-  git -C "${ARC_INSTALL_PATH}/material-arc-tools" fetch
-  git -C "${ARC_INSTALL_PATH}/material-arc-tools" checkout origin/develop
-  git -C "${ARC_INSTALL_PATH}/material-arc-tools" submodule update --init --recursive
-fi
-
 echo 
 echo "Testing arc..."
 "${ARC_PATH}" version
