@@ -122,7 +122,7 @@ submit_diff() {
 
 _get_object_type() {
   if [[ ! -z "$1" ]]; then
-    git cat-file -t "$1" 2>/dev/null
+    git cat-file -t "$(_get_sha $1)" 2>/dev/null
   fi
 }
 
@@ -141,7 +141,16 @@ _is_local_sha() {
 }
 
 _get_sha() {
-  git rev-parse --short "$1" 2>/dev/null
+  ref="$1"
+
+  if [[ "$(echo $ref | tr '[:lower:]' '[:upper:]')" == "HEAD~-"* ]]; then
+    count="$(git rev-list --abbrev-commit origin/develop..HEAD | wc -l)"
+    index="${ref#HEAD~}"
+
+    ref="HEAD~$(($count + $index))"
+  fi
+
+  git rev-parse --short "$ref" 2>/dev/null
 }
 
 _sync() {

@@ -22,15 +22,13 @@
 
     Displays the linear series of pending commits.
 
-    `mdm git edit <sha> [<command>]`
+    `mdm git edit <ref> [<command>]`
 
-    Enters edit mode for the commit with the given <sha>.
+    Enters edit mode for the commit with the given <ref>.
 
     Utilizes interactive rebase mode to automatically put you in an EDIT state.
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
-    the commit or its ancestors are modified in any way.
 
-    If given, applies the optional <command> to the commit with the given <sha>.
+    If given, applies the optional <command> to the commit with the given <ref>.
     For example, "squash" will merge that commit with the preceding one.
 
     `mdm git continue`
@@ -57,15 +55,12 @@
     A commit should be exported when it is ready for review, and every time you have made changes
     that you would like the existing Phabricator diff to reflect.
 
-    `mdm git export [<sha>] [<flags>]`
+    `mdm git export [<ref>] [<flags>]`
 
     Creates a Phabricator diff or updates an existing one for the commit that is determined by:
 
-        The [<sha>], if provided.
+        The [<ref>], if provided.
         HEAD, otherwise.
-
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
-    the commit or its ancestors are modified in any way.
 
     The optional [<flags>] are passed directly to `arc diff`.
     For example, pass "--plan-changes" to set the diff state to "Changes Planned".
@@ -74,14 +69,22 @@
 
     A commit should only be submitted after it has been exported.
 
-    `mdm git submit [<sha>] [<flags>]`
+    `mdm git submit [<ref>] [<flags>]`
 
     Lands the existing Phabricator diff for the commit that is determined by:
 
-        The [<sha>], if provided.
+        The [<ref>], if provided.
         HEAD, otherwise.
 
-    The sha you provide should be copied from `mdm git tree` - be aware that the sha changes when
-    the commit or its ancestors are modified in any way.
-
     The optional [<flags>] are passed directly to `arc land`.
+
+## Supported refs
+
+    All git ref notations are supported. However, a ref will be rejected if it does not exist in
+    the list returned by `mdm git tree`.
+
+    The recommended workflow is to provide a commit's sha directly from `mdm git tree`. Be aware
+    that the sha changes when the commit or its ancestors are modified in any way.
+
+    For your convenience, a negative-index notation is also supported to indicate refs at the
+    bottom of the stack. `HEAD~-1` is the base ref, `HEAD~-2` is the 2nd from the bottom, and so on.
