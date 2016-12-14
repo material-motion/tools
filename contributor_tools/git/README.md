@@ -24,7 +24,7 @@
 
     `mdm git edit <ref> [<command>]`
 
-    Enters edit mode for the commit with the given <ref>.
+    Enters edit mode for the commit with the given <ref>. See the "Supported ref notations" section.
 
     Utilizes interactive rebase mode to automatically put you in an EDIT state.
 
@@ -59,7 +59,7 @@
 
     Creates a Phabricator diff or updates an existing one for the commit that is determined by:
 
-        The [<ref>], if provided.
+        The [<ref>], if provided. See the "Supported ref notations" section.
         HEAD, otherwise.
 
     The optional [<flags>] are passed directly to `arc diff`.
@@ -73,19 +73,30 @@
 
     Lands the existing Phabricator diff for the commit that is determined by:
 
-        The [<ref>], if provided.
-        HEAD, otherwise.
+        The [<ref>], if provided. See the "Supported ref notations" section.
+        BASE, otherwise.
 
     The optional [<flags>] are passed directly to `arc land`.
 
-## Supported refs
+## Supported ref notations
 
     All git ref notations are supported. However, a ref will be rejected if it does not exist in
     the list returned by `mdm git tree`.
 
-    The recommended workflow is to provide a commit's sha directly from `mdm git tree`. Be aware
-    that the sha changes when the commit or its ancestors are modified in any way.
+    Here are some common ref notations that work particularly well in this workflow:
 
-    For your convenience, a BASE notation is also supported to indicate refs at the
-    bottom of the `mdm git tree` stack. `BASE` or `BASE+0` is the bottom ref, `BASE+1` is the 2nd
-    from the bottom, and so on.
+    SHA: `d921970`, `d921970aadf03b3cf0e71becdaab3147ba71cdef`, ...
+
+        The recommended workflow is to provide a commit's sha directly from `mdm git tree`.
+        Be aware that the sha changes when the commit or its ancestors are modified in any way.
+
+    Ancestry: `HEAD`, `HEAD~`, `HEAD~2`, ...
+
+        You can reference a commit at the top of the stack relative to HEAD.
+        `HEAD` is the top ref, `HEAD~` or `HEAD~1` is the 2nd from the top, and so on.
+
+    Reversed: `BASE`, `BASE+1`, `BASE+2`, ...
+
+        For your convenience, a BASE notation is also supported to reference commits at the
+        bottom of the `mdm git tree` stack. The syntax for BASE closely mirror that of HEAD.
+        `BASE` is the bottom ref, `BASE+` or `BASE+1` is the 2nd from the bottom, and so on.

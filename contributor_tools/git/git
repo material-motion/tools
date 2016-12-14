@@ -148,14 +148,18 @@ _is_local_sha() {
 
 _get_sha() {
   ref="$1"
-
   upper_ref="$(echo $ref | tr '[:lower:]' '[:upper:]')"
+
   if [[ "$upper_ref" == "BASE" ]] || [[ "$upper_ref" == "BASE+"* ]]; then
     count="$(git rev-list --abbrev-commit origin/develop..HEAD | wc -l)"
 
-    index="${ref#BASE+}"
-    if [[ -z "$index" ]]; then
+    if [[ "$upper_ref" == "BASE" ]]; then
       index="0"
+    else
+      index="${ref#BASE+}"
+      if [[ -z "$index" ]]; then
+        index="1"
+      fi
     fi
 
     ref="HEAD~$(($count - $index - 1))"
