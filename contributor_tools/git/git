@@ -85,6 +85,10 @@ export_diff() {
     echo "Exiting rebase"
     continue_rebase
   fi
+
+  echo
+  echo "Your current local commits:"
+  print_tree
 }
 
 submit_diff() {
@@ -106,6 +110,10 @@ submit_diff() {
     echo "Submitted successfully. Syncing to latest."
     _sync
   fi
+
+  echo
+  echo "Your current local commits:"
+  print_tree
 }
 
 _is_local_sha() {
