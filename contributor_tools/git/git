@@ -73,25 +73,18 @@ export_diff() {
     flags="${@:2}"
   fi
 
-  # Default to HEAD.
-  if [[ -z "$sha" ]]; then
-    sha="$(_get_sha HEAD)"
+  if [[ ! -z "$sha" ]]; then
+    echo "Checking out $sha via rebase"
+    edit_sha "$sha"
   fi
-
-  if [[ -z "$sha" ]]; then
-    echo "No local commits available." 1>&2
-    exit 1
-  fi
-
-  echo "Checking out $sha via rebase"
-  edit_sha "$sha"
-
 
   echo "Running 'arc diff HEAD~ $flags'"
   arc diff HEAD~ $flags || true
 
-  echo "Exiting rebase"
-  continue_rebase
+  if [[ ! -z "$sha" ]]; then
+    echo "Exiting rebase"
+    continue_rebase
+  fi
 
   echo
   echo "Your current local commits:"
