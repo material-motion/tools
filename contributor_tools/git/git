@@ -68,23 +68,30 @@ abort_rebase() {
 
 export_diff() {
   sha="$(_get_sha $1)";
-  flags=$@
+  flags="$@"
   if [[ ! -z "$sha" ]]; then
-    flags=${@:2}
+    flags="${@:2}"
   fi
 
-  if [[ ! -z "$sha" ]]; then
-    echo "Checking out $sha via rebase"
-    edit_sha "$sha"
+  # Default to HEAD.
+  if [[ -z "$sha" ]]; then
+    sha="$(_get_sha HEAD)"
   fi
+
+  if [[ -z "$sha" ]]; then
+    echo "No local commits available." 1>&2
+    exit 1
+  fi
+
+  echo "Checking out $sha via rebase"
+  edit_sha "$sha"
+
 
   echo "Running 'arc diff HEAD~ $flags'"
   arc diff HEAD~ $flags || true
 
-  if [[ ! -z "$sha" ]]; then
-    echo "Exiting rebase"
-    continue_rebase
-  fi
+  echo "Exiting rebase"
+  continue_rebase
 
   echo
   echo "Your current local commits:"
@@ -93,18 +100,27 @@ export_diff() {
 
 submit_diff() {
   sha="$(_get_sha $1)";
-  flags=$@
+  flags="$@"
   if [[ ! -z "$sha" ]]; then
-    flags=${@:2}
+    flags="${@:2}"
   fi
 
-  if [[ ! -z "$sha" ]]; then
-    echo "Running 'arc land --keep-branch $flags $sha'"
-    arc land --keep-branch $flags "$sha"
-  else
-    echo "Running 'arc land $flags'"
-    arc land $flags
+  # Default to BASE.
+  if [[ -z "$sha" ]]; then
+    sha="$(_get_sha BASE)"
   fi
+
+  if [[ -z "$sha" ]]; then
+    echo "No local commits available." 1>&2
+    exit 1
+  fi
+
+  if [ "$(git rev-list --abbrev-commit origin/develop..HEAD | wc -l)" -gt "1" ]; then
+    flags="$flags --keep-branch"
+  fi
+
+  echo "Running 'arc land $flags $sha'"
+  arc land $flags "$sha"
 
   if [ $? -eq 0 ]; then
     echo "Submitted successfully. Syncing to latest."
