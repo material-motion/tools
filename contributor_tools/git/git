@@ -116,11 +116,12 @@ submit_diff() {
   fi
 
   if [ "$(git rev-list --abbrev-commit origin/develop..HEAD | wc -l)" -gt "1" ]; then
-    flags="$flags --keep-branch"
+    echo "Running 'arc land $flags --keep-branch $sha'"
+    arc land $flags --keep-branch "$sha"
+  else
+    echo "Running 'arc land $flags'"
+    arc land $flags
   fi
-
-  echo "Running 'arc land $flags $sha'"
-  arc land $flags "$sha"
 
   if [ $? -eq 0 ]; then
     echo "Submitted successfully. Syncing to latest."
