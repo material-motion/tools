@@ -21,6 +21,15 @@ usage() {
   $parentcmd help $cmd
 }
 
+update_mdm() {
+  pushd $(mdm dir) >> /dev/null
+  echo "Updating mdm..."  
+  git fetch
+  git rebase origin/develop
+  git submodule update --init --recursive
+  popd >> /dev/null
+}
+
 update_arc_tools() {
   pushd $(dirname $(dirname $(dirname $(which arc))))/material-arc-tools >> /dev/null
   git fetch
@@ -34,5 +43,6 @@ update_arc_tools() {
 
 case "$1" in
   arc)     update_arc_tools ;;
+  mdm)     update_mdm ;;
   *)       usage ;;
 esac
