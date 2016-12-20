@@ -14,6 +14,6 @@
  *  under the License.
  */
 
-export * from './types';
-export * from './<%= exportName %>';
-export { default as <%= exportName %> } from './<%= exportName %>';
+export default function <%= exportName %>() {
+
+}

@@ -14,6 +14,38 @@
  *  under the License.
  */
 
-export * from './types';
-export * from './<%= exportName %>';
-export { default as <%= exportName %> } from './<%= exportName %>';
+import { expect } from 'chai';
+
+import {
+  beforeEach,
+  describe,
+  it,
+} from 'mocha-sugar-free';
+
+import {
+  stub,
+} from 'sinon';
+
+import <%= exportName %> from '../<%= exportName %>';
+
+declare function require(name: string);
+
+// chai really doesn't like being imported as an ES2015 module; will be fixed in v4
+require('chai').use(
+  require('sinon-chai')
+);
+
+describe('<%= exportName %>',
+  () => {
+    beforeEach(
+      () => {
+      }
+    );
+
+    it('',
+      () => {
+      }
+    );
+  }
+);
+
