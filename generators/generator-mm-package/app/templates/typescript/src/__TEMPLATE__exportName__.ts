@@ -14,6 +14,7 @@
  *  under the License.
  */
 
-export default function <%= exportName %>() {
+export function <%= exportName %>() {
 
 }
+export default <%= exportName %>;
