@@ -32,13 +32,37 @@ new_branch() {
 }
 
 print_tree() {
-  tree="$(git log --oneline --abbrev-commit --graph --decorate --color origin/develop..HEAD)"
+  tree="$(git log --oneline --abbrev-commit --graph --color origin/develop..HEAD)"
 
   if [ -z "$tree" ]; then
     echo "All of your commits have already landed on origin/develop."
   else
-    echo "$tree"
+    _print_augmented_tree "$tree"
   fi
+}
+
+_print_augmented_tree() {
+  echo "$1" | while read -r star sha subject; do
+    plain_sha="$(echo "$sha" | perl -pe 's/\x1b\[[0-9;]*[mG]//g')"
+    url="$(_get_diff_url "$plain_sha")"
+    if [ ! -z "$url" ]; then
+      echo "$star $sha $url $subject"
+    else
+      echo "$star $sha $subject"
+    fi
+  done
+}
+
+_get_diff_url() {
+  sha="$1"
+  body="$(git log -n 1 --pretty=format:%b "$sha")"
+  echo "$body" | while read -r line; do
+    if [[ "$line" == "Differential Revision: "* ]]; then
+      underline=$(tput smul)
+      nounderline=$(tput rmul)
+      echo "${underline}${line#Differential Revision: }${nounderline}"
+    fi
+  done
 }
 
 edit_sha() {
@@ -196,6 +220,7 @@ case "$1" in
   _is_local_sha)    _is_local_sha ${@:2} ;;
   _get_sha)         _get_sha ${@:2} ;;
   _sync)            _sync ${@:2} ;;
+  _get_diff_url)    _get_diff_url ${@:2} ;;
 
   # Help
   *)                usage ;;
