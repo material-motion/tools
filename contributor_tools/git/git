@@ -80,14 +80,26 @@ edit_sha() {
   # Replace "pick $sha" and "# pick $sha" with "$cmd $sha".
   regex="'s/^\(# \)\{0,1\}pick $sha/$cmd $sha/'"
   EDITOR="sed -i -e $regex" git rebase -i
+
+  echo
+  echo "Your current local commits:"
+  print_tree
 }
 
 continue_rebase() {
   git rebase --continue
+
+  echo
+  echo "Your current local commits:"
+  print_tree
 }
 
 abort_rebase() {
   git rebase --abort
+
+  echo
+  echo "Your current local commits:"
+  print_tree
 }
 
 export_diff() {
