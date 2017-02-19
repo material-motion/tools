@@ -66,12 +66,20 @@ _get_diff_url() {
 }
 
 edit_sha() {
+  _edit_sha "$@"
+
+  echo
+  echo "Your current local commits:"
+  print_tree
+}
+
+_edit_sha() {
   if [ -z "$1" ]; then
     usage
     exit 1
   fi
 
-  sha="$(_get_sha $1)"
+  sha="$(_get_sha "$1")"
   cmd="edit"
   if [ $# -ge 2 ]; then
       cmd="$2"
@@ -80,26 +88,30 @@ edit_sha() {
   # Replace "pick $sha" and "# pick $sha" with "$cmd $sha".
   regex="'s/^\(# \)\{0,1\}pick $sha/$cmd $sha/'"
   EDITOR="sed -i -e $regex" git rebase -i
-
-  echo
-  echo "Your current local commits:"
-  print_tree
 }
 
 continue_rebase() {
-  git rebase --continue
+  _continue_rebase "$@"
 
   echo
   echo "Your current local commits:"
   print_tree
 }
 
+_continue_rebase() {
+  git rebase --continue
+}
+
 abort_rebase() {
-  git rebase --abort
+  _abort_rebase "$@"
 
   echo
   echo "Your current local commits:"
   print_tree
+}
+
+_abort_rebase() {
+  git rebase --abort
 }
 
 export_diff() {
@@ -111,7 +123,7 @@ export_diff() {
 
   if [[ ! -z "$sha" ]]; then
     echo "Checking out $sha via rebase"
-    edit_sha "$sha"
+    _edit_sha "$sha"
   fi
 
   echo "Running 'arc diff HEAD~ $flags'"
@@ -119,7 +131,7 @@ export_diff() {
 
   if [[ ! -z "$sha" ]]; then
     echo "Exiting rebase"
-    continue_rebase
+    _continue_rebase
   fi
 
   echo
