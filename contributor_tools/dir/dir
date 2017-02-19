@@ -40,6 +40,29 @@ find_path() {
     exit 1
   fi
 
+  # Look for acronyms.
+  word="[a-zA-Z]*"
+  regex="" # Turns "rma" into ".*/r$word-m$word-a$word.*"
+  while read -r -n1 char; do
+    if [ -z "$regex" ]; then
+      regex=".*/$char$word"
+    else
+      regex="$regex-$char$word"
+    fi
+  done < <(echo -n "$short_reponame")
+  regex="$regex.*"
+
+  acro_matches=$(find "$parent_dir" -maxdepth 1 -type d -regex "$regex")
+  count=$(echo "$acro_matches" | sed '/^\s*$/d' | wc -l) # Count non-empty lines.
+  if [ "$count" -eq "1" ]; then
+    echo "$acro_matches"
+    exit 0
+  elif [ "$count" -gt "1" ]; then
+    echo "Ambiguous matches, please provide a more specific query. Found:" >&2
+    echo "$acro_matches" >&2
+    exit 1
+  fi
+
   # Look for fuzzy matches.
   fuzzy_matches=$(find "$parent_dir" -maxdepth 1 -type d -name "*"$short_reponame"*")
   count=$(echo "$fuzzy_matches" | sed '/^\s*$/d' | wc -l) # Count non-empty lines.
