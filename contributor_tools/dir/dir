@@ -41,11 +41,14 @@ find_path() {
   fi
 
   # Look for fuzzy matches.
-  if [ $(ls $parent_dir | grep $short_reponame | wc -l) -eq "1" ]; then
-    echo "$parent_dir/$(ls $parent_dir | grep $short_reponame)"
-  elif [ $(ls $parent_dir | grep $short_reponame | wc -l) -gt "1" ]; then
+  fuzzy_matches=$(find "$parent_dir" -maxdepth 1 -type d -name "*"$short_reponame"*")
+  count=$(echo "$fuzzy_matches" | sed '/^\s*$/d' | wc -l) # Count non-empty lines.
+  if [ "$count" -eq "1" ]; then
+    echo "$parent_dir/$fuzzy_matches"
+    exit 0
+  elif [ "$count" -gt "1" ]; then
     echo "Ambiguous matches, please provide a more specific query. Found:" >&2
-    ls $parent_dir | grep $short_reponame >&2
+    echo "$fuzzy_matches" >&2
     exit 1
   else
     echo "No matches found." >&2
