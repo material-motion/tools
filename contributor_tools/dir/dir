@@ -20,33 +20,35 @@ find_path() {
   parent_dir="$(dirname $ROOT_DIR)"
 
   suffixes=("" "-android" "-objc" "-swift" "-js")
-  matches=()
+  exact_matches=()
 
+  # Look for exact exact_matches.
   for suffix in "${suffixes[@]}"; do
     if [ -d "$parent_dir/$full_reponame$suffix" ]; then
-      matches+=("$parent_dir/$full_reponame$suffix")
+      exact_matches+=("$parent_dir/$full_reponame$suffix")
     elif [ -d "$parent_dir/$short_reponame$suffix" ]; then
-      matches+=("$parent_dir/$short_reponame$suffix")
+      exact_matches+=("$parent_dir/$short_reponame$suffix")
     fi
   done
 
-  if [[ "${#matches[@]}" -eq "0" ]]; then
-    # No exact matches, look for fuzzy matches.
-    if [[ $(ls $parent_dir | grep $short_reponame | wc -l) -eq "1" ]]; then
-      echo "$parent_dir/$(ls $parent_dir | grep $short_reponame)"
-    elif [[ $(ls $parent_dir | grep $short_reponame | wc -l) -gt "1" ]]; then
-      echo "Ambiguous matches, please provide a more specific query. Found:" >&2
-      ls $parent_dir | grep $short_reponame >&2
-      exit 1
-    else
-      echo "No matches found." >&2
-      exit 1
-    fi
-  elif [[ "${#matches[@]}" -eq "1" ]]; then
-    echo "${matches[0]}"
-  else
+  if [[ "${#exact_matches[@]}" -eq "1" ]]; then
+    echo "${exact_matches[0]}"
+    exit 0
+  elif [[ "${#exact_matches[@]}" -gt "1" ]]; then
     echo "Ambiguous matches, please specify a suffix manually. Found:" >&2
-    printf '%s\n' "${matches[@]}" >&2
+    printf '%s\n' "${exact_matches[@]}" >&2
+    exit 1
+  fi
+
+  # Look for fuzzy matches.
+  if [ $(ls $parent_dir | grep $short_reponame | wc -l) -eq "1" ]; then
+    echo "$parent_dir/$(ls $parent_dir | grep $short_reponame)"
+  elif [ $(ls $parent_dir | grep $short_reponame | wc -l) -gt "1" ]; then
+    echo "Ambiguous matches, please provide a more specific query. Found:" >&2
+    ls $parent_dir | grep $short_reponame >&2
+    exit 1
+  else
+    echo "No matches found." >&2
     exit 1
   fi
 }
