@@ -218,7 +218,7 @@ _get_sha() {
 
 _sync() {
   git checkout develop
-  git pull
+  git pull --rebase
   git checkout -
 
   git rebase develop
