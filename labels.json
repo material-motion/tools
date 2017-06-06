@@ -26,9 +26,10 @@
     "type: Internal cleanup": "Internal cleanup",
     "type: Process": "Process",
     "type: Question": "Question",
-    "type: Visual bug": "Visual bug",
+    "type: Visual bug": "Bug",
     "type: Won't fix": "Won't fix",
     "type: Working as intended": "Working as intended",
+    "Visual bug": "Bug",
     "wontfix": "Won't fix"
   },
   "labels": {
@@ -46,7 +47,7 @@
     "Prototype": "BBDEFB",
     "Question": "673AB7",
     "Tests": "BBDEFB",
-    "Visual bug": "F44336",
+    "Bug": "F44336",
     "Won't fix": "EEEEEE",
     "Working as intended": "EEEEEE"
   }
