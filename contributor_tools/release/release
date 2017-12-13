@@ -251,7 +251,17 @@ generate_release_notes() {
   echo "## API changes"
   echo
 
-  if [ -f "$rootdir/Podfile" ]; then
+  if [ -f "$rootdir/.jazzy.yaml" ]; then
+    if grep -q "umbrella_header" $rootdir/.jazzy.yaml; then
+      umbrella_header="$(cd $rootdir; grep umbrella_header .jazzy.yaml | cut -d' ' -f2)"
+      "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate objc "$umbrella_header"
+    else
+      podspec_name="$(cd $rootdir; ls *.podspec)"
+      library_name="$(echo $podspec_name | cut -d'.' -f1)"
+      "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate swift "$library_name.xcworkspace" "$library_name"
+    fi
+    
+  elif [ -f "$rootdir/Podfile" ]; then
     if [ $(cd $rootdir; ls src/MaterialMotion* 2> /dev/null) ]; then
       umbrella_header="$(cd $rootdir; ls src/MaterialMotion*)"
       "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate objc "$umbrella_header"
